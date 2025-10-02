@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Set;
 
 @NoArgsConstructor
@@ -27,6 +28,6 @@ public class Category implements Serializable {
 
     @ToString.Exclude
     @OneToMany(mappedBy = "category")
-    private Set<Book> books;
+    private Set<Book> books = new HashSet<>();
 
 }

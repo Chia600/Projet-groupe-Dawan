@@ -5,6 +5,7 @@ import lombok.*;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.Set;
 
 @NoArgsConstructor
@@ -46,7 +47,7 @@ public class Book implements Serializable {
     private Category category;
 
     @ToString.Exclude
-    @OneToMany
-    private Set<Review> reviews;
+    @OneToMany(mappedBy = "book")
+    private Set<Review> reviews = new HashSet<>();
 
 }

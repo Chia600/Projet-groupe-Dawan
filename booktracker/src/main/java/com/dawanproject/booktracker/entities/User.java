@@ -3,8 +3,8 @@ package com.dawanproject.booktracker.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.Set;
 
 @NoArgsConstructor
@@ -15,7 +15,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "user")
-public class User extends Person implements Serializable {
+public class User extends Person {
 
     private static final long serialVersionUID = 1L;
 
@@ -42,10 +42,10 @@ public class User extends Person implements Serializable {
     private boolean subscribed;
 
     @ToString.Exclude
-    @OneToMany
-    private Set<Book> bookCollection;
+    @ManyToMany
+    private Set<Book> bookCollection = new HashSet<>();
 
     @ToString.Exclude
-    @OneToMany
-    private Set<Review> reviews;
+    @OneToMany(mappedBy = "user")
+    private Set<Review> reviews = new HashSet<>();
 }
