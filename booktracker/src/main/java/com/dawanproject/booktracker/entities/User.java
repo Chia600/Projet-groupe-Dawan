@@ -43,7 +43,7 @@ public class User extends Person {
 
     @ToString.Exclude
     @ManyToMany
-    private Set<Book> bookCollection = new HashSet<>();
+    private Set<Book> books = new HashSet<>();
 
     @ToString.Exclude
     @OneToMany(mappedBy = "user")
