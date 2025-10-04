@@ -29,6 +29,7 @@ public class Review implements Serializable {
     @MapsId("bookId")
     private Book book;
 
+    @Lob
     private String review;
 
     private int rating;

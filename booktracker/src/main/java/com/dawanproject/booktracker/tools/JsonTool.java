@@ -30,40 +30,55 @@ public class JsonTool {
         for (var entry : jsonMappedResponse.entrySet()) {
             JsonNode rootNode = mapper.readTree(entry.getValue());
             JsonNode items = rootNode.path("items");
+            String isbn;
+            String title;
+            String publicationDate;
+            int pageNumber;
+            String cover;
+            String author;
+            String category;
+            String description;
 
             for (JsonNode item : items) {
-                BookDto bookDto = new BookDto();
                 Optional opt;
 
-                bookDto.setId(id);
-                bookDto.setTitle(item.path("volumeInfo").path("title").asText());
+                title = item.path("volumeInfo").path("title").asText();
+                cover = (item.path("volumeInfo").path("imageLinks").path("thumbnail").asText()).split("&zoom=1")[0];
+                pageNumber = item.path("volumeInfo").path("pageCount").asInt();
+                publicationDate = (item.path("volumeInfo").path("publishedDate").asText()).split("-")[0];
+                description = item.path("volumeInfo").path("description").asText();
 
                 opt = item.path("volumeInfo").path("industryIdentifiers").asOptional();
                 if(opt.isEmpty()) {
-                    bookDto.setIsbn("");
+                    isbn = "";
                 } else {
-                    bookDto.setIsbn(item.path("volumeInfo").path("industryIdentifiers").get(0).path("identifier").asText());
+                    isbn = item.path("volumeInfo").path("industryIdentifiers").get(0).path("identifier").asText();
                 }
-
-                bookDto.setCover((item.path("volumeInfo").path("imageLinks").path("thumbnail").asText()).split("&zoom=1")[0]);
-                bookDto.setPageNumber(item.path("volumeInfo").path("pageCount").asInt());
-                bookDto.setPublicationDate((item.path("volumeInfo").path("publishedDate").asText()).split("-")[0]);
 
                 opt = item.path("volumeInfo").path("authors").asOptional();
                 if(opt.isEmpty()) {
-                    bookDto.setAuthor("Auteur Inconnu");
+                    author = "Auteur Inconnu";
                 } else {
-                    bookDto.setAuthor(item.path("volumeInfo").path("authors").get(0).asText());
+                    author = item.path("volumeInfo").path("authors").get(0).asText();
                 }
 
                 opt = item.path("volumeInfo").path("categories").asOptional();
                 if(opt.isEmpty()) {
-                    bookDto.setCategory("");
+                    category = "";
                 } else {
-                    bookDto.setCategory(item.path("volumeInfo").path("categories").get(0).asText());
+                    category = item.path("volumeInfo").path("categories").get(0).asText();
                 }
 
-                bookDto.setDescription(item.path("volumeInfo").path("description").asText());
+                BookDto bookDto = BookDto.builder()
+                        .id(id)
+                        .title(title)
+                        .author(author)
+                        .isbn(isbn)
+                        .publicationDate(publicationDate)
+                        .cover(cover)
+                        .description(description)
+                        .pageNumber(pageNumber)
+                        .category(category).build();
 
                 bookDtoList.add(bookDto);
                 id++;

@@ -4,6 +4,7 @@ import com.dawanproject.booktracker.dtos.BookDto;
 import com.dawanproject.booktracker.services.IGoogleBooksApiService;
 import com.dawanproject.booktracker.tools.JsonTool;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
@@ -17,8 +18,11 @@ import java.util.Map;
 @Service
 public class GoogleBooksApiServiceImpl implements IGoogleBooksApiService {
 
-    private static final String GOOGLE_BOOK_API_URL = "https://www.googleapis.com/books/v1/volumes?q=";
-    private static final String GOOGLE_BOOK_API_KEY = "AIzaSyCbJZJyMK5-BDVBiCTBXzykJBlDzEKMSkA";
+    @Value("${google.books.api.url.base}")
+    private String googleBookApiUrl;
+
+    @Value("${google.books.api.key}")
+    private String googleBookApiKey;
 
     /**
      * Permet d'effectuer une recherche de livres via l'API Google Books
@@ -31,19 +35,19 @@ public class GoogleBooksApiServiceImpl implements IGoogleBooksApiService {
      * @throws JsonProcessingException
      */
     @Override
-    public List<BookDto> getAllBy(int page, int size, String search) throws JsonProcessingException { //Récupération de 100 livres
+    public List<BookDto> getAllBy(int page, int size, String search) throws JsonProcessingException {
         int i = -1;
-        int p = 1;
+        int pageCounter = 1;
         Map<Integer, String> response = new HashMap<>();
 
         RestClient rc = RestClient.create();
 
         while(i<100) {
-            String urlString = GOOGLE_BOOK_API_URL + "2025+intitle:le+la+et&key=" + GOOGLE_BOOK_API_KEY + "&printType=books&orderBy=newest&maxResults=10&startIndex=" + (i+1);
+            String urlString = googleBookApiUrl + "2025+intitle:le+la+et&key=" + googleBookApiKey + "&printType=books&orderBy=newest&maxResults=10&startIndex=" + (i+1);
             String res = rc.get().uri(urlString).retrieve().body(String.class);
-            response.put(p, res);
+            response.put(pageCounter, res);
             i+=11;
-            p++;
+            pageCounter++;
         }
 
         return JsonTool.parseBooksJsonResponse(response);

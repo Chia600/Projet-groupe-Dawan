@@ -23,6 +23,9 @@ public class Category implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long categoryId;
 
+    @Version
+    private int version;
+
     @Column(length=50, nullable = false)
     private String genre;
 

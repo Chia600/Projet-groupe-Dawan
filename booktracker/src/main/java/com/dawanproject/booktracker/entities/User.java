@@ -23,7 +23,7 @@ public class User extends Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long userId;
 
-    @Column(length = 100, nullable = false)
+    @Column(length = 100, nullable = false, unique=true)
     private String username;
 
     @Column(length=100, nullable = false)
@@ -39,7 +39,7 @@ public class User extends Person {
     private LocalDate subscriptionDate;
 
     @Column(nullable = false)
-    private boolean subscribed;
+    private boolean isSubscribed;
 
     @ToString.Exclude
     @ManyToMany

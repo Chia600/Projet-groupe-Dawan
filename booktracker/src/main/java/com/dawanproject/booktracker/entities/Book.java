@@ -24,12 +24,16 @@ public class Book implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long bookId;
 
+    @Version
+    private int version;
+
     @Column(nullable = false)
     private String isbn;
 
     @Column(length=50, nullable = false)
     private String title;
 
+    @Lob
     private String description;
 
     private int pageNumber;
