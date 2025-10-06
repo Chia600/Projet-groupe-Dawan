@@ -1,22 +1,25 @@
 package com.dawanproject.booktracker.services.impl;
 
 import com.dawanproject.booktracker.dtos.BookDto;
-import com.dawanproject.booktracker.services.IGoogleBooksApiService;
+import com.dawanproject.booktracker.services.GoogleBooksApiService;
 import com.dawanproject.booktracker.tools.JsonTool;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * Service d'appel à l'API Google Books
  */
 @Service
-public class GoogleBooksApiServiceImpl implements IGoogleBooksApiService {
+public class GoogleBooksApiServiceImpl implements GoogleBooksApiService {
 
     @Value("${google.books.api.url.base}")
     private String googleBookApiUrl;
@@ -25,36 +28,37 @@ public class GoogleBooksApiServiceImpl implements IGoogleBooksApiService {
     private String googleBookApiKey;
 
     /**
-     * Permet d'effectuer une recherche de livres via l'API Google Books
-     * (si le paramètre search est vide, récupère 100 livres)
+     * Recherche paginée de livres via l'API Google Books
+     * (si le paramètre search est vide, récupère des livres ayant pour genre 'Computers')
      *
-     * @param page numéro de la page courante
-     * @param size nombre de résultats affichés par page
+     * @param page page courante
+     * @param size nombre d'éléments par page
      * @param search critères de recherche
-     * @return List<BookDto> renvoie la liste de bookDto
+     * @return Page<BookDto>
      * @throws JsonProcessingException
      */
     @Override
-    public List<BookDto> getAllBy(int page, int size, String search) throws JsonProcessingException {
-        //TODO
-        // - gestion pagination
-        // - gestion du search
-        // - Appel controller
-
-        int i = -1;
-        int pageCounter = 1;
-        Map<Integer, String> response = new HashMap<>();
-
+    public Page<BookDto> getAllLivres(int page, int size, String search) throws JsonProcessingException {
         RestClient rc = RestClient.create();
-
-        while(i<100) {
-            String urlString = googleBookApiUrl + "2025+intitle:le+la+et&key=" + googleBookApiKey + "&printType=books&orderBy=newest&maxResults=10&startIndex=" + (i+1);
-            String res = rc.get().uri(urlString).retrieve().body(String.class);
-            response.put(pageCounter, res);
-            i+=11;
-            pageCounter++;
+        if(search.trim().isEmpty()) {
+            search = "subject:Computers";
+        } else {
+            search = search.contains(" ") ? search.replaceAll(" ", "+") : search;
         }
 
-        return JsonTool.parseBooksJsonResponse(response);
+        //Appel de l'API Google Books
+        String urlString = googleBookApiUrl + search + "&key=" + googleBookApiKey + "&maxResults=40";
+        String results = rc.get().uri(urlString).retrieve().body(String.class);
+
+        List<BookDto> bookDtoList = JsonTool.parseBooksJsonResponse(results);
+
+        //Conversion de List<BookDto> en Page<bookDto>
+        Pageable pageRequest = PageRequest.of(page, size);
+        int start = (int) pageRequest.getOffset();
+        int end = Math.min((start + pageRequest.getPageSize()), bookDtoList.size());
+        List<BookDto> pageContent = bookDtoList.subList(start, end);
+
+        return new PageImpl<>(pageContent, pageRequest, bookDtoList.size());
+
     }
 }
