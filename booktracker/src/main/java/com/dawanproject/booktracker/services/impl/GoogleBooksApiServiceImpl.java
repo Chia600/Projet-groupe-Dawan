@@ -36,6 +36,11 @@ public class GoogleBooksApiServiceImpl implements IGoogleBooksApiService {
      */
     @Override
     public List<BookDto> getAllBy(int page, int size, String search) throws JsonProcessingException {
+        //TODO
+        // - gestion pagination
+        // - gestion du search
+        // - Appel controller
+
         int i = -1;
         int pageCounter = 1;
         Map<Integer, String> response = new HashMap<>();

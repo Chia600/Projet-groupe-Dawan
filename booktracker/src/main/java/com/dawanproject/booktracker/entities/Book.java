@@ -27,9 +27,6 @@ public class Book implements Serializable {
     @Version
     private int version;
 
-    @Column(nullable = false)
-    private String isbn;
-
     @Column(length=50, nullable = false)
     private String title;
 

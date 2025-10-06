@@ -29,7 +29,7 @@ public class User extends Person {
     @Column(length=100, nullable = false)
     private String password;
 
-    @Column(length=100, nullable = false)
+    @Column(length=100, nullable = false, unique=true)
     private String email;
 
     @ToString.Exclude
