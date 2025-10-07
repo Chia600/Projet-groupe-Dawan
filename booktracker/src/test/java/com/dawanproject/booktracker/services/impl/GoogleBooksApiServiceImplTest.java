@@ -2,6 +2,7 @@ package com.dawanproject.booktracker.services.impl;
 
 import com.dawanproject.booktracker.dtos.BookDto;
 import com.dawanproject.booktracker.tools.JsonTool;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -14,8 +15,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 @ExtendWith(MockitoExtension.class)
@@ -24,11 +24,19 @@ class GoogleBooksApiServiceImplTest {
     private static final String URL_VALUE = "https://www.googleapis.com/books/v1/volumes";
     private static final String KEY_VALUE = "AIzaSyCbJZJyMK5-BDVBiCTBXzykJBlDzEKMSkA";
 
+    private String jsonResults;
     private GoogleBooksApiServiceImpl service;
 
     @BeforeEach
     void setUp() {
         service = new GoogleBooksApiServiceImpl();
+
+        Path jsonFilePath = Path.of("src/test/resources/livres.json");
+        try {
+            jsonResults = Files.readString(jsonFilePath);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
         ReflectionTestUtils.setField(
                 service,
@@ -41,15 +49,10 @@ class GoogleBooksApiServiceImplTest {
     }
 
     @Test
-    public void getAllLivresSearchEmptyTest() throws IOException {
-        String search = "";
-
-        Path jsonFilePath = Path.of("src/test/resources/livres.json");
-        String jsonResults = Files.readString(jsonFilePath);
-
+    public void getAllSearchEmptyTest() throws IOException {
         List<BookDto> bookDtoList = JsonTool.parseBooksJsonResponse(jsonResults);
 
-        Page<BookDto> result = service.getAll(0, 10, search);
+        Page<BookDto> result = service.getAll(0, 10, "");
 
         assertEquals(40, bookDtoList.size());
         assertEquals(result.stream().toList().get(0).getId(), bookDtoList.get(0).getId());
@@ -58,7 +61,7 @@ class GoogleBooksApiServiceImplTest {
     }
 
     @Test
-    public void getAllLivresSearchValuedTest() throws IOException {
+    public void getAllSearchValuedTest() throws IOException {
         String search1 = "inauthor:Stephen King"; //recherche google API uniquement sur l'auteur
         String search2 = "Java";
 
@@ -75,6 +78,14 @@ class GoogleBooksApiServiceImplTest {
         assertTrue(result2.stream().toList().get(5).getTitle().contains(search2));
         assertTrue(result2.stream().toList().get(6).getTitle().contains(search2));
         assertTrue(result2.stream().toList().get(8).getTitle().contains(search2));
+    }
+
+    @Test
+    public void getAllExceptionTest() {
+        jsonResults = jsonResults.replaceFirst("\\{", "[");
+        JsonProcessingException exception = assertThrows(JsonProcessingException.class, () ->
+                JsonTool.parseBooksJsonResponse(jsonResults));
+        assertTrue(exception.getMessage().contains("Unexpected character"));
     }
 
 }
