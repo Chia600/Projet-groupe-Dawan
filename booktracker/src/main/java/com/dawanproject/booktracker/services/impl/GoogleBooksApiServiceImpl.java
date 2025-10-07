@@ -12,7 +12,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Service d'appel à l'API Google Books
@@ -59,5 +61,20 @@ public class GoogleBooksApiServiceImpl implements GoogleBooksApiService {
 
         return new PageImpl<>(pageContent, pageRequest, bookDtoList.size());
 
+    }
+
+    /** Nouvelle méthode : récupère un seul livre via l’API Google
+     *
+     * @param googleBookId Id d'un livre
+     * @return BookDto
+     * @throws JsonProcessingException
+     */
+    @Override
+    public BookDto getBookById(String googleBookId) throws JsonProcessingException {
+        String url = googleBookApiUrl + "/" + googleBookId;
+        RestClient rc = RestClient.create();
+        String response = rc.get().uri(url).retrieve().body(String.class);
+        List<BookDto> bookDtoList = JsonTool.parseBooksJsonResponse(response);
+        return bookDtoList.getFirst();
     }
 }

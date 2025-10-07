@@ -7,4 +7,5 @@ public interface GoogleBooksApiService {
 
     Page<BookDto> getAll(int page, int size, String search) throws Exception;
 
+    BookDto getBookById(String googleBookId) throws Exception;
 }
