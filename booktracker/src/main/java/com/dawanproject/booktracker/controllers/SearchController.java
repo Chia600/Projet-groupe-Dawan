@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.info.Info;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,13 +26,13 @@ import java.util.Optional;
 @RequiredArgsConstructor
 
 @RestController
-@RequestMapping("/api/livres")
+@RequestMapping("/api/books")
 public class SearchController {
 
     private final GoogleBooksApiService service;
 
-    @GetMapping(value = {"/{page}/{size}/{search}", "/{page}/{size}"}, produces = "application/json")
-    public ResponseEntity<Page<BookDto>> getAll(@PathVariable(value = "page") int page, @PathVariable("size") int size,
+    @GetMapping(value = {"/{page}/{size}/{search}", "/{page}/{size}"}, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Page<BookDto>> getAll(@PathVariable int page, @PathVariable int size,
                                                 @PathVariable(value = "search", required = false) Optional<String> optional
     ) throws Exception {
 
