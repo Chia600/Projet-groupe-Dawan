@@ -28,51 +28,63 @@ public class JsonTool {
 
         JsonNode rootNode = mapper.readTree(jsonResults);
         JsonNode items = rootNode.path("items");
-        String title;
-        String publicationDate;
-        int pageNumber;
-        String cover;
-        String author;
-        String category;
-        String description;
 
-        for (JsonNode item : items) {
-            Optional opt;
-
-            title = item.path("volumeInfo").path("title").asText();
-            cover = (item.path("volumeInfo").path("imageLinks").path("thumbnail").asText()).split("&zoom=1")[0];
-            pageNumber = item.path("volumeInfo").path("pageCount").asInt();
-            publicationDate = (item.path("volumeInfo").path("publishedDate").asText()).split("-")[0];
-            description = item.path("volumeInfo").path("description").asText();
-
-            opt = item.path("volumeInfo").path("authors").asOptional();
-            if (opt.isEmpty()) {
-                author = "Auteur Inconnu";
-            } else {
-                author = item.path("volumeInfo").path("authors").get(0).asText();
-            }
-
-            opt = item.path("volumeInfo").path("categories").asOptional();
-            if (opt.isEmpty()) {
-                category = "";
-            } else {
-                category = item.path("volumeInfo").path("categories").get(0).asText();
-            }
-
-            BookDto bookDto = BookDto.builder()
-                    .id(id)
-                    .title(title)
-                    .author(author)
-                    .publicationDate(publicationDate)
-                    .cover(cover)
-                    .description(description)
-                    .pageNumber(pageNumber)
-                    .category(category).build();
-
+        if (items.isEmpty()) {
+            BookDto bookDto = getBookDto(rootNode, id);
             bookDtoList.add(bookDto);
-            id++;
+        } else {
+            for (JsonNode item : items) {
+                BookDto bookDto = getBookDto(item, id);
+                bookDtoList.add(bookDto);
+                id++;
+            }
         }
 
         return bookDtoList;
+    }
+
+    private static BookDto getBookDto(JsonNode item, long id) {
+        String publicationDate;
+        String author;
+        String title;
+        String idVolume;
+        String description;
+        String cover;
+        String category;
+        int pageNumber;
+        Optional opt;
+
+        idVolume = item.path("id").asText();
+        title = item.path("volumeInfo").path("title").asText();
+        cover = (item.path("volumeInfo").path("imageLinks").path("thumbnail").asText()).split("&zoom=1")[0];
+        pageNumber = item.path("volumeInfo").path("pageCount").asInt();
+        publicationDate = (item.path("volumeInfo").path("publishedDate").asText()).split("-")[0];
+        description = item.path("volumeInfo").path("description").asText();
+
+        opt = item.path("volumeInfo").path("authors").asOptional();
+        if (opt.isEmpty()) {
+            author = "Auteur Inconnu";
+        } else {
+            author = item.path("volumeInfo").path("authors").get(0).asText();
+        }
+
+        opt = item.path("volumeInfo").path("categories").asOptional();
+        if (opt.isEmpty()) {
+            category = "";
+        } else {
+            category = item.path("volumeInfo").path("categories").get(0).asText();
+        }
+
+        BookDto bookDto = BookDto.builder()
+                .id(id)
+                .title(title)
+                .author(author)
+                .idVolume(idVolume)
+                .publicationDate(publicationDate)
+                .cover(cover)
+                .description(description)
+                .pageNumber(pageNumber)
+                .category(category).build();
+        return bookDto;
     }
 }

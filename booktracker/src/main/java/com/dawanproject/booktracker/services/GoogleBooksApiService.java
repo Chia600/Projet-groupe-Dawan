@@ -5,6 +5,6 @@ import org.springframework.data.domain.Page;
 
 public interface GoogleBooksApiService {
 
-    Page<BookDto> getAllLivres(int page, int size, String search) throws Exception;
+    Page<BookDto> getAll(int page, int size, String search) throws Exception;
 
 }

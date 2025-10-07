@@ -42,7 +42,7 @@ public class SearchController {
             search = "";
         }
 
-        Page<BookDto> customerPage = service.getAllLivres(page, size, search);
+        Page<BookDto> customerPage = service.getAll(page, size, search);
         HttpHeaders headers = new HttpHeaders();
         headers.add("X-Page-Number", String.valueOf(customerPage.getNumber()));
         headers.add("X-Page-Size", String.valueOf(customerPage.getSize()));

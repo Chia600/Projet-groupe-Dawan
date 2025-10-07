@@ -1,0 +1,3170 @@
+{
+  "kind": "books#volumes",
+  "totalItems": 1000000,
+  "items": [
+    {
+      "kind": "books#volume",
+      "id": "5wBQEp6ruIAC",
+      "etag": "HJybjVO4KLE",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/5wBQEp6ruIAC",
+      "volumeInfo": {
+        "title": "The Pragmatic Programmer",
+        "subtitle": "From Journeyman to Master",
+        "authors": [
+          "Andrew Hunt",
+          "David Thomas"
+        ],
+        "publisher": "Addison-Wesley Professional",
+        "publishedDate": "1999-10-20",
+        "description": "What others in the trenches say about The Pragmatic Programmer... “The cool thing about this book is that it’s great for keeping the programming process fresh. The book helps you to continue to grow and clearly comes from people who have been there.” — Kent Beck, author of Extreme Programming Explained: Embrace Change “I found this book to be a great mix of solid advice and wonderful analogies!” — Martin Fowler, author of Refactoring and UML Distilled “I would buy a copy, read it twice, then tell all my colleagues to run out and grab a copy. This is a book I would never loan because I would worry about it being lost.” — Kevin Ruland, Management Science, MSG-Logistics “The wisdom and practical experience of the authors is obvious. The topics presented are relevant and useful.... By far its greatest strength for me has been the outstanding analogies—tracer bullets, broken windows, and the fabulous helicopter-based explanation of the need for orthogonality, especially in a crisis situation. I have little doubt that this book will eventually become an excellent source of useful information for journeymen programmers and expert mentors alike.” — John Lakos, author of Large-Scale C++ Software Design “This is the sort of book I will buy a dozen copies of when it comes out so I can give it to my clients.” — Eric Vought, Software Engineer “Most modern books on software development fail to cover the basics of what makes a great software developer, instead spending their time on syntax or technology where in reality the greatest leverage possible for any software team is in having talented developers who really know their craft well. An excellent book.” — Pete McBreen, Independent Consultant “Since reading this book, I have implemented many of the practical suggestions and tips it contains. Across the board, they have saved my company time and money while helping me get my job done quicker! This should be a desktop reference for everyone who works with code for a living.” — Jared Richardson, Senior Software Developer, iRenaissance, Inc. “I would like to see this issued to every new employee at my company....” — Chris Cleeland, Senior Software Engineer, Object Computing, Inc. “If I’m putting together a project, it’s the authors of this book that I want. . . . And failing that I’d settle for people who’ve read their book.” — Ward Cunningham Straight from the programming trenches, The Pragmatic Programmer cuts through the increasing specialization and technicalities of modern software development to examine the core process--taking a requirement and producing working, maintainable code that delights its users. It covers topics ranging from personal responsibility and career development to architectural techniques for keeping your code flexible and easy to adapt and reuse. Read this book, and you'll learn how to Fight software rot; Avoid the trap of duplicating knowledge; Write flexible, dynamic, and adaptable code; Avoid programming by coincidence; Bullet-proof your code with contracts, assertions, and exceptions; Capture real requirements; Test ruthlessly and effectively; Delight your users; Build teams of pragmatic programmers; and Make your developments more precise with automation. Written as a series of self-contained sections and filled with entertaining anecdotes, thoughtful examples, and interesting analogies, The Pragmatic Programmer illustrates the best practices and major pitfalls of many different aspects of software development. Whether you're a new coder, an experienced programmer, or a manager responsible for software projects, use these lessons daily, and you'll quickly see improvements in personal productivity, accuracy, and job satisfaction. You'll learn skills and develop habits and attitudes that form the foundation for long-term success in your career. You'll become a Pragmatic Programmer.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780132119177"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "013211917X"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 346,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 4.5,
+        "ratingsCount": 7,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "2.20.13.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=5wBQEp6ruIAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=5wBQEp6ruIAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=5wBQEp6ruIAC&printsec=frontcover&dq=subject:Computers&hl=&cd=1&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=5wBQEp6ruIAC&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=5wBQEp6ruIAC"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 42.19,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 28.47,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=5wBQEp6ruIAC&rdid=book-5wBQEp6ruIAC&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 42190000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 28470000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=5wBQEp6ruIAC&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "wL66CILxDLkC",
+      "etag": "0CZNSDWlnms",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/wL66CILxDLkC",
+      "volumeInfo": {
+        "title": "Being Digital",
+        "authors": [
+          "Nicholas Negroponte"
+        ],
+        "publisher": "Vintage",
+        "publishedDate": "1996-01",
+        "description": "A lively exploration of the mysteries of modern technology examines the realities of multimedia, virtual reality, the Internet, CD-ROM, and other innovations; speculates about technology's future; and analyzes the social implications of technology. Reprint. 125,000 first printing.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780679762904"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0679762906"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 255,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 5,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.0.0.preview.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=wL66CILxDLkC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=wL66CILxDLkC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=wL66CILxDLkC&dq=subject:Computers&hl=&cd=2&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=wL66CILxDLkC&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Being_Digital.html?hl=&id=wL66CILxDLkC"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=wL66CILxDLkC&hl=&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "Yq35BY5Fk3gC",
+      "etag": "1FTemG0/MB8",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/Yq35BY5Fk3gC",
+      "volumeInfo": {
+        "title": "The Mythical Man-Month",
+        "subtitle": "Essays on Software Engineering, Anniversary Edition",
+        "authors": [
+          "Frederick P. Brooks Jr."
+        ],
+        "publisher": "Pearson Education",
+        "publishedDate": "1995-08-02",
+        "description": "Few books on software project management have been as influential and timeless as The Mythical Man-Month. With a blend of software engineering facts and thought-provoking opinions, Fred Brooks offers insight for anyone managing complex projects. These essays draw from his experience as project manager for the IBM System/360 computer family and then for OS/360, its massive software system. Now, 20 years after the initial publication of his book, Brooks has revisited his original ideas and added new thoughts and advice, both for readers already familiar with his work and for readers discovering it for the first time. The added chapters contain (1) a crisp condensation of all the propositions asserted in the original book, including Brooks' central argument in The Mythical Man-Month: that large programming projects suffer management problems different from small ones due to the division of labor; that the conceptual integrity of the product is therefore critical; and that it is difficult but possible to achieve this unity; (2) Brooks' view of these propositions a generation later; (3) a reprint of his classic 1986 paper \"No Silver Bullet\"; and (4) today's thoughts on the 1986 assertion, \"There will be no silver bullet within ten years.\"",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780132119160"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0132119161"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 348,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 4.5,
+        "ratingsCount": 6,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "2.19.13.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=Yq35BY5Fk3gC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=Yq35BY5Fk3gC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=Yq35BY5Fk3gC&printsec=frontcover&dq=subject:Computers&hl=&cd=3&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=Yq35BY5Fk3gC&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=Yq35BY5Fk3gC"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 24.25,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 16.98,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=Yq35BY5Fk3gC&rdid=book-Yq35BY5Fk3gC&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 24250000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 16980000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=Yq35BY5Fk3gC&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "620pAgAAQBAJ",
+      "etag": "cQs22JOADjE",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/620pAgAAQBAJ",
+      "volumeInfo": {
+        "title": "The Hard Thing About Hard Things",
+        "subtitle": "Building a Business When There Are No Easy Answers",
+        "authors": [
+          "Ben Horowitz"
+        ],
+        "publisher": "Harper Collins",
+        "publishedDate": "2014-03-04",
+        "description": "Ben Horowitz, cofounder of Andreessen Horowitz and one of Silicon Valley's most respected and experienced entrepreneurs, offers essential advice on building and running a startup—practical wisdom for managing the toughest problems business school doesn’t cover, based on his popular ben’s blog. While many people talk about how great it is to start a business, very few are honest about how difficult it is to run one. Ben Horowitz analyzes the problems that confront leaders every day, sharing the insights he’s gained developing, managing, selling, buying, investing in, and supervising technology companies. A lifelong rap fanatic, he amplifies business lessons with lyrics from his favorite songs, telling it straight about everything from firing friends to poaching competitors, cultivating and sustaining a CEO mentality to knowing the right time to cash in. Filled with his trademark humor and straight talk, The Hard Thing About Hard Things is invaluable for veteran entrepreneurs as well as those aspiring to their own new ventures, drawing from Horowitz's personal and often humbling experiences.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780062273215"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0062273213"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": false
+        },
+        "pageCount": 232,
+        "printType": "BOOK",
+        "categories": [
+          "Business & Economics"
+        ],
+        "averageRating": 3.5,
+        "ratingsCount": 2,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "2.8.11.0.preview.2",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=620pAgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=620pAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=620pAgAAQBAJ&printsec=frontcover&dq=subject:Computers&hl=&cd=4&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=620pAgAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=620pAgAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 17.99,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 17.99,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=620pAgAAQBAJ&rdid=book-620pAgAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 17990000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 17990000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/The_Hard_Thing_About_Hard_Things-sample-epub.acsm?id=620pAgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=620pAgAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "tn3EDwAAQBAJ",
+      "etag": "vPFXzj4GqOE",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/tn3EDwAAQBAJ",
+      "volumeInfo": {
+        "title": "TinyML",
+        "subtitle": "Machine Learning with TensorFlow Lite on Arduino and Ultra-Low-Power Microcontrollers",
+        "authors": [
+          "Pete Warden",
+          "Daniel Situnayake"
+        ],
+        "publisher": "O'Reilly Media",
+        "publishedDate": "2019-12-16",
+        "description": "Deep learning networks are getting smaller. Much smaller. The Google Assistant team can detect words with a model just 14 kilobytes in size—small enough to run on a microcontroller. With this practical book you’ll enter the field of TinyML, where deep learning and embedded systems combine to make astounding things possible with tiny devices. Pete Warden and Daniel Situnayake explain how you can train models small enough to fit into any environment. Ideal for software and hardware developers who want to build embedded systems using machine learning, this guide walks you through creating a series of TinyML projects, step-by-step. No machine learning or microcontroller experience is necessary. Build a speech recognizer, a camera that detects people, and a magic wand that responds to gestures Work with Arduino and ultra-low-power microcontrollers Learn the essentials of ML and how to train your own models Train models to understand audio, image, and accelerometer data Explore TensorFlow Lite for Microcontrollers, Google’s toolkit for TinyML Debug applications and provide safeguards for privacy and security Optimize latency, energy usage, and model and binary size",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781492052012"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1492052019"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 504,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.2.2.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=tn3EDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=tn3EDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=tn3EDwAAQBAJ&printsec=frontcover&dq=subject:Computers&hl=&cd=5&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=tn3EDwAAQBAJ&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/TinyML.html?hl=&id=tn3EDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=tn3EDwAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "j4OQDwAAQBAJ",
+      "etag": "JZP485MLUK4",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/j4OQDwAAQBAJ",
+      "volumeInfo": {
+        "title": "The Squiggly Career",
+        "subtitle": "The No.1 Sunday Times Business Bestseller - Ditch the Ladder, Discover Opportunity, Design Your Career",
+        "authors": [
+          "Helen Tupper",
+          "Sarah Ellis"
+        ],
+        "publisher": "Penguin UK",
+        "publishedDate": "2020-01-09",
+        "description": "THE NO.1 SUNDAY TIMES BUSINESS BESTSELLER 'The Squiggly Career is about navigating work in a way that suits you, it's a timely and brilliant handbook for now' Stylist 'A brilliant guide. Read it and get the tools you need to thrive in your career now and in the future' Marie Forleo, author of Everything is Figureoutable 'Logical, practical and based on tried and tested models' Financial Times's Book of the Month Career ladders and jobs for life are a thing of the past Today, we're living in a world of squiggly careers, where moving frequently and fluidly between roles, industries, locations, and even careers, is becoming the new normal. Squiggly careers can feel stressful and overwhelming, but if you know how to make the most of them, they can be full of opportunity, freedom and purpose. And to make the most of our increasingly squiggly careers we need to answer some important questions: What am I good at? What do I stand for? What motivates and drives me? Where do I want to go in the future? In The Squiggly Career, you'll learn how to: - Play to your super strengths - Discover your values - Overcome your confidence gremlins - Build better support networks - Explore your future possibilities Packed with insights about the changing shape of work and inspiration from highly successful people, this book will fuel your growth and help you be happier, and ultimately more successful in your career.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780241385852"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0241385857"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": false
+        },
+        "pageCount": 198,
+        "printType": "BOOK",
+        "categories": [
+          "Self-Help"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.11.10.0.preview.2",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=j4OQDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=j4OQDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=j4OQDwAAQBAJ&printsec=frontcover&dq=subject:Computers&hl=&cd=6&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=j4OQDwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=j4OQDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 14.99,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 14.99,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=j4OQDwAAQBAJ&rdid=book-j4OQDwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 14990000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 14990000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/The_Squiggly_Career-sample-epub.acsm?id=j4OQDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=j4OQDwAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "UArRb8a5oPYC",
+      "etag": "STVD8ADS/PI",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/UArRb8a5oPYC",
+      "volumeInfo": {
+        "title": "Discovering Statistics Using R",
+        "authors": [
+          "Andy Field",
+          "Jeremy Miles",
+          "Zoë Field"
+        ],
+        "publisher": "SAGE",
+        "publishedDate": "2012-03-31",
+        "description": "The R version of Andy Field's hugely popular Discovering Statistics Using SPSS takes students on a journey of statistical discovery using the freeware R. Like its sister textbook, Discovering Statistics Using R is written in an irreverent style and follows the same ground-breaking structure and pedagogical approach. The core material is enhanced by a cast of characters to help the reader on their way, hundreds of examples, self-assessment tests to consolidate knowledge, and additional website material for those wanting to learn more.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781446200452"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1446200450"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 994,
+        "printType": "BOOK",
+        "categories": [
+          "Social Science"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.2.2.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=UArRb8a5oPYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=UArRb8a5oPYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=UArRb8a5oPYC&printsec=frontcover&dq=subject:Computers&hl=&cd=7&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=UArRb8a5oPYC&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Discovering_Statistics_Using_R.html?hl=&id=UArRb8a5oPYC"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Discovering_Statistics_Using_R-sample-pdf.acsm?id=UArRb8a5oPYC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=UArRb8a5oPYC&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "AuGYVSo64qoC",
+      "etag": "SdHKhydByRk",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/AuGYVSo64qoC",
+      "volumeInfo": {
+        "title": "Structural Equation Modeling with LISREL",
+        "subtitle": "Essentials and Advances",
+        "authors": [
+          "Leslie A. Hayduk"
+        ],
+        "publisher": "JHU Press",
+        "publishedDate": "1987",
+        "description": "Hayduk is equally at ease explaining the simplest and most advanced applications of the program . . . Hayduk has written more than just a solid text for use in advanced graduate courses on statistical modeling. Those with a firm mathematical background who wish to learn about the approach, or those who know a little about the program and want to know more, will find this an excellent reference.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0801834783"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780801834783"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 430,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 5,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.8.8.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=AuGYVSo64qoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=AuGYVSo64qoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=AuGYVSo64qoC&printsec=frontcover&dq=subject:Computers&hl=&cd=8&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=AuGYVSo64qoC&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Structural_Equation_Modeling_with_LISREL.html?hl=&id=AuGYVSo64qoC"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Structural_Equation_Modeling_with_LISREL-sample-pdf.acsm?id=AuGYVSo64qoC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=AuGYVSo64qoC&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "0SNXgnx6un4C",
+      "etag": "Xw00958BFeQ",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/0SNXgnx6un4C",
+      "volumeInfo": {
+        "title": "Fundamentals of Optical Waveguides",
+        "authors": [
+          "Katsunari Okamoto"
+        ],
+        "publisher": "Academic Press",
+        "publishedDate": "2006",
+        "description": "Fundamentals of Optical Waveguides is an essential resource for any researcher, professional or student involved in optics and communications engineering. Any reader interested in designing or actively working with optical devices must have a firm grasp of the principles of lightwave propagation. Katsunari Okamoto has presented this difficult technology clearly and concisely with several illustrations and equations. Optical theory encompassed in this reference includes coupled mode theory, nonlinear optical effects, finite element method, beam propagation method, staircase concatenation method, along with several central theorems and formulas. Since the publication of the well-received first edition of this book, planar lightwave circuits and photonic crystal fibers have fully matured. With this second edition the advances of these fibers along with other improvements on existing optical technologies are completely detailed. This comprehensive volume enables readers to fully analyze, design and simulate optical atmospheres. Features: + Exceptional new chapter on Arrayed-Waveguide Grating (AWG) + In depth discussion of Photonic Crystal Fibers (PCFs) + Thorough explanation of Multimode Interference Devices (MMI) + Full coverage of polarization Mode Dispersion (PMD) About the Author: Katsunari Okamoto was born in Hiroshima, Japan, on October 19, 1949. He received the B.S., M.S., and Ph.D. in electronic engineering from Tokyo University, Japan, in 1972, 1974, and 1977, respectively. He has engaged in research on the transmission characteristics of various fibers, including PANDA fibers, as well as fiber-optic components, and proposed the idea of dispersion-flattened fibers (DFF) on which he has also experimented. Dr. Okamoto has worked for the Optical Fiber Group in Southampton, England and the NTT Photonics Laboratories at the Ibaraki R&D Center, where he developed various AWGs and integrated-optic add/drop multiplexers. He is a fellow of IEEE and a research fellow of NTT Science and Core Technology Laboratory Group. In 2003, he started Okamoto Laboratory Ltd. Okamoto Laboratory is an R&D consulting company that deals with the custom design of optical fibers and functional planar lightwave circuits.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780125250962"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0125250967"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 579,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 4,
+        "ratingsCount": 3,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.4.1.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=0SNXgnx6un4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=0SNXgnx6un4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=0SNXgnx6un4C&printsec=frontcover&dq=subject:Computers&hl=&cd=9&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=0SNXgnx6un4C&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Fundamentals_of_Optical_Waveguides.html?hl=&id=0SNXgnx6un4C"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Fundamentals_of_Optical_Waveguides-sample-pdf.acsm?id=0SNXgnx6un4C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=0SNXgnx6un4C&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "NnM-uISyywAC",
+      "etag": "2Andv0XE6To",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/NnM-uISyywAC",
+      "volumeInfo": {
+        "title": "Cybernetics Or Control and Communication in the Animal and the Machine",
+        "authors": [
+          "Norbert Wiener"
+        ],
+        "publisher": "MIT Press",
+        "publishedDate": "1961",
+        "description": "It appers impossible for anyone seriously interested in our civilization to ignore this book. It is a 'must' book for those in every branch of science . . . in addition, economists, politicians, statesmen, and businessmen cannot afford to overlook cybernetics and its tremendous, even terrifying implications.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "026273009X"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780262730099"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 244,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 5,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.4.7.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=NnM-uISyywAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=NnM-uISyywAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=NnM-uISyywAC&printsec=frontcover&dq=subject:Computers&hl=&cd=10&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=NnM-uISyywAC&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Cybernetics_Or_Control_and_Communication.html?hl=&id=NnM-uISyywAC"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Cybernetics_Or_Control_and_Communication-sample-pdf.acsm?id=NnM-uISyywAC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=NnM-uISyywAC&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "v8DaAAAAMAAJ",
+      "etag": "aV8qWKoRwOQ",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/v8DaAAAAMAAJ",
+      "volumeInfo": {
+        "title": "Darwin Among The Machines",
+        "subtitle": "The Evolution Of Global Intelligence",
+        "authors": [
+          "George Dyson"
+        ],
+        "publisher": "Addison Wesley Publishing Company",
+        "publishedDate": "1997-05",
+        "description": "In this astonishing prediction of the World Wide Web's ultimate challenge to human civilization--a globally networked, electronic, sentient being--Dyson traces the course of the information revolution, illuminating the lives, work, and ideas of visionaries who foresaw the development of artificial intelligence, artificial life, and the global mind.",
+        "industryIdentifiers": [
+          {
+            "type": "OTHER",
+            "identifier": "UOM:39015041310320"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 312,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.5.1.0.preview.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=v8DaAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=v8DaAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=v8DaAAAAMAAJ&dq=subject:Computers&hl=&cd=11&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=v8DaAAAAMAAJ&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Darwin_Among_The_Machines.html?hl=&id=v8DaAAAAMAAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=v8DaAAAAMAAJ&hl=&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "56mb7XuSx3QC",
+      "etag": "jJtPfey8yOE",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/56mb7XuSx3QC",
+      "volumeInfo": {
+        "title": "Mind Children",
+        "subtitle": "The Future of Robot and Human Intelligence",
+        "authors": [
+          "Hans Moravec"
+        ],
+        "publisher": "Harvard University Press",
+        "publishedDate": "1988",
+        "description": "\"A dizzying display of intellect and wild imaginings by Moravec, a world-class roboticist who has himself developed clever beasts . . . Undeniably, Moravec comes across as a highly knowledgeable and creative talent--which is just what the field needs\".--Kirkus Reviews.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0674576187"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780674576186"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 228,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 5,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.4.7.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=56mb7XuSx3QC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=56mb7XuSx3QC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=56mb7XuSx3QC&printsec=frontcover&dq=subject:Computers&hl=&cd=12&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=56mb7XuSx3QC&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Mind_Children.html?hl=&id=56mb7XuSx3QC"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Mind_Children-sample-epub.acsm?id=56mb7XuSx3QC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Mind_Children-sample-pdf.acsm?id=56mb7XuSx3QC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=56mb7XuSx3QC&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "duTODldZzRcC",
+      "etag": "1zneiytJTzg",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/duTODldZzRcC",
+      "volumeInfo": {
+        "title": "Modern Multidimensional Scaling",
+        "subtitle": "Theory and Applications",
+        "authors": [
+          "I. Borg",
+          "P. J. F. Groenen"
+        ],
+        "publisher": "Springer Science & Business Media",
+        "publishedDate": "2005-08-04",
+        "description": "The first edition was released in 1996 and has sold close to 2200 copies. Provides an up-to-date comprehensive treatment of MDS, a statistical technique used to analyze the structure of similarity or dissimilarity data in multidimensional space. The authors have added three chapters and exercise sets. The text is being moved from SSS to SSPP. The book is suitable for courses in statistics for the social or managerial sciences as well as for advanced courses on MDS. All the mathematics required for more advanced topics is developed systematically in the text.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0387251502"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780387251509"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 540,
+        "printType": "BOOK",
+        "categories": [
+          "Social Science"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.4.1.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=duTODldZzRcC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=duTODldZzRcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=duTODldZzRcC&printsec=frontcover&dq=subject:Computers&hl=&cd=13&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=duTODldZzRcC&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Modern_Multidimensional_Scaling.html?hl=&id=duTODldZzRcC"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Modern_Multidimensional_Scaling-sample-pdf.acsm?id=duTODldZzRcC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=duTODldZzRcC&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "PW3_EAAAQBAJ",
+      "etag": "48+LTr3+FuU",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/PW3_EAAAQBAJ",
+      "volumeInfo": {
+        "title": "The Lady from the Sea",
+        "authors": [
+          "Henrik Ibsen"
+        ],
+        "publisher": "BoD - Books on Demand",
+        "publishedDate": "2024-04-05",
+        "description": "The Lady from the Sea\" is a play written by Henrik Ibsen, first performed in 1888. Set in a small Norwegian coastal town, the play explores themes of duty, freedom, and personal fulfillment. The story revolves around Ellida Wangel, the lady of the sea, who is trapped in a marriage to Dr. Wangel, a widower with two daughters. Ellida feels a deep connection to the sea and longs for the freedom it represents. Her sense of unease is compounded by the arrival of a mysterious stranger, the Stranger, who claims to have a previous connection to Ellida. As the play unfolds, Ellida is torn between her sense of duty to her family and her desire for personal autonomy. The presence of the Stranger awakens conflicting emotions within her, leading to a series of dramatic confrontations and revelations.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9791041996094"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 102,
+        "printType": "BOOK",
+        "categories": [
+          "Poetry"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.2.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=PW3_EAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=PW3_EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=PW3_EAAAQBAJ&printsec=frontcover&dq=subject:Computers&hl=&cd=14&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=PW3_EAAAQBAJ&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Lady_from_the_Sea.html?hl=&id=PW3_EAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/The_Lady_from_the_Sea-sample-pdf.acsm?id=PW3_EAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=PW3_EAAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "KfodEAAAQBAJ",
+      "etag": "v4s3bXmiJAU",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/KfodEAAAQBAJ",
+      "volumeInfo": {
+        "title": "The Atlas of AI",
+        "subtitle": "Power, Politics, and the Planetary Costs of Artificial Intelligence",
+        "authors": [
+          "Kate Crawford"
+        ],
+        "publisher": "Yale University Press",
+        "publishedDate": "2021-04-06",
+        "description": "The hidden costs of artificial intelligence, from natural resources and labor to privacy and freedom What happens when artificial intelligence saturates political life and depletes the planet? How is AI shaping our understanding of ourselves and our societies? In this book Kate Crawford reveals how this planetary network is fueling a shift toward undemocratic governance and increased inequality. Drawing on more than a decade of research, award-winning science, and technology, Crawford reveals how AI is a technology of extraction: from the energy and minerals needed to build and sustain its infrastructure, to the exploited workers behind \"automated\" services, to the data AI collects from us. Rather than taking a narrow focus on code and algorithms, Crawford offers us a political and a material perspective on what it takes to make artificial intelligence and where it goes wrong. While technical systems present a veneer of objectivity, they are always systems of power. This is an urgent account of what is at stake as technology companies use artificial intelligence to reshape the world.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780300209570"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0300209576"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 336,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.2.0.preview.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=KfodEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=KfodEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=KfodEAAAQBAJ&printsec=frontcover&dq=subject:Computers&hl=&cd=15&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=KfodEAAAQBAJ&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Atlas_of_AI.html?hl=&id=KfodEAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=KfodEAAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "fpSpDQAAQBAJ",
+      "etag": "XDZFi0daBTU",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/fpSpDQAAQBAJ",
+      "volumeInfo": {
+        "title": "Network Security Assessment",
+        "subtitle": "Know Your Network",
+        "authors": [
+          "Chris McNab"
+        ],
+        "publisher": "\"O'Reilly Media, Inc.\"",
+        "publishedDate": "2016-12-06",
+        "description": "How secure is your network? The best way to find out is to attack it, using the same tactics attackers employ to identify and exploit weaknesses. With the third edition of this practical book, you’ll learn how to perform network-based penetration testing in a structured manner. Security expert Chris McNab demonstrates common vulnerabilities, and the steps you can take to identify them in your environment. System complexity and attack surfaces continue to grow. This book provides a process to help you mitigate risks posed to your network. Each chapter includes a checklist summarizing attacker techniques, along with effective countermeasures you can use immediately. Learn how to effectively test system components, including: Common services such as SSH, FTP, Kerberos, SNMP, and LDAP Microsoft services, including NetBIOS, SMB, RPC, and RDP SMTP, POP3, and IMAP email services IPsec and PPTP services that provide secure network access TLS protocols and features providing transport security Web server software, including Microsoft IIS, Apache, and Nginx Frameworks including Rails, Django, Microsoft ASP.NET, and PHP Database servers, storage protocols, and distributed key-value stores",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781491911068"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1491911069"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 493,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.1.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=fpSpDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=fpSpDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=fpSpDQAAQBAJ&printsec=frontcover&dq=subject:Computers&hl=&cd=16&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=fpSpDQAAQBAJ&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Network_Security_Assessment.html?hl=&id=fpSpDQAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=fpSpDQAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "wCmzAAAAIAAJ",
+      "etag": "YI5SZei35y0",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/wCmzAAAAIAAJ",
+      "volumeInfo": {
+        "title": "Pascal User Manual and Report",
+        "authors": [
+          "Kathleen Jensen",
+          "Niklaus Wirth"
+        ],
+        "publisher": "Springer",
+        "publishedDate": "1985",
+        "description": "Software -- Programming Languages.",
+        "industryIdentifiers": [
+          {
+            "type": "OTHER",
+            "identifier": "UCAL:B4340327"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 292,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.4.2.0.preview.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=wCmzAAAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=wCmzAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=wCmzAAAAIAAJ&dq=subject:Computers&hl=&cd=17&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=wCmzAAAAIAAJ&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Pascal_User_Manual_and_Report.html?hl=&id=wCmzAAAAIAAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=wCmzAAAAIAAJ&hl=&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "El4TAgAAQBAJ",
+      "etag": "wKZ7wneoDM8",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/El4TAgAAQBAJ",
+      "volumeInfo": {
+        "title": "Python & XML",
+        "subtitle": "XML Processing with Python",
+        "authors": [
+          "Christopher A. Jones",
+          "Fred L. Drake Jr"
+        ],
+        "publisher": "\"O'Reilly Media, Inc.\"",
+        "publishedDate": "2001-12-18",
+        "description": "If you are a Python programmer who wants to incorporate XML into your skill set, this is the book for you. Python has attracted a wide variety of developers, who use it either as glue to connect critical programming tasks together, or as a complete cross-platform application development language. Yet, because it is object-oriented and has powerful text manipulation abilities, Python is an ideal language for manipulating XML.Python & XML gives you a solid foundation for using these two languages together. Loaded with practical examples, this new volume highlights common application tasks, so that you can learn by doing. The book starts with the basics then quickly progresses to complex topics, like transforming XML with XSLT, querying XML with XPath, and working with XML dialects and validation. It also explores the more advanced issues: using Python with SOAP and distributed web services, and using Python to create scalable streams between distributed applications (like databases and web servers).The book provides effective practical applications, while referencing many of the tools involved in XML processing and Python, and highlights cross-platform issues along with tasks relevant to enterprise computing. You will find ample coverage of XML flow analysis and details on ways in which you can transport XML through your network.Whether you are using Python as an application language, or as an administrative or middleware scripting language, you are sure to benefit from this book. If you want to use Python to manipulate XML, this is your guide.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781491948866"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1491948868"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 380,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.2.2.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=El4TAgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=El4TAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=El4TAgAAQBAJ&printsec=frontcover&dq=subject:Computers&hl=&cd=18&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=El4TAgAAQBAJ&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Python_XML.html?hl=&id=El4TAgAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=El4TAgAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "QvRgDwAAQBAJ",
+      "etag": "JTJhigRmWyQ",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/QvRgDwAAQBAJ",
+      "volumeInfo": {
+        "title": "Human Impact on the Natural Environment",
+        "subtitle": "Past, Present and Future",
+        "authors": [
+          "Andrew S. Goudie"
+        ],
+        "publisher": "John Wiley & Sons",
+        "publishedDate": "2018-06-19",
+        "description": "A brand new edition of the definitive textbook on humankind’s impact on the Earth’s environment—now in full color This classic text explores the multitude of impacts that humans have had over time upon vegetation, animals, soils, water, landforms, and the atmosphere. It considers the ways in which climate changes and modifications in land cover may change the environment in coming decades. Thoroughly revised to cover the remarkable transformation in interest that humans are having in the environment, this book examines previously uncovered topics, such as rewilding, ecosystem services, techniques for study, novel and no analogue ecosystems, and more. It also presents the latest views on big themes such as human origins, the anthropocene, domestication, extinctions, and ecological invasions. Extensively re-written, Human Impact on the Natural Environment, Eighth Edition contains many new and updated statistical tables, figures, and references. It offers enlightening chapters that look at the past and present state of the world—examining our impact on the land itself and the creatures that inhabit it; the oceans, lakes, rivers and streams; and the climate and atmosphere. The book also takes a deep look at our future impact on the planet and its resources—our affect on the coastal environments, the cryosphere and the drylands, as well as the hydrological and geomorphological impacts. Fully updated to take account of recent advances in our understanding of global warming and other phenomena Offers current opinions on such topics as human origins, the anthropocene, domestication, extinctions, and ecological invasions Features a full-color presentation to allow for more and clearer photographs and diagrams Contains more international case studies than previous editions to balance UK examples Human Impact on the Natural Environment is essential reading for undergraduates in geography and environmental science, and for those who want a thorough, wide-ranging and balanced overview of the impacts of humans upon natural processes and systems from the Stone Age to the Anthropocene and who wish to understand the major environmental issues that concern the human race at the present time.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781119403739"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1119403731"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 977,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "0.1.1.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=QvRgDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=QvRgDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=QvRgDwAAQBAJ&printsec=frontcover&dq=subject:Computers&hl=&cd=19&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=QvRgDwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=QvRgDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 53.99,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 53.99,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=QvRgDwAAQBAJ&rdid=book-QvRgDwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 53990000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 53990000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Human_Impact_on_the_Natural_Environment-sample-epub.acsm?id=QvRgDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Human_Impact_on_the_Natural_Environment-sample-pdf.acsm?id=QvRgDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=QvRgDwAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "hJX7EAAAQBAJ",
+      "etag": "gloNCn5oj7M",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/hJX7EAAAQBAJ",
+      "volumeInfo": {
+        "title": "Hermann and Dorothea",
+        "authors": [
+          "Wolfgang Johann Von Goethe"
+        ],
+        "publisher": "BoD - Books on Demand",
+        "publishedDate": "2024-03-17",
+        "description": "\"Hermann and Dorothea\" by Johann Wolfgang von Goethe is a timeless epic poem that unfolds against the backdrop of rural Germany. Set during a time of social upheaval and political change, Goethe's narrative follows the love story of Hermann and Dorothea, two young individuals from different social classes. As their romance blossoms amidst the chaos of the French Revolution, Goethe weaves a rich tapestry of themes including love, friendship, and the search for identity. Through vivid descriptions and lyrical language, he captures the essence of small-town life, while also addressing larger societal issues of the time. \"Hermann and Dorothea\" stands as a masterpiece of German literature, showcasing Goethe's unparalleled skill in blending the personal and the political into a captivating narrative that continues to resonate with readers today.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9791041989065"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 68,
+        "printType": "BOOK",
+        "categories": [
+          "Poetry"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.2.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=hJX7EAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=hJX7EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=hJX7EAAAQBAJ&printsec=frontcover&dq=subject:Computers&hl=&cd=20&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=hJX7EAAAQBAJ&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Hermann_and_Dorothea.html?hl=&id=hJX7EAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Hermann_and_Dorothea-sample-pdf.acsm?id=hJX7EAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=hJX7EAAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "tjOlkl7ecVQC",
+      "etag": "4ohL2QWCihw",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/tjOlkl7ecVQC",
+      "volumeInfo": {
+        "title": "Elements of Programming",
+        "authors": [
+          "Alexander A. Stepanov",
+          "Paul McJones"
+        ],
+        "publisher": "Addison-Wesley Professional",
+        "publishedDate": "2009",
+        "description": "A truly foundational book on the discipline of generic programming reveals how to write better software by mastering the development of abstract components. The authors show programmers how to use mathematics to compose reliable algorithms from components, and to design effective interfaces between algorithms and data structures.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780321635372"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "032163537X"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 279,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.2.1.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=tjOlkl7ecVQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=tjOlkl7ecVQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=tjOlkl7ecVQC&printsec=frontcover&dq=subject:Computers&hl=&cd=21&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=tjOlkl7ecVQC&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Elements_of_Programming.html?hl=&id=tjOlkl7ecVQC"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=tjOlkl7ecVQC&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "SmDImt1zHXkC",
+      "etag": "OpRvg+bmBFM",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/SmDImt1zHXkC",
+      "volumeInfo": {
+        "title": "The Circuits and Filters Handbook",
+        "authors": [
+          "Wai-Kai Chen"
+        ],
+        "publisher": "CRC Press",
+        "publishedDate": "2002-12-23",
+        "description": "A bestseller in its first edition, The Circuits and Filters Handbook has been thoroughly updated to provide the most current, most comprehensive information available in both the classical and emerging fields of circuits and filters, both analog and digital. This edition contains 29 new chapters, with significant additions in the areas of computer-",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "1420041401"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9781420041408"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 3074,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 5,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.9.12.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=SmDImt1zHXkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=SmDImt1zHXkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=SmDImt1zHXkC&printsec=frontcover&dq=subject:Computers&hl=&cd=22&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=SmDImt1zHXkC&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Circuits_and_Filters_Handbook.html?hl=&id=SmDImt1zHXkC"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/The_Circuits_and_Filters_Handbook-sample-pdf.acsm?id=SmDImt1zHXkC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=SmDImt1zHXkC&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "nMwVDAAAQBAJ",
+      "etag": "T5OPpkl8Qrw",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/nMwVDAAAQBAJ",
+      "volumeInfo": {
+        "title": "The Official (ISC)2 Guide to the SSCP CBK",
+        "authors": [
+          "Adam Gordon",
+          "Steven Hernandez"
+        ],
+        "publisher": "John Wiley & Sons",
+        "publishedDate": "2016-04-27",
+        "description": "The fourth edition of the Official (ISC)2® Guide to the SSCP CBK® is a comprehensive resource providing an in-depth look at the seven domains of the SSCP Common Body of Knowledge (CBK). This latest edition provides an updated, detailed guide that is considered one of the best tools for candidates striving to become an SSCP. The book offers step-by-step guidance through each of SSCP’s domains, including best practices and techniques used by the world's most experienced practitioners. Endorsed by (ISC)2 and compiled and reviewed by SSCPs and subject matter experts, this book brings together a global, thorough perspective to not only prepare for the SSCP exam, but it also provides a reference that will serve you well into your career.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781119278658"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1119278651"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 841,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.4.2.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=nMwVDAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=nMwVDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=nMwVDAAAQBAJ&printsec=frontcover&dq=subject:Computers&hl=&cd=23&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=nMwVDAAAQBAJ&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Official_ISC_2_Guide_to_the_SSCP_CBK.html?hl=&id=nMwVDAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/The_Official_ISC_2_Guide_to_the_SSCP_CBK-sample-epub.acsm?id=nMwVDAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/The_Official_ISC_2_Guide_to_the_SSCP_CBK-sample-pdf.acsm?id=nMwVDAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=nMwVDAAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "r2C1DwAAQBAJ",
+      "etag": "OhLnSwWwmVM",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/r2C1DwAAQBAJ",
+      "volumeInfo": {
+        "title": "Machines Who Think",
+        "subtitle": "A Personal Inquiry into the History and Prospects of Artificial Intelligence",
+        "authors": [
+          "Pamela McCorduck",
+          "Cli Cfe"
+        ],
+        "publisher": "CRC Press",
+        "publishedDate": "2004-03-17",
+        "description": "This book is a history of artificial intelligence, that audacious effort to duplicate in an artifact what we consider to be our most important property—our intelligence. It is an invitation for anybody with an interest in the future of the human race to participate in the inquiry.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781000065299"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1000065294"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 599,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "0.2.3.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=r2C1DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=r2C1DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=r2C1DwAAQBAJ&printsec=frontcover&dq=subject:Computers&hl=&cd=24&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=r2C1DwAAQBAJ&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Machines_Who_Think.html?hl=&id=r2C1DwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Machines_Who_Think-sample-pdf.acsm?id=r2C1DwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=r2C1DwAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "vbQlDQAAQBAJ",
+      "etag": "mABkeq4tkXY",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/vbQlDQAAQBAJ",
+      "volumeInfo": {
+        "title": "Introduction to Machine Learning with Python",
+        "subtitle": "A Guide for Data Scientists",
+        "authors": [
+          "Andreas C. Müller",
+          "Sarah Guido"
+        ],
+        "publisher": "\"O'Reilly Media, Inc.\"",
+        "publishedDate": "2016-09-26",
+        "description": "Machine learning has become an integral part of many commercial applications and research projects, but this field is not exclusive to large companies with extensive research teams. If you use Python, even as a beginner, this book will teach you practical ways to build your own machine learning solutions. With all the data available today, machine learning applications are limited only by your imagination. You’ll learn the steps necessary to create a successful machine-learning application with Python and the scikit-learn library. Authors Andreas Müller and Sarah Guido focus on the practical aspects of using machine learning algorithms, rather than the math behind them. Familiarity with the NumPy and matplotlib libraries will help you get even more from this book. With this book, you’ll learn: Fundamental concepts and applications of machine learning Advantages and shortcomings of widely used machine learning algorithms How to represent data processed by machine learning, including which data aspects to focus on Advanced methods for model evaluation and parameter tuning The concept of pipelines for chaining models and encapsulating your workflow Methods for working with text data, including text-specific processing techniques Suggestions for improving your machine learning and data science skills",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781449369897"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1449369898"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 429,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 3.5,
+        "ratingsCount": 3,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "3.12.10.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=vbQlDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=vbQlDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=vbQlDQAAQBAJ&printsec=frontcover&dq=subject:Computers&hl=&cd=25&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=vbQlDQAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=vbQlDQAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 40.62,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 40.62,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=vbQlDQAAQBAJ&rdid=book-vbQlDQAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 40620000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 40620000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=vbQlDQAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "pXDzdJ_1E3oC",
+      "etag": "EF1uzd7yDik",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/pXDzdJ_1E3oC",
+      "volumeInfo": {
+        "title": "Practical C++ Programming",
+        "authors": [
+          "Steve Oualline"
+        ],
+        "publisher": "\"O'Reilly Media, Inc.\"",
+        "publishedDate": "2003",
+        "description": "Practical C++ Programming thoroughly covers: C++ syntax · Coding standards and style · Creation and use of object classes · Templates · Debugging and optimization · Use of the C++ preprocessor · File input/output",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780596004194"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0596004192"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 574,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 4,
+        "ratingsCount": 19,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.6.2.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=pXDzdJ_1E3oC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=pXDzdJ_1E3oC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=pXDzdJ_1E3oC&printsec=frontcover&dq=subject:Computers&hl=&cd=26&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=pXDzdJ_1E3oC&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Practical_C++_Programming.html?hl=&id=pXDzdJ_1E3oC"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=pXDzdJ_1E3oC&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "4UbaEAAAQBAJ",
+      "etag": "eE4cz68et/o",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/4UbaEAAAQBAJ",
+      "volumeInfo": {
+        "title": "Analytical Corporate Finance",
+        "authors": [
+          "Angelo Corelli"
+        ],
+        "publisher": "Springer Nature",
+        "publishedDate": "2023-09-29",
+        "description": "This book draws readers’ attention to the financial aspects of daily life at a corporation by combining a robust mathematical setting and the explanation and derivation of the most popular models of the firm. Intended for third-year undergraduate students of business finance, quantitative finance, and financial mathematics, as well as first-year postgraduate students, it is based on the twin pillars of theory and analytics, which merge in a way that makes it easy for students to understand the exact meaning of the concepts and their representation and applicability in real-world contexts. Examples are given throughout the chapters in order to clarify the most intricate aspects; where needed, there are appendices at the end of chapters, offering additional mathematical insights into specific topics. Due to the recent growth in knowledge demand in the private sector, practitioners can also profit from the book as a bridge-builder between university and industry. Lastly, the book provides useful information for managers who want to deepen their understanding of risk management and come to recognize what may have been lacking in their own systems.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9783031323195"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "303132319X"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 515,
+        "printType": "BOOK",
+        "categories": [
+          "Business & Economics"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.2.2.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=4UbaEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=4UbaEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=4UbaEAAAQBAJ&printsec=frontcover&dq=subject:Computers&hl=&cd=27&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=4UbaEAAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=4UbaEAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 147.69,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 103.38,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=4UbaEAAAQBAJ&rdid=book-4UbaEAAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 147690000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 103380000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Analytical_Corporate_Finance-sample-epub.acsm?id=4UbaEAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Analytical_Corporate_Finance-sample-pdf.acsm?id=4UbaEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=4UbaEAAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "R__hfWbE3DwC",
+      "etag": "U/Ll5rCr5Bk",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/R__hfWbE3DwC",
+      "volumeInfo": {
+        "title": "Children, Risk and Safety on the Internet",
+        "subtitle": "Research and Policy Challenges in Comparative Perspective",
+        "authors": [
+          "Sonia M. Livingstone",
+          "Leslie Haddon",
+          "Anke Gorzig"
+        ],
+        "publisher": "Policy Press",
+        "publishedDate": "2012",
+        "description": "Based on an impressive in-depth survey of 25,000 children carried out by the EU Kids Online network, this timely book examines the prospect for young internet users of enhanced opportunities for learning, creativity and communication set against the fear of cyberbullying, pornography and invaded privacy.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781847428820"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1847428827"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 408,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.2.2.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=R__hfWbE3DwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=R__hfWbE3DwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=R__hfWbE3DwC&printsec=frontcover&dq=subject:Computers&hl=&cd=28&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=R__hfWbE3DwC&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Children_Risk_and_Safety_on_the_Internet.html?hl=&id=R__hfWbE3DwC"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Children_Risk_and_Safety_on_the_Internet-sample-pdf.acsm?id=R__hfWbE3DwC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=R__hfWbE3DwC&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "L81Gkb0z3UUC",
+      "etag": "MqROC2xFQn0",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/L81Gkb0z3UUC",
+      "volumeInfo": {
+        "title": "Audio Sampling",
+        "subtitle": "A Practical Guide",
+        "authors": [
+          "Sam McGuire",
+          "Roy Pritts"
+        ],
+        "publisher": "Taylor & Francis",
+        "publishedDate": "2008",
+        "description": "Bringing sampling to a new generation of audio engineers and composers Audio Sampling explains how to record and create sampled instruments in a software setting. There are many things that go into creating a sampled instrument and many things that can go wrong, this book is a step by step guide through the process, from introducing sampling, where it begins to recording editing and using samples, providing much sought after detailed information on the actual process of sampling, creating sampled instruments as well as the different ways they can be used. The software used is the NN-XT a sampler that is a part of the Reason studio software and ProTools LE, however the material discussed is applicable and can be used with any sampler. The companion website has exclusive material including a comprehensive comparison of the different hardware software available, as well as audio examples and video clips from each stage of the process",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780240520735"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0240520734"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 232,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "3.6.6.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=L81Gkb0z3UUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=L81Gkb0z3UUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=L81Gkb0z3UUC&printsec=frontcover&dq=subject:Computers&hl=&cd=29&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=L81Gkb0z3UUC&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Audio_Sampling.html?hl=&id=L81Gkb0z3UUC"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Audio_Sampling-sample-pdf.acsm?id=L81Gkb0z3UUC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=L81Gkb0z3UUC&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "3TAKAgAAQBAJ",
+      "etag": "BjA7T6i0Iyk",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/3TAKAgAAQBAJ",
+      "volumeInfo": {
+        "title": "Theory of Fun for Game Design",
+        "authors": [
+          "Raph Koster"
+        ],
+        "publisher": "\"O'Reilly Media, Inc.\"",
+        "publishedDate": "2013-11-08",
+        "description": "Now in full color, the 10th anniversary edition of this classic book takes you deep into the influences that underlie modern video games, and examines the elements they share with traditional games such as checkers. At the heart of his exploration, veteran game designer Raph Koster takes a close look at the concept of fun and why it’s the most vital element in any game. Why do some games become boring quickly, while others remain fun for years? How do games serve as fundamental and powerful learning tools? Whether you’re a game developer, dedicated gamer, or curious observer, this illustrated, fully updated edition helps you understand what drives this major cultural force, and inspires you to take it further. You’ll discover that: Games play into our innate ability to seek patterns and solve puzzles Most successful games are built upon the same elements Slightly more females than males now play games Many games still teach primitive survival skills Fictional dressing for modern games is more developed than the conceptual elements Truly creative designers seldom use other games for inspiration Games are beginning to evolve beyond their prehistoric origins",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781449363178"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1449363172"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 292,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.4.4.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=3TAKAgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=3TAKAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=3TAKAgAAQBAJ&printsec=frontcover&dq=subject:Computers&hl=&cd=30&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=3TAKAgAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=3TAKAgAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 26.38,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 26.38,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=3TAKAgAAQBAJ&rdid=book-3TAKAgAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 26380000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 26380000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=3TAKAgAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "O0_fO2Xvp98C",
+      "etag": "poYF3vMSvZo",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/O0_fO2Xvp98C",
+      "volumeInfo": {
+        "title": "Information Security Risk Analysis",
+        "authors": [
+          "Thomas R. Peltier"
+        ],
+        "publisher": "CRC Press",
+        "publishedDate": "2001-01-23",
+        "description": "Risk is a cost of doing business. The question is, \"What are the risks, and what are their costs?\" Knowing the vulnerabilities and threats that face your organization's information and systems is the first essential step in risk management. Information Security Risk Analysis shows you how to use cost-effective risk analysis techniques to id",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781420000092"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1420000098"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 296,
+        "printType": "BOOK",
+        "categories": [
+          "Business & Economics"
+        ],
+        "averageRating": 4.5,
+        "ratingsCount": 15,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.4.5.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=O0_fO2Xvp98C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=O0_fO2Xvp98C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=O0_fO2Xvp98C&printsec=frontcover&dq=subject:Computers&hl=&cd=31&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=O0_fO2Xvp98C&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Information_Security_Risk_Analysis.html?hl=&id=O0_fO2Xvp98C"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Information_Security_Risk_Analysis-sample-epub.acsm?id=O0_fO2Xvp98C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Information_Security_Risk_Analysis-sample-pdf.acsm?id=O0_fO2Xvp98C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=O0_fO2Xvp98C&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "ATaHUkLVFSIC",
+      "etag": "ztsXY2BpIfw",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/ATaHUkLVFSIC",
+      "volumeInfo": {
+        "title": "How to Use Excel® in Analytical Chemistry",
+        "subtitle": "And in General Scientific Data Analysis",
+        "authors": [
+          "Robert de Levie"
+        ],
+        "publisher": "Cambridge University Press",
+        "publishedDate": "2001-02-05",
+        "description": "Because of their intuitive layout, extensive mathematical capabilities, and convenient graphics, spreadsheets provide an easy, straightforward route to scientific computing. This textbook for undergraduate and entry-level graduate chemistry and chemical engineering students uses Excel, the most powerful available spreadsheet, to explore and solve problems in general and chemical data analysis. This is the only up-to-date text on the use of spreadsheets in chemistry. The book discusses topics including statistics, chemical equilibria, pH calculations, titrations, and instrumental methods such as chromatography, spectrometry, and electroanalysis. It contains many examples of data analysis, and uses spreadsheets for numerical simulations, and testing analytical procedures. It also treats modern data analysis methods such as linear and non-linear least squares in great detail, as well as methods based on Fourier transformation. The book shows how matrix methods can be powerful tools in data analysis, and how easily these are implemented on a spreadsheet and describes in detail how to simulate chemical kinetics on a spreadsheet. It also introduces the reader to the use of VBA, the macro language of Microsoft Office, which lets the user import higher-level computer programs into the spreadsheet.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0521644844"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780521644846"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 506,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.6.5.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=ATaHUkLVFSIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=ATaHUkLVFSIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=ATaHUkLVFSIC&printsec=frontcover&dq=subject:Computers&hl=&cd=32&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=ATaHUkLVFSIC&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/How_to_Use_Excel_in_Analytical_Chemistry.html?hl=&id=ATaHUkLVFSIC"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/How_to_Use_Excel_in_Analytical_Chemistry-sample-pdf.acsm?id=ATaHUkLVFSIC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=ATaHUkLVFSIC&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "5TP6CAAAQBAJ",
+      "etag": "8fDM77SaJ8k",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/5TP6CAAAQBAJ",
+      "volumeInfo": {
+        "title": "A Course in Computational Algebraic Number Theory",
+        "authors": [
+          "Henri Cohen"
+        ],
+        "publisher": "Springer Science & Business Media",
+        "publishedDate": "2013-04-17",
+        "description": "With the advent of powerful computing tools and numerous advances in math ematics, computer science and cryptography, algorithmic number theory has become an important subject in its own right. Both external and internal pressures gave a powerful impetus to the development of more powerful al gorithms. These in turn led to a large number of spectacular breakthroughs. To mention but a few, the LLL algorithm which has a wide range of appli cations, including real world applications to integer programming, primality testing and factoring algorithms, sub-exponential class group and regulator algorithms, etc ... Several books exist which treat parts of this subject. (It is essentially impossible for an author to keep up with the rapid pace of progress in all areas of this subject.) Each book emphasizes a different area, corresponding to the author's tastes and interests. The most famous, but unfortunately the oldest, is Knuth's Art of Computer Programming, especially Chapter 4. The present book has two goals. First, to give a reasonably comprehensive introductory course in computational number theory. In particular, although we study some subjects in great detail, others are only mentioned, but with suitable pointers to the literature. Hence, we hope that this book can serve as a first course on the subject. A natural sequel would be to study more specialized subjects in the existing literature.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9783662029459"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "3662029456"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 556,
+        "printType": "BOOK",
+        "categories": [
+          "Mathematics"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.2.1.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=5TP6CAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=5TP6CAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=5TP6CAAAQBAJ&printsec=frontcover&dq=subject:Computers&hl=&cd=33&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=5TP6CAAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=5TP6CAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 60.12,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 39.08,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=5TP6CAAAQBAJ&rdid=book-5TP6CAAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 60120000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 39080000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/A_Course_in_Computational_Algebraic_Numb-sample-pdf.acsm?id=5TP6CAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=5TP6CAAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "10KYwCZxSdEC",
+      "etag": "oXKjoNcim+8",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/10KYwCZxSdEC",
+      "volumeInfo": {
+        "title": "Think Python",
+        "authors": [
+          "Allen B. Downey"
+        ],
+        "publisher": "\"O'Reilly Media, Inc.\"",
+        "publishedDate": "2012-08-09",
+        "description": "If you want to learn how to program, working with Python is an excellent way to start. This hands-on guide takes you through the language one step at a time, beginning with basic programming concepts before moving on to functions, recursion, data structures, and object-oriented design. Through exercises in each chapter, you’ll try out programming concepts as you learn them. Think Python is ideal for students at the high school or college level, as well as self-learners, home-schooled students, and professionals who need to learn programming basics. Start with the basics, including language syntax and semantics Get a clear definition of each programming concept Learn values, variables, statements, functions, and data structures in a logical progression Discover how to work with files and databases Understand objects, methods, and object-oriented programming Use debugging techniques to fix syntax, runtime, and semantic errors Explore interface design, data structures, and GUI-based programs through case studies",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781449332020"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1449332021"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 299,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.4.4.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=10KYwCZxSdEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=10KYwCZxSdEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=10KYwCZxSdEC&printsec=frontcover&dq=subject:Computers&hl=&cd=34&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=10KYwCZxSdEC&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Think_Python.html?hl=&id=10KYwCZxSdEC"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=10KYwCZxSdEC&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "ZvSfDwAAQBAJ",
+      "etag": "3Fjc5iy+bQM",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/ZvSfDwAAQBAJ",
+      "volumeInfo": {
+        "title": "The Definitive Guide to DAX",
+        "subtitle": "Business intelligence for Microsoft Power BI, SQL Server Analysis Services, and Excel",
+        "authors": [
+          "Marco Russo",
+          "Alberto Ferrari"
+        ],
+        "publisher": "Microsoft Press",
+        "publishedDate": "2019-07-02",
+        "description": "Now expanded and updated with modern best practices, this is the most complete guide to Microsoft’s DAX language for business intelligence, data modeling, and analytics. Expert Microsoft BI consultants Marco Russo and Alberto Ferrari help you master everything from table functions through advanced code and model optimization. You’ll learn exactly what happens under the hood when you run a DAX expression, and use this knowledge to write fast, robust code. This edition focuses on examples you can build and run with the free Power BI Desktop, and helps you make the most of the powerful syntax of variables (VAR) in Power BI, Excel, or Analysis Services. Want to leverage all of DAX’s remarkable capabilities? This no-compromise “deep dive” is exactly what you need. Perform powerful data analysis with DAX for Power BI, SQL Server, and Excel · Master core DAX concepts, including calculated columns, measures, and calculation groups · Work efficiently with basic and advanced table functions · Understand evaluation contexts and the CALCULATE and CALCULATETABLE functions · Perform time-based calculations · Use calculation groups and calculation items · Use syntax of variables (VAR) to write more readable, maintainable code · Express diverse and unusual relationships with DAX, including many-to-many relationships and bidirectional filters · Master advanced optimization techniques, and improve performance in aggregations · Optimize data models to achieve better compression · Measure DAX query performance with DAX Studio and learn how to optimize your DAX",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780134865874"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0134865871"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 1886,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 5,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.7.7.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=ZvSfDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=ZvSfDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=ZvSfDwAAQBAJ&printsec=frontcover&dq=subject:Computers&hl=&cd=35&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=ZvSfDwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=ZvSfDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 47.46,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 32.43,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=ZvSfDwAAQBAJ&rdid=book-ZvSfDwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 47460000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 32430000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/The_Definitive_Guide_to_DAX-sample-epub.acsm?id=ZvSfDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/The_Definitive_Guide_to_DAX-sample-pdf.acsm?id=ZvSfDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=ZvSfDwAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "JNCsBAAAQBAJ",
+      "etag": "dgbZDzcyGnM",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/JNCsBAAAQBAJ",
+      "volumeInfo": {
+        "title": "The Art of Social Media",
+        "subtitle": "Power Tips for Power Users",
+        "authors": [
+          "Guy Kawasaki",
+          "Peg Fitzpatrick"
+        ],
+        "publisher": "Penguin",
+        "publishedDate": "2014-12-04",
+        "description": "By now it's clear that whether you're promoting a business, a product, or yourself, social media is near the top of what determines your success or failure. And there are countless pundits, authors, and consultants eager to advise you. But there’s no one quite like Guy Kawasaki, the legendary former chief evangelist for Apple and one of the pioneers of business blogging, tweeting, Facebooking, Tumbling, and much, much more. Now Guy has teamed up with Peg Fitzpatrick, who he says is the best social-media person he’s ever met, to offer The Art of Social Media—the one essential guide you need to get the most bang for your time, effort, and money. With over one hundred practical tips, tricks, and insights, Guy and Peg present a bottom-up strategy to produce a focused, thorough, and compelling presence on the most popular social-media platforms. They guide you through steps to build your foundation, amass your digital assets, optimize your profile, attract more followers, and effectively integrate social media and blogging. For beginners overwhelmed by too many choices as well as seasoned professionals eager to improve their game, The Art of Social Media is full of tactics that have been proven to work in the real world. Or as Guy puts it, “great stuff, no fluff.”",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780698197671"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0698197674"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": false
+        },
+        "pageCount": 210,
+        "printType": "BOOK",
+        "categories": [
+          "Business & Economics"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.5.5.0.preview.2",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=JNCsBAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=JNCsBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=JNCsBAAAQBAJ&printsec=frontcover&dq=subject:Computers&hl=&cd=36&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=JNCsBAAAQBAJ&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Art_of_Social_Media.html?hl=&id=JNCsBAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/The_Art_of_Social_Media-sample-epub.acsm?id=JNCsBAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=JNCsBAAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "OyJHFJsnh10C",
+      "etag": "orBUdmADKNU",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/OyJHFJsnh10C",
+      "volumeInfo": {
+        "title": "The SGML FAQ Book",
+        "subtitle": "Understanding the Foundation of HTML and XML",
+        "authors": [
+          "S.J. DeRose"
+        ],
+        "publisher": "Springer Science & Business Media",
+        "publishedDate": "1997-07-31",
+        "description": "Although not evident to all, many people have been waiting more than a decade for The SGML FAQ Book by Steve DeRose. It has been \"brewing\" for a long time, with many hours, months, years of research talking to people, gathering their ideas, listening to their frustrations, applauding their successes. Only Steve with his experience, credentials, wit, and enthusiasm for the subject could have written this book. But it is also a measure of the success and maturity of ISO 8879 and its amazing longevity that allows an \"SGMLer\" to write such a book. We can now laugh at ourselves, even disclose our mistakes without fear of the other guy. While most would not recognize it, the revolution known as the World Wide Web would not have happened without a non-proprietary, easy, and almost \"portable way to create and distribute documents across a widely disparate set of computers, networks, even countries. HTML, an SGML application, enabled this and as a result the world and the SGML community will never be the same. For some the term SGML means order, management, standards, discipline; to others, the term brings images of pain, confusion, complexity, and pitfalls. To all who have engaged in it, the Standard means hard work, good friends, savings in terms of time, money, and effort, a sense of accomplishment and best of all - fun. This book adds immeasurably to all of these. Enjoy the quote from Through Looking by Lewis Carroll as much as we have.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780792399438"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0792399439"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 267,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 1,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "2.4.5.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=OyJHFJsnh10C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=OyJHFJsnh10C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=OyJHFJsnh10C&printsec=frontcover&dq=subject:Computers&hl=&cd=37&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=OyJHFJsnh10C&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_SGML_FAQ_Book.html?hl=&id=OyJHFJsnh10C"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/The_SGML_FAQ_Book-sample-epub.acsm?id=OyJHFJsnh10C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/The_SGML_FAQ_Book-sample-pdf.acsm?id=OyJHFJsnh10C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=OyJHFJsnh10C&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "FbJDAAAAQBAJ",
+      "etag": "fZHTJvVpt04",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/FbJDAAAAQBAJ",
+      "volumeInfo": {
+        "title": "The Tower of Hanoi – Myths and Maths",
+        "authors": [
+          "Andreas M. Hinz",
+          "Sandi Klavžar",
+          "Uroš Milutinović",
+          "Ciril Petr"
+        ],
+        "publisher": "Springer Science & Business Media",
+        "publishedDate": "2013-01-31",
+        "description": "This is the first comprehensive monograph on the mathematical theory of the solitaire game “The Tower of Hanoi” which was invented in the 19th century by the French number theorist Édouard Lucas. The book comprises a survey of the historical development from the game’s predecessors up to recent research in mathematics and applications in computer science and psychology. Apart from long-standing myths it contains a thorough, largely self-contained presentation of the essential mathematical facts with complete proofs, including also unpublished material. The main objects of research today are the so-called Hanoi graphs and the related Sierpiński graphs. Acknowledging the great popularity of the topic in computer science, algorithms and their correctness proofs form an essential part of the book. In view of the most important practical applications of the Tower of Hanoi and its variants, namely in physics, network theory, and cognitive (neuro)psychology, other related structures and puzzles like, e.g., the “Tower of London”, are addressed. Numerous captivating integer sequences arise along the way, but also many open questions impose themselves. Central among these is the famed Frame-Stewart conjecture. Despite many attempts to decide it and large-scale numerical experiments supporting its truth, it remains unsettled after more than 70 years and thus demonstrates the timeliness of the topic. Enriched with elaborate illustrations, connections to other puzzles and challenges for the reader in the form of (solved) exercises as well as problems for further exploration, this book is enjoyable reading for students, educators, game enthusiasts and researchers alike.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9783034802376"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "3034802374"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 340,
+        "printType": "BOOK",
+        "categories": [
+          "Mathematics"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.3.1.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=FbJDAAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=FbJDAAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=FbJDAAAAQBAJ&printsec=frontcover&dq=subject:Computers&hl=&cd=38&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=FbJDAAAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=FbJDAAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 58.01,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 37.71,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=FbJDAAAAQBAJ&rdid=book-FbJDAAAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 58010000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 37710000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/The_Tower_of_Hanoi_Myths_and_Maths-sample-pdf.acsm?id=FbJDAAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=FbJDAAAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "W5XsDAAAQBAJ",
+      "etag": "WUzhfICt49Q",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/W5XsDAAAQBAJ",
+      "volumeInfo": {
+        "title": "Computer Age Statistical Inference",
+        "subtitle": "Algorithms, Evidence, and Data Science",
+        "authors": [
+          "Bradley Efron",
+          "Trevor Hastie"
+        ],
+        "publisher": "Cambridge University Press",
+        "publishedDate": "2016-07-21",
+        "description": "The twenty-first century has seen a breathtaking expansion of statistical methodology, both in scope and in influence. 'Big data', 'data science', and 'machine learning' have become familiar terms in the news, as statistical methods are brought to bear upon the enormous data sets of modern science and commerce. How did we get here? And where are we going? This book takes us on an exhilarating journey through the revolution in data analysis following the introduction of electronic computation in the 1950s. Beginning with classical inferential theories - Bayesian, frequentist, Fisherian - individual chapters take up a series of influential topics: survival analysis, logistic regression, empirical Bayes, the jackknife and bootstrap, random forests, neural networks, Markov chain Monte Carlo, inference after model selection, and dozens more. The distinctly modern approach integrates methodology and algorithms with statistical inference. The book ends with speculation on the future direction of statistics and data science.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781108107952"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1108107958"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 496,
+        "printType": "BOOK",
+        "categories": [
+          "Mathematics"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "0.6.4.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=W5XsDAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=W5XsDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=W5XsDAAAQBAJ&printsec=frontcover&dq=subject:Computers&hl=&cd=39&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=W5XsDAAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=W5XsDAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 67.71,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 67.71,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=W5XsDAAAQBAJ&rdid=book-W5XsDAAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 67710000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 67710000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Computer_Age_Statistical_Inference-sample-epub.acsm?id=W5XsDAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Computer_Age_Statistical_Inference-sample-pdf.acsm?id=W5XsDAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=W5XsDAAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "-vzMEwf-bHEC",
+      "etag": "SyDVYaKTmS0",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/-vzMEwf-bHEC",
+      "volumeInfo": {
+        "title": "Charles Babbage",
+        "subtitle": "And the Engines of Perfection",
+        "authors": [
+          "Bruce Collier",
+          "James MacLachlan"
+        ],
+        "publisher": "Oxford University Press",
+        "publishedDate": "2000-09-28",
+        "description": "Charles Babbage, \"the grandfather of the modern computer,\" did not live to see even one of his calculating machines at work. A dazzling genius with vision extending far beyond the limitations of the Victorian age, Babbage successfully calculated a table of logarithms during his years at Cambridge University, allowing mathematical calculations to be executed with extreme precision. Only the possibility of human error prevented complete accuracy, and Babbage understood that the only way to attain perfection is to leave the human mind entirely out of the equation. He devoted most of his life and spent most of his private fortune and government stipend trying to improve his difference engines and analytical engines.Bruce Collier and James MacLachlan chronicle Babbage's education and scientific career, his remarkably active social life and long string of personal tragedies, his forays into philosophy and economics, his successes and failures, and the biggest disappointment of his life-- his ingenious inventions were centuries ahead of the primitive capabilities of Victorian technology.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780195142877"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "019514287X"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 129,
+        "printType": "BOOK",
+        "categories": [
+          "Biography & Autobiography"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.4.3.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=-vzMEwf-bHEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=-vzMEwf-bHEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=-vzMEwf-bHEC&printsec=frontcover&dq=subject:Computers&hl=&cd=40&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=-vzMEwf-bHEC&dq=subject:Computers&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Charles_Babbage.html?hl=&id=-vzMEwf-bHEC"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Charles_Babbage-sample-epub.acsm?id=-vzMEwf-bHEC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Charles_Babbage-sample-pdf.acsm?id=-vzMEwf-bHEC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=-vzMEwf-bHEC&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    }
+  ]
+}

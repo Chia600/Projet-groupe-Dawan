@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Service d'appel à l'API Google Books
@@ -31,23 +30,23 @@ public class GoogleBooksApiServiceImpl implements GoogleBooksApiService {
      * Recherche paginée de livres via l'API Google Books
      * (si le paramètre search est vide, récupère des livres ayant pour genre 'Computers')
      *
-     * @param page page courante
-     * @param size nombre d'éléments par page
+     * @param page   page courante
+     * @param size   nombre d'éléments par page
      * @param search critères de recherche
      * @return Page<BookDto>
      * @throws JsonProcessingException
      */
     @Override
-    public Page<BookDto> getAllLivres(int page, int size, String search) throws JsonProcessingException {
+    public Page<BookDto> getAll(int page, int size, String search) throws JsonProcessingException {
         RestClient rc = RestClient.create();
-        if(search.trim().isEmpty()) {
+        if (search.trim().isEmpty()) {
             search = "subject:Computers";
         } else {
             search = search.contains(" ") ? search.replaceAll(" ", "+") : search;
         }
 
         //Appel de l'API Google Books
-        String urlString = googleBookApiUrl + search + "&key=" + googleBookApiKey + "&maxResults=40";
+        String urlString = googleBookApiUrl + "?q=" + search + "&key=" + googleBookApiKey + "&maxResults=40&orderBy=relevance";
         String results = rc.get().uri(urlString).retrieve().body(String.class);
 
         List<BookDto> bookDtoList = JsonTool.parseBooksJsonResponse(results);
