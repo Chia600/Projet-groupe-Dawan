@@ -1,20 +1,19 @@
 package com.dawanproject.booktracker.services;
 
 import com.dawanproject.booktracker.dtos.AuthorDto;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface AuthorService {
 
-    Page<AuthorDto> getAll(Pageable page);
+    List<AuthorDto> getAll();
 
-    AuthorDto getById(long id);
+    Optional<AuthorDto> getAuthorById(long id);
 
-    List<AuthorDto> getByName(String name);
+    Optional<List<AuthorDto>> getAuthorByName(String name);
 
-    void deleteById(long id);
+    boolean deleteById(long id);
 
-    AuthorDto create(AuthorDto dto);
+    AuthorDto saveOrUpdate(AuthorDto dto);
 }

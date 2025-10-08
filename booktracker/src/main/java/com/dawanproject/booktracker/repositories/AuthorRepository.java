@@ -7,7 +7,5 @@ import java.util.List;
 
 public interface AuthorRepository extends JpaRepository<Author, Long> {
 
-    List<Author> findByNameLike(String name);
-
-    int removeById(long id);
+    List<Author> findByLastnameLike(String name);
 }

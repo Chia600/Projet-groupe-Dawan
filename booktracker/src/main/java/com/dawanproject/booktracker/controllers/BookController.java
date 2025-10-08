@@ -27,10 +27,20 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/books")
-public class SearchController {
+public class BookController {
 
     private final GoogleBooksApiService service;
 
+    /**
+     * Return 40 computer books if search is empty
+     * Else return pagined result of the search
+     *
+     * @param page the current page
+     * @param size number of books by page
+     * @param optional search criteria
+     * @return ResponseEntity containing list of books
+     * @throws Exception
+     */
     @GetMapping(value = {"/{page}/{size}/{search}", "/{page}/{size}"}, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Page<BookDto>> getAll(@PathVariable int page, @PathVariable int size,
                                                 @PathVariable(value = "search", required = false) Optional<String> optional

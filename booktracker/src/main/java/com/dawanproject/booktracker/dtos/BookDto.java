@@ -6,6 +6,8 @@ import jakarta.validation.constraints.PositiveOrZero;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
+import java.time.LocalDate;
+
 @Getter
 @Setter
 @ToString
@@ -22,7 +24,7 @@ public class BookDto {
     private String title;
 
     @PastOrPresent
-    private String publicationDate;
+    private LocalDate publicationDate;
 
     private int pageNumber;
 

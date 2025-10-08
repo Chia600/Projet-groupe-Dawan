@@ -42,9 +42,11 @@ public class Book implements Serializable {
     private LocalDate publicationDate;
 
     @ManyToOne
+    @JoinColumn(name="authorId")
     private Author author;
 
     @ManyToOne
+    @JoinColumn(name="categoryId")
     private Category category;
 
     @ToString.Exclude

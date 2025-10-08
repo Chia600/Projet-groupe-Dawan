@@ -8,9 +8,12 @@ import org.mapstruct.*;
 @DecoratedWith(AuthorMapperDecorator.class)
 public interface AuthorMapper {
 
-    @Mapping(source = "books", target = "bookIds")
+    @Mapping(source = "authorId", target = "id")
+    @Mapping(target = "bookIds", ignore = true)
     AuthorDto toDto(Author author);
 
+    @Mapping(source = "id", target = "authorId")
+    @Mapping(target = "books", ignore = true)
     Author toEntity(AuthorDto dto);
 
 }
