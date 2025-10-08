@@ -27,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
-@WebMvcTest(SearchController.class)
+@WebMvcTest(BookController.class)
 @AutoConfigureMockMvc(addFilters = false)
 class SearchControllerTest {
 
@@ -69,6 +69,6 @@ class SearchControllerTest {
                 .andReturn().getResponse();
         assertEquals(200, response.getStatus());
 
-        assertTrue(response.getContentAsString().contains("\"id\":3,\"idVolume\":\"Yq35BY5Fk3gC\",\"title\":\"The Mythical Man-Month\",\"publicationDate\":\"1995\",\"pageNumber\":348"));
+        assertTrue(response.getContentAsString().contains("\"id\":3,\"idVolume\":\"Yq35BY5Fk3gC\",\"title\":\"The Mythical Man-Month\",\"publicationDate\":\"1995-01-01\",\"pageNumber\":348"));
     }
 }

@@ -14,7 +14,7 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-@Builder
+@Builder(toBuilder = true)
 public class AuthorDto {
 
     @PositiveOrZero
