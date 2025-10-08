@@ -2,6 +2,7 @@ package com.dawanproject.booktracker.dtos;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,6 +20,7 @@ public class UserDto {
     /**
      * Unique identifier for the user.
      */
+    @NotNull(message = "L'ID utilisateur est requis pour les mises à jour")
     private Long userId;
 
     /**
@@ -45,8 +47,11 @@ public class UserDto {
      */
     private boolean isSubscribed;
 
+    private List<Long> bookIds;
+
     /**
      * List of review IDs (book IDs) associated with the user.
      */
+    @NotNull(message = "La liste des IDs de critiques ne peut pas être nulle")
     private List<Long> reviewIds;
 }

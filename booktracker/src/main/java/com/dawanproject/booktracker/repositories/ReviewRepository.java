@@ -6,6 +6,6 @@ import com.dawanproject.booktracker.entities.Review;
 import com.dawanproject.booktracker.entities.ReviewPK;
 
 public interface ReviewRepository extends JpaRepository<Review, ReviewPK> {
-    List<Review> findByBookId(long bookId);
-    List<Review> findByUserId(long userId);
+    List<Review> findByReviewId_BookId(long bookId);
+    List<Review> findByReviewId_UserId(long userId);
 }

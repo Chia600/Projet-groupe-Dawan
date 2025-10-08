@@ -4,11 +4,13 @@ import com.dawanproject.booktracker.dtos.ReviewDto;
 import com.dawanproject.booktracker.entities.Review;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.MappingConstants;
+import org.mapstruct.ReportingPolicy;
 
 /**
  * Mapper for converting between Review entity and ReviewDTO.
  */
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = MappingConstants.ComponentModel.SPRING, unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface ReviewMapper {
 
     /**
@@ -29,7 +31,5 @@ public interface ReviewMapper {
      */
     @Mapping(source = "userId", target = "reviewId.userId")
     @Mapping(source = "bookId", target = "reviewId.bookId")
-    @Mapping(target = "book", ignore = true)
-    @Mapping(target = "user", ignore = true)
     Review toEntity(ReviewDto reviewDTO);
 }

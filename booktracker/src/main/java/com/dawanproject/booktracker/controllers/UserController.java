@@ -14,7 +14,7 @@ import java.util.List;
  * REST controller for managing User entities and their book collections.
  */
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/api/users")
 @Validated
 @RequiredArgsConstructor
 public class UserController {

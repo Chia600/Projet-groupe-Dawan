@@ -3,6 +3,7 @@ package com.dawanproject.booktracker.dtos;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PastOrPresent;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -42,5 +43,6 @@ public class ReviewDto {
     /**
      * Date the review was created.
      */
+    @PastOrPresent(message = "La date de création doit être dans le passé ou aujourd'hui")
     private LocalDate creationDate;
 }

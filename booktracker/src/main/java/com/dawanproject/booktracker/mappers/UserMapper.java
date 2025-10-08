@@ -3,17 +3,21 @@ package com.dawanproject.booktracker.mappers;
 import com.dawanproject.booktracker.dtos.UserDto;
 import com.dawanproject.booktracker.entities.Review;
 import com.dawanproject.booktracker.entities.User;
+
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.MappingConstants;
 import org.mapstruct.Named;
+import org.mapstruct.ReportingPolicy;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
  * Mapper for converting between User entity and UserDTO.
  */
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = MappingConstants.ComponentModel.SPRING, unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface UserMapper {
      /**
      * Maps a set of Review entities to a list of review IDs (bookIds).
@@ -22,7 +26,7 @@ public interface UserMapper {
      * @return A list of book IDs.
      */
     @Named("mapReviewsToIds")
-    default List<Long> mapReviewsToIds(java.util.Set<Review> reviews) {
+    default List<Long> mapReviewsToIds(Set<Review> reviews) {
         if (reviews == null) {
             return null;
         }

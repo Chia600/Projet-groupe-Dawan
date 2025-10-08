@@ -2,7 +2,6 @@ package com.dawanproject.booktracker.controller;
 
 import com.dawanproject.booktracker.controllers.UserController;
 import com.dawanproject.booktracker.dtos.UserDto;
-import com.dawanproject.booktracker.entities.Book;
 import com.dawanproject.booktracker.services.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
@@ -17,6 +16,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Optional;
 
 import static org.mockito.ArgumentMatchers.any;
@@ -51,8 +51,8 @@ class UserControllerTest {
 
     @Test
     void testRegisterUser_Success() throws Exception {
-        UserDto userDTO = new UserDto(null, "testuser", "test@example.com", null, false, null);
-        UserDto responseDTO = new UserDto(1L, "testuser", "test@example.com", null, false, null);
+        UserDto userDTO = new UserDto(null, "testuser", "test@example.com", "secret", false, null, null);
+        UserDto responseDTO = new UserDto(1L, "testuser", "test@example.com", null, false, Collections.emptyList(), Collections.emptyList());
 
         when(userService.registerUser(any(UserDto.class))).thenReturn(responseDTO);
 
@@ -68,7 +68,7 @@ class UserControllerTest {
 
     @Test
     void testRegisterUser_ValidationError() throws Exception {
-        UserDto userDTO = new UserDto(null, "", "invalid-email", null, false, null);
+        UserDto userDTO = new UserDto(null, "", "invalid", "", false, null, null);
 
         mockMvc.perform(post("/users/register")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -82,8 +82,8 @@ class UserControllerTest {
     @Test
     @WithMockUser(username = "user", roles = {"USER"})
     void testCreateUser_Success() throws Exception {
-        UserDto userDTO = new UserDto(null, "testuser", "test@example.com", null, false, null);
-        UserDto responseDTO = new UserDto(1L, "testuser", "test@example.com", null, false, null);
+        UserDto userDTO = new UserDto(null, "testuser", "test@example.com", "secret", false, null, null);
+        UserDto responseDTO = new UserDto(1L, "testuser", "test@example.com", null, false, Collections.emptyList(), Collections.emptyList());
 
         when(userService.createUser(any(UserDto.class))).thenReturn(responseDTO);
 
@@ -100,8 +100,8 @@ class UserControllerTest {
     @Test
     @WithMockUser(username = "user", roles = {"USER"})
     void testGetAllUsers_Success() throws Exception {
-        UserDto userDTO1 = new UserDto(1L, "user1", "user1@example.com", null, false, null);
-        UserDto userDTO2 = new UserDto(2L, "user2", "user2@example.com", null, false, null);
+        UserDto userDTO1 = new UserDto(1L, "user1", "user1@example.com", null, false, Collections.emptyList(), Collections.emptyList());
+        UserDto userDTO2 = new UserDto(2L, "user2", "user2@example.com", null, false, Collections.emptyList(), Collections.emptyList());
 
         when(userService.getAllUsers()).thenReturn(Arrays.asList(userDTO1, userDTO2));
 
@@ -116,7 +116,7 @@ class UserControllerTest {
     @Test
     @WithMockUser(username = "user", roles = {"USER"})
     void testGetUserById_Success() throws Exception {
-        UserDto userDTO = new UserDto(1L, "testuser", "test@example.com", null, false, null);
+        UserDto userDTO = new UserDto(1L, "testuser", "test@example.com", null, false, Collections.emptyList(), Collections.emptyList());
 
         when(userService.getUserById(1L)).thenReturn(Optional.of(userDTO));
 
@@ -139,8 +139,8 @@ class UserControllerTest {
     @Test
     @WithMockUser(username = "user", roles = {"USER"})
     void testUpdateUser_Success() throws Exception {
-        UserDto userDTO = new UserDto(null, "newuser", "new@example.com", null, false, null);
-        UserDto responseDTO = new UserDto(1L, "newuser", "new@example.com", null, false, null);
+        UserDto userDTO = new UserDto(null, "newuser", "new@example.com", "newpassword", false, null, null);
+        UserDto responseDTO = new UserDto(1L, "newuser", "new@example.com", null, false, Collections.emptyList(), Collections.emptyList());
 
         when(userService.updateUser(1L, any(UserDto.class))).thenReturn(Optional.of(responseDTO));
 
@@ -156,7 +156,7 @@ class UserControllerTest {
     @Test
     @WithMockUser(username = "user", roles = {"USER"})
     void testUpdateUser_NotFound() throws Exception {
-        UserDto userDTO = new UserDto(null, "newuser", "new@example.com", null, false, null);
+        UserDto userDTO = new UserDto(null, "newuser", "new@example.com", "newpassword", false, null, null);
 
         when(userService.updateUser(1L, any(UserDto.class))).thenReturn(Optional.empty());
 
@@ -187,7 +187,7 @@ class UserControllerTest {
     @Test
     @WithMockUser(username = "user", roles = {"USER"})
     void testGetUserByUsername_Success() throws Exception {
-        UserDto userDTO = new UserDto(1L, "testuser", "test@example.com", null, false, null);
+        UserDto userDTO = new UserDto(1L, "testuser", "test@example.com", null, false, Collections.emptyList(), Collections.emptyList());
 
         when(userService.getUserByUsername("testuser")).thenReturn(Optional.of(userDTO));
 
@@ -210,7 +210,7 @@ class UserControllerTest {
     @Test
     @WithMockUser(username = "user", roles = {"USER"})
     void testGetUserByEmail_Success() throws Exception {
-        UserDto userDTO = new UserDto(1L, "testuser", "test@example.com", null, false, null);
+        UserDto userDTO = new UserDto(1L, "testuser", "test@example.com", null, false, Collections.emptyList(), Collections.emptyList());
 
         when(userService.getUserByEmail("test@example.com")).thenReturn(Optional.of(userDTO));
 
