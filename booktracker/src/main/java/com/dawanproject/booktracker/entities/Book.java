@@ -27,7 +27,7 @@ public class Book implements Serializable {
     @Version
     private int version;
 
-    @Column(length=50, nullable = false)
+    @Column(length=150, nullable = false)
     private String title;
 
     @Lob
@@ -42,9 +42,11 @@ public class Book implements Serializable {
     private LocalDate publicationDate;
 
     @ManyToOne
+    @JoinColumn(name = "authorId")
     private Author author;
 
     @ManyToOne
+    @JoinColumn(name = "categoryId")
     private Category category;
 
     @ToString.Exclude

@@ -1,14 +1,17 @@
 package com.dawanproject.booktracker.services.impl;
 
+import com.dawanproject.booktracker.dtos.BookDto;
 import com.dawanproject.booktracker.entities.Book;
+import com.dawanproject.booktracker.mappers.BookMapper;
 import com.dawanproject.booktracker.repositories.BookRepository;
 import com.dawanproject.booktracker.services.BookService;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -16,17 +19,37 @@ import org.springframework.transaction.annotation.Transactional;
 public class BookServiceImpl implements BookService {
 
     private final BookRepository bookRepository;
+    private final BookMapper mapper;
+
     private final ObjectMapper objectMapper = new ObjectMapper();
 
+    /**
+     * Récupère un livre par son ID et le convertit en JSON
+     */
     @Override
-    public String getBookById(long bookId) {
-        Book book = bookRepository.findByBookId(bookId)
-                .orElseThrow(() -> new EntityNotFoundException("Book not found with id: " + bookId));
+    public Optional<BookDto> getBookById(long bookId) {
+        return bookRepository.findById(bookId).map(mapper::toDto);
+    }
+    // Récupérer tous les livres d'une catégorie
+    @Override
+    public List<BookDto> getBooksByGenre(String genre) {
+        return bookRepository.findByCategoryGenreIgnoreCase(genre)
+                .stream()
+                .map(mapper::toDto)
+                .toList();
+    }
 
-        try {
-            return objectMapper.writeValueAsString(book); // 🔹 transforme l’entité Book en JSON
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException("Erreur de conversion Book -> JSON", e);
-        }
+    /**
+     * Récupère les livres dont le titre correspond au critère LIKE spécifié.
+     * @param title titre du livre (peut être partiel)
+     * @return une liste de {@link BookDto} encapsulée dans un {@link Optional}
+     */
+
+    @Override // 2 usages new
+    public Optional<List<BookDto>> getBookByTitle(String title) {
+        List<Book> books = bookRepository.findByTitleLikeIgnoreCase("%" + title + "%");
+        return Optional.of(books.stream()
+                .map(mapper::toDto)
+                .toList());
     }
 }

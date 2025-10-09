@@ -26,6 +26,4 @@ public interface CategoryService {
     // Récupérer une catégorie par genre (insensible à la casse, sans livres)
     Optional<Category> getCategoryByGenre(String genre);
 
-    // Récupérer tous les livres d'une catégorie
-    List<Book> getBooksByCategory(Long id);
 }
