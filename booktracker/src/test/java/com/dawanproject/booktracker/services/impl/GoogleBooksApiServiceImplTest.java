@@ -1,6 +1,7 @@
 package com.dawanproject.booktracker.services.impl;
 
 import com.dawanproject.booktracker.dtos.BookDto;
+import com.dawanproject.booktracker.services.BookService;
 import com.dawanproject.booktracker.tools.JsonTool;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -26,9 +27,11 @@ class GoogleBooksApiServiceImplTest {
 
     private GoogleBooksApiServiceImpl service;
 
+    private BookService bookService;
+
     @BeforeEach
     void setUp() {
-        service = new GoogleBooksApiServiceImpl();
+        service = new GoogleBooksApiServiceImpl(bookService);
 
         ReflectionTestUtils.setField(
                 service,

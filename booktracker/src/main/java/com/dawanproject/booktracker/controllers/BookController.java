@@ -1,8 +1,9 @@
 package com.dawanproject.booktracker.controllers;
 
 import com.dawanproject.booktracker.dtos.BookDto;
-import com.dawanproject.booktracker.services.GoogleBooksApiService;
+import com.dawanproject.booktracker.mappers.BookMapper;
 import com.dawanproject.booktracker.services.BookService;
+import com.dawanproject.booktracker.services.GoogleBooksApiService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +21,7 @@ import java.util.List;
  *     <li>De récupérer les détails d’un livre depuis l’API Google Books</li>
  *     <li>De consulter les reviews stockées en base de données pour un livre local</li>
  * </ul>
- *
+ * <p>
  * Les appels à la base de données sont effectués via {@link BookService},
  * tandis que les données externes proviennent de {@link GoogleBooksApiService}.
  */
@@ -31,6 +32,7 @@ public class BookController {
 
     private final GoogleBooksApiService googleBooksApiService;
     private final BookService bookService;
+    private final BookMapper bookMapper;
 
     /**
      * Récupère les détails d’un livre à partir de l’API Google Books.
@@ -41,7 +43,7 @@ public class BookController {
      */
     @GetMapping("/details/{bookId}")
     public ResponseEntity<BookDto> getBookDetails(@PathVariable String bookId) throws Exception {
-        return ResponseEntity.ok(googleBooksApiService.getBookById(bookId));
+        return ResponseEntity.ok(googleBooksApiService.getBookById(bookId)); //QbUACwAAQBAJ
 
     }
 
@@ -58,7 +60,7 @@ public class BookController {
     /**
      * Récupère les livres dont le titre correspond (partiellement ou totalement)
      * au nom indiqué dans l'URL.
-     *
+     * <p>
      * Exemple :
      * GET /api/books/title/Misery
      *
@@ -71,7 +73,6 @@ public class BookController {
     )
     public ResponseEntity<List<BookDto>> getBooksByTitle(@PathVariable String title) {
         return bookService.getBookByTitle(title)
-                .filter(list -> !list.isEmpty())
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }

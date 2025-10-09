@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @RequiredArgsConstructor
-@Component
+//@Component
 public class ServiceRunner implements CommandLineRunner {
 
     private final GoogleBooksApiService service;

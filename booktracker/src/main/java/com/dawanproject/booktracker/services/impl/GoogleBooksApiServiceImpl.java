@@ -1,9 +1,11 @@
 package com.dawanproject.booktracker.services.impl;
 
 import com.dawanproject.booktracker.dtos.BookDto;
+import com.dawanproject.booktracker.services.BookService;
 import com.dawanproject.booktracker.services.GoogleBooksApiService;
 import com.dawanproject.booktracker.tools.JsonTool;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -12,7 +14,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 /**
  * Service d'appel à l'API Google Books
@@ -25,6 +29,13 @@ public class GoogleBooksApiServiceImpl implements GoogleBooksApiService {
 
     @Value("${google.books.api.key}")
     private String googleBookApiKey;
+
+    private BookService bookService;
+
+    @Autowired
+    public GoogleBooksApiServiceImpl(BookService bookService) {
+        this.bookService = bookService;
+    }
 
     /**
      * Recherche paginée de livres via l'API Google Books
@@ -61,7 +72,8 @@ public class GoogleBooksApiServiceImpl implements GoogleBooksApiService {
 
     }
 
-    /** Nouvelle méthode : récupère un seul livre via l’API Google
+    /**
+     * Nouvelle méthode : récupère un seul livre via l’API Google
      *
      * @param googleBookId Id d'un livre
      * @return BookDto
@@ -71,8 +83,21 @@ public class GoogleBooksApiServiceImpl implements GoogleBooksApiService {
     public BookDto getBookById(String googleBookId) throws JsonProcessingException {
         String url = googleBookApiUrl + "/" + googleBookId;
         RestClient rc = RestClient.create();
+
+        //Récupération du livre via Google Books API par son IdVolume
         String response = rc.get().uri(url).retrieve().body(String.class);
-        List<BookDto> bookDtoList = JsonTool.parseBooksJsonResponse(response);
-        return bookDtoList.getFirst();
+        List<BookDto> booksApiList = JsonTool.parseBooksJsonResponse(response);
+        BookDto bookApi = booksApiList.getFirst();
+        String title = bookApi.getTitle();
+
+        //Récupération du livre par son titre en base de données, s'il existe
+        Optional<List<BookDto>> optBooklist = bookService.getBookByTitle(title);
+        List<BookDto> booklistDB = optBooklist.orElse(new ArrayList<>());
+
+        //Si le livre est en base de données, on le renvoie (contient les données de reviews et rating)
+        //sinon on retourne le livre récupéré dans Google Books API (pas de reviews ou rating)
+        if (!booklistDB.isEmpty())
+            bookApi = booklistDB.getFirst();
+        return bookApi;
     }
 }

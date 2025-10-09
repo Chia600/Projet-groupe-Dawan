@@ -10,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -30,6 +31,7 @@ public class BookServiceImpl implements BookService {
     public Optional<BookDto> getBookById(long bookId) {
         return bookRepository.findById(bookId).map(mapper::toDto);
     }
+
     // Récupérer tous les livres d'une catégorie
     @Override
     public List<BookDto> getBooksByGenre(String genre) {
@@ -41,15 +43,20 @@ public class BookServiceImpl implements BookService {
 
     /**
      * Récupère les livres dont le titre correspond au critère LIKE spécifié.
+     *
      * @param title titre du livre (peut être partiel)
      * @return une liste de {@link BookDto} encapsulée dans un {@link Optional}
      */
-
     @Override // 2 usages new
     public Optional<List<BookDto>> getBookByTitle(String title) {
         List<Book> books = bookRepository.findByTitleLikeIgnoreCase("%" + title + "%");
-        return Optional.of(books.stream()
-                .map(mapper::toDto)
-                .toList());
+
+        if (books.isEmpty())
+            return Optional.of(new ArrayList<>());
+
+        if (books.size() == 1)
+            return Optional.of(List.of(mapper.toDto(books.getFirst())));
+
+        return Optional.of(books.stream().map(mapper::toDto).toList());
     }
 }
