@@ -8,7 +8,6 @@ import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
-import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -20,17 +19,6 @@ public abstract class AuthorMapperDecorator implements AuthorMapper {
 
     @Autowired
     private BookRepository repository;
-
-    @Override
-    public AuthorDto toDto(Author author) {
-        AuthorDto dto = delegate.toDto(author);
-
-        if (!author.getBooks().isEmpty()) {
-            List<Long> bookIds = author.getBooks().stream().map(b -> b.getBookId()).toList();
-            dto.toBuilder().bookIds(bookIds).build();
-        }
-        return dto;
-    }
 
     @Override
     public Author toEntity(AuthorDto dto) {
