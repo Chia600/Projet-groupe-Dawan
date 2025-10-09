@@ -21,7 +21,7 @@ public class CategoryController {
     private final CategoryService categoryService;
     private final CategoryMapper categoryMapper;
 
-    // 🔹 Créer une nouvelle catégorie
+    // Créer une nouvelle catégorie
     @PostMapping
     public ResponseEntity<CategoryDto> createCategory(@Valid @RequestBody CategoryDto categoryDto) {
         Category category = categoryMapper.toEntity(categoryDto);
@@ -29,7 +29,7 @@ public class CategoryController {
         return ResponseEntity.status(201).body(categoryMapper.toDto(saved));
     }
 
-    // 🔹 Récupérer toutes les catégories
+    // Récupérer toutes les catégories
     @GetMapping
     public ResponseEntity<List<CategoryDto>> getAllCategories() {
         List<CategoryDto> dtos = categoryService.getAllCategories()
@@ -39,7 +39,7 @@ public class CategoryController {
         return ResponseEntity.ok(dtos);
     }
 
-    // 🔹 Récupérer une catégorie par ID
+    // Récupérer une catégorie par ID
     @GetMapping("/{id}")
     public ResponseEntity<CategoryDto> getCategoryById(@PathVariable Long id) {
         return categoryService.getCategoryById(id)
@@ -48,7 +48,7 @@ public class CategoryController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // 🔹 Mettre à jour une catégorie (seulement le genre)
+    // Mettre à jour une catégorie (seulement le genre)
     @PutMapping("/{id}")
     public ResponseEntity<CategoryDto> updateCategory(@PathVariable Long id, @Valid @RequestBody CategoryDto updatedCategoryDto) {
         Category updatedEntity = categoryMapper.toEntity(updatedCategoryDto);
@@ -58,7 +58,7 @@ public class CategoryController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // 🔹 Supprimer une catégorie
+    // Supprimer une catégorie
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteCategory(@PathVariable Long id) {
         boolean deleted = categoryService.deleteCategory(id);
@@ -66,7 +66,7 @@ public class CategoryController {
                 : ResponseEntity.notFound().build();
     }
 
-    // 🔹 Récupérer une catégorie par genre (insensible à la casse)
+    // Récupérer une catégorie par genre (insensible à la casse)
     @GetMapping("/genre/{genre}")
     public ResponseEntity<CategoryDto> getCategoryByGenre(@PathVariable String genre) {
         return categoryService.getCategoryByGenre(genre)
