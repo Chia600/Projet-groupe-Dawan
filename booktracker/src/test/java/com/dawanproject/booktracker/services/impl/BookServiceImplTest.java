@@ -4,6 +4,7 @@ import com.dawanproject.booktracker.dtos.BookDto;
 import com.dawanproject.booktracker.entities.Book;
 import com.dawanproject.booktracker.mappers.BookMapper;
 import com.dawanproject.booktracker.repositories.BookRepository;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -32,10 +33,10 @@ class BookServiceImplTest {
     private Book book;
     private BookDto bookDto;
 
+    private AutoCloseable closeable;
     @BeforeEach
     void setUp() {
-        MockitoAnnotations.openMocks(this);
-
+        closeable = MockitoAnnotations.openMocks(this);
         // Données de test
         book = new Book();
         book.setBookId(1L);
@@ -46,8 +47,11 @@ class BookServiceImplTest {
                 .id(1L)
                 .title("Test Book")
                 .build();
-    }
 
+    }
+    @AfterEach void tearDown() throws Exception {
+        closeable.close();
+    }
     @Test
     @DisplayName("Doit retourner un BookDto quand le livre existe")
     void shouldReturnBookDto_whenBookExists() {
