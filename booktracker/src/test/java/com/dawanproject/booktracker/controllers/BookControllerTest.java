@@ -1,6 +1,7 @@
 package com.dawanproject.booktracker.controllers;
 
 import com.dawanproject.booktracker.dtos.BookDto;
+import com.dawanproject.booktracker.services.BookService;
 import com.dawanproject.booktracker.services.GoogleBooksApiService;
 import com.dawanproject.booktracker.tools.JsonTool;
 import org.junit.jupiter.api.BeforeEach;
@@ -29,15 +30,18 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 
 @WebMvcTest(BookController.class)
 @AutoConfigureMockMvc(addFilters = false)
-class SearchControllerTest {
+class BookControllerTest {
+
+    private List<BookDto> bookDtoList;
 
     @MockitoBean
     private GoogleBooksApiService service;
 
+    @MockitoBean
+    private BookService bookService;
+
     @Autowired
     private MockMvc mockMvc;
-
-    private List<BookDto> bookDtoList;
 
     @BeforeEach
     public void setUp() {
