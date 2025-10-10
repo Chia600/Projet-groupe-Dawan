@@ -5,7 +5,6 @@ import com.dawanproject.booktracker.entities.Book;
 import com.dawanproject.booktracker.mappers.BookMapper;
 import com.dawanproject.booktracker.repositories.BookRepository;
 import com.dawanproject.booktracker.services.BookService;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,8 +20,6 @@ public class BookServiceImpl implements BookService {
 
     private final BookRepository bookRepository;
     private final BookMapper mapper;
-
-    private final ObjectMapper objectMapper = new ObjectMapper();
 
     /**
      * Récupère un livre par son ID et le convertit en JSON

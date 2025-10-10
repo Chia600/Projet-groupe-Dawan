@@ -45,7 +45,7 @@ public class JsonTool {
     }
 
     private static BookDto getBookDto(JsonNode item, long id) {
-        String publicationDate;
+        int publicationDate;
         String author;
         String title;
         String idVolume;
@@ -63,9 +63,13 @@ public class JsonTool {
 
         opt = item.path("volumeInfo").path("publishedDate").asOptional();
         if (opt.isEmpty()) {
-            publicationDate = "0000";
+            publicationDate = 0;
         } else {
-            publicationDate = (item.path("volumeInfo").path("publishedDate").asText()).split("-")[0];
+            try {
+                publicationDate = Integer.parseInt((item.path("volumeInfo").path("publishedDate").asText()).split("-")[0]);
+            } catch (NumberFormatException nfe) {
+                publicationDate = 0;
+            }
         }
 
         opt = item.path("volumeInfo").path("authors").asOptional();
@@ -87,7 +91,7 @@ public class JsonTool {
                 .title(title)
                 .author(author)
                 .idVolume(idVolume)
-                .publicationDate(LocalDate.of(Integer.parseInt(publicationDate), 01, 01))
+                .publicationDate(LocalDate.of(publicationDate, 01, 01))
                 .cover(cover)
                 .description(description)
                 .pageNumber(pageNumber)

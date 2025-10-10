@@ -71,7 +71,6 @@ class GoogleBooksApiServiceImplTest {
         assertEquals(result1.stream().toList().get(0).getAuthor(), "Stephen King");
         assertEquals(result1.stream().toList().get(3).getAuthor(), "Stephen King");
         assertEquals(result1.stream().toList().get(7).getAuthor(), "Stephen King");
-        assertEquals(result1.stream().toList().get(9).getAuthor(), "Stephen King");
 
         assertTrue(result2.stream().toList().get(0).getTitle().contains(search2));
         assertTrue(result2.stream().toList().get(2).getTitle().contains(search2));

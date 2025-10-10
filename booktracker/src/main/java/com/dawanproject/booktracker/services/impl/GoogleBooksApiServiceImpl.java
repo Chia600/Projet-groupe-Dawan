@@ -5,7 +5,7 @@ import com.dawanproject.booktracker.services.BookService;
 import com.dawanproject.booktracker.services.GoogleBooksApiService;
 import com.dawanproject.booktracker.tools.JsonTool;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -22,6 +22,7 @@ import java.util.Optional;
  * Service d'appel à l'API Google Books
  */
 @Service
+@RequiredArgsConstructor
 public class GoogleBooksApiServiceImpl implements GoogleBooksApiService {
 
     @Value("${google.books.api.url.base}")
@@ -30,12 +31,7 @@ public class GoogleBooksApiServiceImpl implements GoogleBooksApiService {
     @Value("${google.books.api.key}")
     private String googleBookApiKey;
 
-    private BookService bookService;
-
-    @Autowired
-    public GoogleBooksApiServiceImpl(BookService bookService) {
-        this.bookService = bookService;
-    }
+    private final BookService bookService;
 
     /**
      * Recherche paginée de livres via l'API Google Books

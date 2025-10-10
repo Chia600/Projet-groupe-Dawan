@@ -1,7 +1,6 @@
 package com.dawanproject.booktracker.controllers;
 
 import com.dawanproject.booktracker.dtos.BookDto;
-import com.dawanproject.booktracker.mappers.BookMapper;
 import com.dawanproject.booktracker.services.BookService;
 import com.dawanproject.booktracker.services.GoogleBooksApiService;
 import lombok.RequiredArgsConstructor;
@@ -32,7 +31,6 @@ public class BookController {
 
     private final GoogleBooksApiService googleBooksApiService;
     private final BookService bookService;
-    private final BookMapper bookMapper;
 
     /**
      * Récupère les détails d’un livre à partir de l’API Google Books.
