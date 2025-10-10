@@ -2,12 +2,12 @@ package com.dawanproject.booktracker.controllers;
 
 import com.dawanproject.booktracker.dtos.ReviewDto;
 import com.dawanproject.booktracker.services.ReviewService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import jakarta.validation.Valid;
 import java.util.List;
 
 /**
@@ -60,8 +60,8 @@ public class ReviewController {
     /**
      * Updates an existing review.
      *
-     * @param userId The ID of the user associated with the review.
-     * @param bookId The ID of the book associated with the review.
+     * @param userId    The ID of the user associated with the review.
+     * @param bookId    The ID of the book associated with the review.
      * @param reviewDTO The updated review data.
      * @return ResponseEntity containing the updated review if found, or HTTP status 404 (Not Found).
      */

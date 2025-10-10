@@ -2,12 +2,12 @@ package com.dawanproject.booktracker.controllers;
 
 import com.dawanproject.booktracker.dtos.UserDto;
 import com.dawanproject.booktracker.services.UserService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import jakarta.validation.Valid;
 import java.util.List;
 
 /**
@@ -71,7 +71,7 @@ public class UserController {
     /**
      * Updates an existing user.
      *
-     * @param id The ID of the user to update.
+     * @param id      The ID of the user to update.
      * @param userDTO The updated user data.
      * @return ResponseEntity containing the updated user if found, or HTTP status 404 (Not Found).
      */
@@ -138,7 +138,7 @@ public class UserController {
     /**
      * Adds a book to the user's collection of favorite books.
      *
-     * @param id The ID of the user.
+     * @param id     The ID of the user.
      * @param bookId The ID of the book to add.
      * @return ResponseEntity with HTTP status 200 (OK) if added, or 404 (Not Found).
      */
@@ -153,7 +153,7 @@ public class UserController {
     /**
      * Removes a book from the user's collection of favorite books.
      *
-     * @param id The ID of the user.
+     * @param id     The ID of the user.
      * @param bookId The ID of the book to remove.
      * @return ResponseEntity with HTTP status 204 (No Content) if removed, or 404 (Not Found).
      */

@@ -45,7 +45,7 @@ public interface UserService {
     /**
      * Updates an existing user.
      *
-     * @param id The ID of the user to update.
+     * @param id      The ID of the user to update.
      * @param userDTO The updated user data.
      * @return Optional containing the updated UserDTO if found, empty otherwise.
      */
@@ -86,7 +86,7 @@ public interface UserService {
     /**
      * Adds a book to the user's collection of favorite books.
      *
-     * @param id The ID of the user.
+     * @param id     The ID of the user.
      * @param bookId The ID of the book to add.
      * @return True if added, false if the user or book does not exist.
      */
@@ -95,7 +95,7 @@ public interface UserService {
     /**
      * Removes a book from the user's collection of favorite books.
      *
-     * @param id The ID of the user.
+     * @param id     The ID of the user.
      * @param bookId The ID of the book to remove.
      * @return True if removed, false if the user or book does not exist.
      */

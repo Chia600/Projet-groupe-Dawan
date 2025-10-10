@@ -7,7 +7,6 @@ import com.dawanproject.booktracker.mappers.UserMapper;
 import com.dawanproject.booktracker.repositories.BookRepository;
 import com.dawanproject.booktracker.repositories.UserRepository;
 import com.dawanproject.booktracker.services.UserService;
-
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -26,8 +25,8 @@ public class UserServiceImpl implements UserService {
     private final PasswordEncoder passwordEncoder;
     private final UserMapper userMapper;
 
-    public UserServiceImpl(UserRepository userRepository, BookRepository bookRepository, 
-                          PasswordEncoder passwordEncoder, UserMapper userMapper) {
+    public UserServiceImpl(UserRepository userRepository, BookRepository bookRepository,
+                           PasswordEncoder passwordEncoder, UserMapper userMapper) {
         this.userRepository = userRepository;
         this.bookRepository = bookRepository;
         this.passwordEncoder = passwordEncoder;

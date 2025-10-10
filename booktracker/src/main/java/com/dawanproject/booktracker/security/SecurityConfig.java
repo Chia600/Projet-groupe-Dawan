@@ -25,7 +25,7 @@ public class SecurityConfig {
         this.jwtAuthenticationFilter = jwtAuthenticationFilter;
     }
 
-    
+
     /**
      * Configures the security filter chain.
      *
