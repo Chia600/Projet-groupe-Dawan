@@ -41,13 +41,6 @@ class GoogleBooksApiServiceImplTest {
             throw new RuntimeException(e);
         }
 
-        Path jsonFilePath = Path.of("src/test/resources/livres.json");
-        try {
-            jsonResults = Files.readString(jsonFilePath);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
         ReflectionTestUtils.setField(
                 service,
                 "googleBookApiUrl",

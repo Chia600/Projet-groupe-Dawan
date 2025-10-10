@@ -4,9 +4,6 @@ import com.dawanproject.booktracker.dtos.BookDto;
 import com.dawanproject.booktracker.services.BookService;
 import com.dawanproject.booktracker.services.GoogleBooksApiService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -45,13 +42,7 @@ public class BookController {
     @GetMapping("/details/{bookId}")
     public ResponseEntity<BookDto> getBookDetails(@PathVariable String bookId) throws Exception {
         return ResponseEntity.ok(googleBooksApiService.getBookById(bookId)); //QbUACwAAQBAJ
-
-    String search;
-        if (optional.isPresent()) {
-            search = optional.get();
-        } else {
-            search = "";
-        }
+    }
 
     // Récupérer tous les livres d'une catégorie
     @GetMapping("/category/{genre}")
