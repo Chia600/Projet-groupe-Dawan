@@ -2,6 +2,7 @@ package com.dawanproject.booktracker.entities;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -25,9 +26,11 @@ public class User extends Person {
     private long userId;
 
     @Column(length = 100, nullable = false, unique=true)
+    @NotBlank
     private String username;
 
     @Column(length=100, nullable = false)
+    @NotBlank
     private String password;
 
     @Column(length=100, nullable = false, unique=true)

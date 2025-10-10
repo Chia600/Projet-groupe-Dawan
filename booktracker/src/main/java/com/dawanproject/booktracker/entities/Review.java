@@ -3,7 +3,6 @@ package com.dawanproject.booktracker.entities;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -34,6 +33,7 @@ public class Review implements Serializable {
 
     @Lob
     private String review;
+
 
     private int rating;
 

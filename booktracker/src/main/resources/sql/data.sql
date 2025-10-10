@@ -28,4 +28,3 @@ INSERT INTO user_books (user_user_id,books_book_id) VALUES
 (1, 3);
 
 
-
