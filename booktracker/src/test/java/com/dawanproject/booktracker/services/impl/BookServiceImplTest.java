@@ -4,7 +4,6 @@ import com.dawanproject.booktracker.dtos.BookDto;
 import com.dawanproject.booktracker.entities.Book;
 import com.dawanproject.booktracker.mappers.BookMapper;
 import com.dawanproject.booktracker.repositories.BookRepository;
-import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,7 +13,8 @@ import org.mockito.MockitoAnnotations;
 
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.*;
 
 @DisplayName("Tests unitaires du service BookServiceImpl")
