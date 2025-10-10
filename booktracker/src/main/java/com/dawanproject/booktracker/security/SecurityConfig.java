@@ -4,12 +4,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 /**
  * Configuration class for Spring Security.
@@ -17,7 +19,11 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
+    /**private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
+   * public SecurityConfig(JwtAuthenticationFilter jwtAuthenticationFilter) {
+        this.jwtAuthenticationFilter = jwtAuthenticationFilter;
+    }*/
     /**
      * Configures the security filter chain.
      *
@@ -28,11 +34,13 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .csrf(csrf -> csrf.disable()) // Désactiver CSRF pour les APIs REST
+                .csrf(csrf -> csrf.disable())// Désactiver CSRF pour les APIs REST
+                //.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // Pas de session
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/users/register").permitAll() // Endpoint public pour l'inscription
+                        .requestMatchers("api/users/register", "/login").permitAll() // Endpoint public pour l'inscription
                         .anyRequest().authenticated() // Tous les autres endpoints nécessitent une authentification
                 )
+               // .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class) // Filtre JWT avant l'authentification standard
                 .httpBasic(httpBasic -> {}) // Authentification de base
                 .formLogin(form -> {}); // Connexion par formulaire
 
