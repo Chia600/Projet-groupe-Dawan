@@ -1,5 +1,6 @@
 package com.dawanproject.booktracker.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -47,5 +48,6 @@ public class User extends Person {
 
     @ToString.Exclude
     @OneToMany(mappedBy = "user")
+    @JsonManagedReference
     private Set<Review> reviews = new HashSet<>();
 }

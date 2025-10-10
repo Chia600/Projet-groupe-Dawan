@@ -1,13 +1,14 @@
 package com.dawanproject.booktracker.dtos;
 
+import com.dawanproject.booktracker.entities.Review;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -26,6 +27,6 @@ public class BookDto {
     private String description;
 
     @Builder.Default
-    private final List<Long> reviewIds = new ArrayList<>();
+    private final Set<Review> reviews = new HashSet<>();
 
 }

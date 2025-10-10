@@ -1,5 +1,6 @@
 package com.dawanproject.booktracker.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -27,7 +28,7 @@ public class Book implements Serializable {
     @Version
     private int version;
 
-    @Column(length=150, nullable = false)
+    @Column(length = 150, nullable = false)
     private String title;
 
     @Lob
@@ -43,14 +44,17 @@ public class Book implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "authorId")
+    @JsonManagedReference
     private Author author;
 
     @ManyToOne
     @JoinColumn(name = "categoryId")
+    @JsonManagedReference
     private Category category;
 
     @ToString.Exclude
     @OneToMany(mappedBy = "book")
+    @JsonManagedReference
     private Set<Review> reviews = new HashSet<>();
 
 }
