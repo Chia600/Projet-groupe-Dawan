@@ -19,11 +19,13 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
-    /**private final JwtAuthenticationFilter jwtAuthenticationFilter;
+    private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
-   * public SecurityConfig(JwtAuthenticationFilter jwtAuthenticationFilter) {
+    public SecurityConfig(JwtAuthenticationFilter jwtAuthenticationFilter) {
         this.jwtAuthenticationFilter = jwtAuthenticationFilter;
-    }*/
+    }
+
+    
     /**
      * Configures the security filter chain.
      *
@@ -31,18 +33,17 @@ public class SecurityConfig {
      * @return The configured SecurityFilterChain.
      * @throws Exception If an error occurs during configuration.
      */
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .csrf(csrf -> csrf.disable())// Désactiver CSRF pour les APIs REST
-                //.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // Pas de session
+                .csrf(csrf -> csrf.disable())
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("api/users/register", "/login").permitAll() // Endpoint public pour l'inscription
-                        .anyRequest().authenticated() // Tous les autres endpoints nécessitent une authentification
+                        .requestMatchers("/api/users/register", "/login").permitAll() // Fixed: added leading slash
+                        .anyRequest().authenticated()
                 )
-               // .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class) // Filtre JWT avant l'authentification standard
-                .httpBasic(httpBasic -> {}) // Authentification de base
-                .formLogin(form -> {}); // Connexion par formulaire
+                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }

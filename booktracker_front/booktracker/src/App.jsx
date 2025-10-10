@@ -2,7 +2,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import BookPage from "./pages/BookPage";
+import BookPage from "./pages/BookPages";
 import Navbar from "./components/Navbar";
 
 function App(){

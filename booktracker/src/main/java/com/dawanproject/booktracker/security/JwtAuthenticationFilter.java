@@ -2,8 +2,8 @@
 
      import io.jsonwebtoken.Claims;
      import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.security.Keys;
-import jakarta.servlet.FilterChain;
+     import io.jsonwebtoken.security.Keys;
+     import jakarta.servlet.FilterChain;
      import jakarta.servlet.ServletException;
      import jakarta.servlet.http.HttpServletRequest;
      import jakarta.servlet.http.HttpServletResponse;
@@ -21,7 +21,7 @@ import jakarta.servlet.FilterChain;
      public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
          private final UserDetailsService userDetailsService;
-         private final String secretKey = ""; // Remplacez par une clé sécurisée
+         private final String secretKey = "secret"; // Remplacez par une clé sécurisée
 
          public JwtAuthenticationFilter(UserDetailsService userDetailsService) {
              this.userDetailsService = userDetailsService;
