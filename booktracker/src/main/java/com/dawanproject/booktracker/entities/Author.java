@@ -23,7 +23,7 @@ public class Author extends Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long authorId;
 
-    @OneToMany(mappedBy = "author")
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "author")
     @JsonBackReference
     private Set<Book> books = new HashSet<>();
 }
