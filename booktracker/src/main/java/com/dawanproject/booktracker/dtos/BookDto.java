@@ -1,10 +1,10 @@
 package com.dawanproject.booktracker.dtos;
 
+import com.dawanproject.booktracker.entities.Review;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.PastOrPresent;
 import jakarta.validation.constraints.PositiveOrZero;
 import jakarta.validation.constraints.Size;
-import com.dawanproject.booktracker.entities.Review;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,8 +14,6 @@ import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
-
-import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -34,6 +32,7 @@ public class BookDto {
 
     @PastOrPresent
     private LocalDate publicationDate;
+
     private int pageNumber;
 
     private String cover;
