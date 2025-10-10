@@ -1,5 +1,6 @@
 package com.dawanproject.booktracker.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -26,11 +27,12 @@ public class Category implements Serializable {
     @Version
     private int version;
 
-    @Column(length=50, nullable = false)
+    @Column(length = 50, nullable = false)
     private String genre;
 
     @ToString.Exclude
     @OneToMany(mappedBy = "category")
+    @JsonBackReference
     private Set<Book> books = new HashSet<>();
 
 }

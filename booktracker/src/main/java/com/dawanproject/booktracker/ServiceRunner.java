@@ -10,15 +10,17 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-//@RequiredArgsConstructor
+@RequiredArgsConstructor
 //@Component
-//public class ServiceRunner implements CommandLineRunner {
+public class ServiceRunner implements CommandLineRunner {
 
-//    private final GoogleBooksApiService service;
+    private final GoogleBooksApiService service;
 
-//    @Override
-//    public void run(String... args) throws Exception {
-//        Page<BookDto> list = service.getAllLivres(0,10,"Stephen King");
+    @Override
+    public void run(String... args) throws Exception {
+//        Page<BookDto> list = service.getAll(0,10,"Stephen King");
 //        list.forEach(System.out::println);
-//    }
-//}
+        BookDto bookDto = service.getBookById("5wBQEp6ruIAC");
+        System.out.println(bookDto);
+    }
+}

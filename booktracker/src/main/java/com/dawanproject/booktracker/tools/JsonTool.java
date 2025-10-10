@@ -5,6 +5,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -44,7 +45,7 @@ public class JsonTool {
     }
 
     private static BookDto getBookDto(JsonNode item, long id) {
-        String publicationDate;
+        int publicationDate;
         String author;
         String title;
         String idVolume;
@@ -58,8 +59,18 @@ public class JsonTool {
         title = item.path("volumeInfo").path("title").asText();
         cover = (item.path("volumeInfo").path("imageLinks").path("thumbnail").asText()).split("&zoom=1")[0];
         pageNumber = item.path("volumeInfo").path("pageCount").asInt();
-        publicationDate = (item.path("volumeInfo").path("publishedDate").asText()).split("-")[0];
         description = item.path("volumeInfo").path("description").asText();
+
+        opt = item.path("volumeInfo").path("publishedDate").asOptional();
+        if (opt.isEmpty()) {
+            publicationDate = 0;
+        } else {
+            try {
+                publicationDate = Integer.parseInt((item.path("volumeInfo").path("publishedDate").asText()).split("-")[0]);
+            } catch (NumberFormatException nfe) {
+                publicationDate = 0;
+            }
+        }
 
         opt = item.path("volumeInfo").path("authors").asOptional();
         if (opt.isEmpty()) {
@@ -80,7 +91,7 @@ public class JsonTool {
                 .title(title)
                 .author(author)
                 .idVolume(idVolume)
-                .publicationDate(publicationDate)
+                .publicationDate(LocalDate.of(publicationDate, 01, 01))
                 .cover(cover)
                 .description(description)
                 .pageNumber(pageNumber)

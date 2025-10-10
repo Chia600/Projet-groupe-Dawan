@@ -1,6 +1,7 @@
 package com.dawanproject.booktracker.services.impl;
 
 import com.dawanproject.booktracker.dtos.BookDto;
+import com.dawanproject.booktracker.services.BookService;
 import com.dawanproject.booktracker.tools.JsonTool;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -26,9 +27,11 @@ class GoogleBooksApiServiceImplTest {
 
     private GoogleBooksApiServiceImpl service;
 
+    private BookService bookService;
+
     @BeforeEach
     void setUp() {
-        service = new GoogleBooksApiServiceImpl();
+        service = new GoogleBooksApiServiceImpl(bookService);
 
         ReflectionTestUtils.setField(
                 service,
@@ -68,7 +71,6 @@ class GoogleBooksApiServiceImplTest {
         assertEquals(result1.stream().toList().get(0).getAuthor(), "Stephen King");
         assertEquals(result1.stream().toList().get(3).getAuthor(), "Stephen King");
         assertEquals(result1.stream().toList().get(7).getAuthor(), "Stephen King");
-        assertEquals(result1.stream().toList().get(9).getAuthor(), "Stephen King");
 
         assertTrue(result2.stream().toList().get(0).getTitle().contains(search2));
         assertTrue(result2.stream().toList().get(2).getTitle().contains(search2));

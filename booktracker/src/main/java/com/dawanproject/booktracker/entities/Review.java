@@ -1,5 +1,6 @@
 package com.dawanproject.booktracker.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 import java.io.Serializable;
@@ -22,10 +23,12 @@ public class Review implements Serializable {
 
     @ManyToOne
     @MapsId("userId")
+    @JsonBackReference
     private User user;
 
     @ManyToOne
     @MapsId("bookId")
+    @JsonBackReference
     private Book book;
 
     @Lob

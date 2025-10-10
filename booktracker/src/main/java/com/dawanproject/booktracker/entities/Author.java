@@ -1,5 +1,6 @@
 package com.dawanproject.booktracker.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -23,5 +24,6 @@ public class Author extends Person {
     private long authorId;
 
     @OneToMany(mappedBy = "author")
+    @JsonBackReference
     private Set<Book> books = new HashSet<>();
 }
