@@ -22,7 +22,7 @@ INSERT INTO book (cover,description,page_number,publication_date,title,author_id
 INSERT INTO user (firstname,lastname,email,password,picture,subscription_date,username,version,is_subscribed) VALUES
 ('Donald', 'Duck', 'dduck@duckburg.wd', 'mypassword', NULL, '2025-10-06', 'powerDuck', 0, true);
 
-INSERT INTO review (creation_date,rating,review,user_user_id,book_book_id) VALUES
+INSERT INTO review (creation_date,rating,review,user_id,book_id) VALUES
 ('2025-10-06',4, NULL, 1, 1);
 
 INSERT INTO user_books (user_user_id,books_book_id) VALUES
