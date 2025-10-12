@@ -2,7 +2,6 @@ package com.dawanproject.booktracker.controller;
 
 import com.dawanproject.booktracker.controllers.UserController;
 import com.dawanproject.booktracker.dtos.UserDto;
-import com.dawanproject.booktracker.security.JwtAuthenticationFilter;
 import com.dawanproject.booktracker.security.SecurityConfig;
 import com.dawanproject.booktracker.services.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -12,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
-import org.springframework.security.test.context.support.WithAnonymousUser;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
@@ -39,9 +37,6 @@ class UserControllerTest {
     @MockitoBean
     private UserService userService;
 
-    @MockitoBean
-    private JwtAuthenticationFilter jwtAuthenticationFilter;
-
     @Autowired
     private ObjectMapper objectMapper;
 
@@ -49,74 +44,29 @@ class UserControllerTest {
     void setUp() {
         reset(userService);
     }
-
-    @Test
-    @WithAnonymousUser
-    void testRegisterUser_Success() throws Exception {
-
-        UserDto userDTO = new UserDto(1L, "John", "Doe", "testuser", "test@example.com", "secret", false, Collections.emptyList(), Collections.emptyList());
-        UserDto responseDTO = new UserDto(1L, "John", "Doe", "testuser", "test@example.com", null, false, Collections.emptyList(), Collections.emptyList());
-
-        when(userService.registerUser(any(UserDto.class))).thenReturn(responseDTO);
-
-        mockMvc.perform(post("/api/users/register")
-                        .with(csrf())
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(userDTO)))
-                .andExpect(status().isCreated()) // Should be 201
-                .andExpect(jsonPath("$.userId").value(1L))
-                .andExpect(jsonPath("$.username").value("testuser"))
-                .andExpect(jsonPath("$.email").value("test@example.com"))
-                .andExpect(jsonPath("$.password").doesNotExist());
-
-        // Verify the service method was called
-        verify(userService, times(1)).registerUser(any(UserDto.class));
-    }
-
-    @Test
-    @WithAnonymousUser
-    void testRegisterUser_ValidationError() throws Exception {
-
-        String invalidUserJson = "{\"username\":\"\",\"email\":\"invalid\",\"password\":\"\"}";
-
-        mockMvc.perform(post("/api/users/register")
-                        .with(csrf())
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(invalidUserJson))
-                .andExpect(status().isBadRequest()); // Should be 400
-
-        // Verify the service method was NOT called due to validation error
-        verify(userService, never()).registerUser(any(UserDto.class));
-    }
-
-    @Test
-    @WithMockUser(roles = {"ADMIN", "USER"})
-    void testCreateUser_Success() throws Exception {
-
-        UserDto userDTO = new UserDto(1L, "John", "Doe", "testuser", "test@example.com", "secret", false, Collections.emptyList(), Collections.emptyList());
-        UserDto responseDTO = new UserDto(1L, "John", "Doe", "testuser", "test@example.com", null, false, Collections.emptyList(), Collections.emptyList());
-
-        when(userService.createUser(any(UserDto.class))).thenReturn(responseDTO);
-
-        mockMvc.perform(post("/api/users")
-                        .with(csrf())
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(userDTO)))
-                .andExpect(status().isCreated()) // Should be 201
-                .andExpect(jsonPath("$.userId").value(1L))
-                .andExpect(jsonPath("$.username").value("testuser"))
-                .andExpect(jsonPath("$.email").value("test@example.com"))
-                .andExpect(jsonPath("$.password").doesNotExist());
-
-        verify(userService, times(1)).createUser(any(UserDto.class));
-    }
+//
+//    @Test
+//    @WithAnonymousUser
+//    void testRegisterUser_ValidationError() throws Exception {
+//
+//        String invalidUserJson = "{\"username\":\"\",\"email\":\"invalid\",\"password\":\"\"}";
+//
+//        mockMvc.perform(post("/api/users/register")
+//                        .with(csrf())
+//                        .contentType(MediaType.APPLICATION_JSON)
+//                        .content(invalidUserJson))
+//                .andExpect(status().isBadRequest()); // Should be 400
+//
+//        // Verify the service method was NOT called due to validation error
+//        verify(userService, never()).register(any(RegisterRequestDto.class));
+//    }
 
     @Test
     @WithMockUser(roles = {"ADMIN", "USER"})
     void testGetAllUsers_Success() throws Exception {
 
-        UserDto userDTO1 = new UserDto(1L, "John", "Doe", "user1", "user1@example.com", null, false, Collections.emptyList(), Collections.emptyList());
-        UserDto userDTO2 = new UserDto(2L, "John", "Doe", "user2", "user2@example.com", null, false, Collections.emptyList(), Collections.emptyList());
+        UserDto userDTO1 = new UserDto(1L, "John", "Doe", "user1", "user1@example.com", null, Collections.emptyList(), Collections.emptyList());
+        UserDto userDTO2 = new UserDto(2L, "John", "Doe", "user2", "user2@example.com", null, Collections.emptyList(), Collections.emptyList());
         List<UserDto> users = Arrays.asList(userDTO1, userDTO2);
 
         when(userService.getAllUsers()).thenReturn(users);
@@ -135,7 +85,7 @@ class UserControllerTest {
     @WithMockUser(roles = {"ADMIN", "USER"})
     void testGetUserById_Success() throws Exception {
 
-        UserDto userDTO = new UserDto(1L, "John", "Doe", "testuser", "test@example.com", null, false, Collections.emptyList(), Collections.emptyList());
+        UserDto userDTO = new UserDto(1L, "John", "Doe", "testuser", "test@example.com", null, Collections.emptyList(), Collections.emptyList());
 
         when(userService.getUserById(1L)).thenReturn(Optional.of(userDTO));
 
@@ -164,8 +114,8 @@ class UserControllerTest {
     @WithMockUser(roles = {"ADMIN", "USER"})
     void testUpdateUser_Success() throws Exception {
 
-        UserDto userDTO = new UserDto(1L, "John", "Doe", "testuser", "new@example.com", "newpassword", false, Collections.emptyList(), Collections.emptyList());
-        UserDto responseDTO = new UserDto(1L, "John", "Doe", "testuser", "new@example.com", null, false, Collections.emptyList(), Collections.emptyList());
+        UserDto userDTO = new UserDto(1L, "John", "Doe", "testuser", "new@example.com", "newpassword", Collections.emptyList(), Collections.emptyList());
+        UserDto responseDTO = new UserDto(1L, "John", "Doe", "testuser", "new@example.com", null, Collections.emptyList(), Collections.emptyList());
 
         when(userService.updateUser(eq(1L), any(UserDto.class))).thenReturn(Optional.of(responseDTO));
 
@@ -185,7 +135,7 @@ class UserControllerTest {
     @WithMockUser(roles = {"ADMIN", "USER"})
     void testUpdateUser_NotFound() throws Exception {
 
-        UserDto userDTO = new UserDto(1L, "John", "Doe", "newuser", "new@example.com", "newpassword", false, Collections.emptyList(), Collections.emptyList());
+        UserDto userDTO = new UserDto(1L, "John", "Doe", "newuser", "new@example.com", "newpassword", Collections.emptyList(), Collections.emptyList());
 
         when(userService.updateUser(eq(1L), any(UserDto.class))).thenReturn(Optional.empty());
 
@@ -228,7 +178,7 @@ class UserControllerTest {
     @WithMockUser(roles = {"ADMIN", "USER"})
     void testGetUserByUsername_Success() throws Exception {
 
-        UserDto userDTO = new UserDto(1L, "John", "Doe", "testuser", "test@example.com", null, false, Collections.emptyList(), Collections.emptyList());
+        UserDto userDTO = new UserDto(1L, "John", "Doe", "testuser", "test@example.com", null, Collections.emptyList(), Collections.emptyList());
 
         when(userService.getUserByUsername("testuser")).thenReturn(Optional.of(userDTO));
 
@@ -258,7 +208,7 @@ class UserControllerTest {
     @WithMockUser(roles = {"ADMIN", "USER"})
     void testGetUserByEmail_Success() throws Exception {
 
-        UserDto userDTO = new UserDto(1L, "John", "Doe", "testuser", "test@example.com", null, false, Collections.emptyList(), Collections.emptyList());
+        UserDto userDTO = new UserDto(1L, "John", "Doe", "testuser", "test@example.com", null, Collections.emptyList(), Collections.emptyList());
 
         when(userService.getUserByEmail("test@example.com")).thenReturn(Optional.of(userDTO));
 

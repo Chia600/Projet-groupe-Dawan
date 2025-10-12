@@ -1,5 +1,6 @@
 package com.dawanproject.booktracker.mappers;
 
+import com.dawanproject.booktracker.dtos.RegisterRequestDto;
 import com.dawanproject.booktracker.dtos.UserDto;
 import com.dawanproject.booktracker.entities.Book;
 import com.dawanproject.booktracker.entities.Review;
@@ -49,7 +50,6 @@ public interface UserMapper {
      */
     @Mapping(source = "reviews", target = "reviewIds", qualifiedByName = "mapReviewsToIds")
     @Mapping(source = "books", target = "bookIds", qualifiedByName = "mapBooksToIds")
-    @Mapping(target = "password", ignore = true)
     UserDto toDTO(User user);
 
     /**
@@ -60,5 +60,9 @@ public interface UserMapper {
      */
 
     User toEntity(UserDto userDTO);
+
+    RegisterRequestDto toDto(User user);
+
+    User registerRequestDtoToEntity(RegisterRequestDto dto);
 
 }

@@ -14,7 +14,7 @@ import java.util.List;
  * REST controller for managing Review entities.
  */
 @RestController
-@RequestMapping("/reviews")
+@RequestMapping("/api/reviews")
 @Validated
 @RequiredArgsConstructor
 public class ReviewController {

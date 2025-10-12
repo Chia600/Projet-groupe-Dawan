@@ -10,22 +10,6 @@ import java.util.Optional;
  */
 public interface UserService {
 
-    /**
-     * Registers a new user with a hashed password.
-     *
-     * @param userDTO The user data to register.
-     * @return The created UserDTO.
-     * @throws IllegalArgumentException if the user data is invalid.
-     */
-    UserDto registerUser(UserDto userDTO);
-
-    /**
-     * Creates a new user with a hashed password.
-     *
-     * @param userDTO The user data to create.
-     * @return The created UserDTO.
-     */
-    UserDto createUser(UserDto userDTO);
 
     /**
      * Retrieves all users.

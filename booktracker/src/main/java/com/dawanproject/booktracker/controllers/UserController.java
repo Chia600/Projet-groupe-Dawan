@@ -1,6 +1,10 @@
 package com.dawanproject.booktracker.controllers;
 
+import com.dawanproject.booktracker.dtos.LoginRequestDto;
+import com.dawanproject.booktracker.dtos.RegisterRequestDto;
 import com.dawanproject.booktracker.dtos.UserDto;
+import com.dawanproject.booktracker.dtos.AccountResponseDto;
+import com.dawanproject.booktracker.services.AuthenticationService;
 import com.dawanproject.booktracker.services.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -21,28 +25,28 @@ public class UserController {
 
     private final UserService userService;
 
+    private final AuthenticationService authService;
+
     /**
      * Registers a new user with a hashed password (public endpoint).
      *
-     * @param userDTO The user data to register.
+     * @param registerRequestDto The user data to register.
      * @return ResponseEntity containing the created user and HTTP status 201 (Created).
      */
     @PostMapping("/register")
-    public ResponseEntity<UserDto> registerUser(@Valid @RequestBody UserDto userDTO) {
-        UserDto createdUser = userService.registerUser(userDTO);
-        return ResponseEntity.status(201).body(createdUser);
+    public ResponseEntity<AccountResponseDto> register(@Valid @RequestBody RegisterRequestDto registerRequestDto) {
+        return authService.register(registerRequestDto);
     }
 
     /**
-     * Creates a new user with a hashed password.
+     * Login
      *
-     * @param userDTO The user data to create.
+     * @param loginRequestDto The user data to login.
      * @return ResponseEntity containing the created user and HTTP status 201 (Created).
      */
-    @PostMapping
-    public ResponseEntity<UserDto> createUser(@Valid @RequestBody UserDto userDTO) {
-        UserDto createdUser = userService.createUser(userDTO);
-        return ResponseEntity.status(201).body(createdUser);
+    @PostMapping("/login")
+    public ResponseEntity<AccountResponseDto> login(@Valid @RequestBody LoginRequestDto loginRequestDto) {
+        return authService.login(loginRequestDto);
     }
 
     /**
