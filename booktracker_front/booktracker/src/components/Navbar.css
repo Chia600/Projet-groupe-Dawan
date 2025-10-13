@@ -1,0 +1,52 @@
+.navbar {
+    background-color: #f4f4f4;
+    padding: 0.75rem 1.5rem;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+}
+
+/* Styles communs aux liens ET au bouton "Se connecter" */
+.navbar-links a,
+.login-link {
+    display: inline-block;
+    background-color: white;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    cursor: pointer;
+    font-family: inherit; /* garde la même police que les liens */
+    line-height: normal;
+}
+
+/* Effet au survol (pour link et button normalement) */
+.navbar-links a:hover,
+.login-link:hover {
+    background-color: #595b60;
+    color: white;
+    border-color: #595b60;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Supprime les styles natifs du bouton (important !!!) */
+.login-link {
+    border: 1px solid #ccc;  /* garde la même bordure */
+    background: white;       /* neutralise fond native */
+    appearance: none;        /* supprime le style système */
+    outline: none;
+    padding: 0.5rem 1rem;    /* même espacement que les liens */
+}

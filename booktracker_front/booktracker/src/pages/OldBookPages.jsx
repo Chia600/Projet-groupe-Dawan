@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import api from "../api/axios";
 import BookCard from "../components/BookCard";
 
-export default function BookPages() {
+export default function OldBookPages() {
   const [books, setBooks] = useState([]);
   const [q, setQ] = useState("");
 

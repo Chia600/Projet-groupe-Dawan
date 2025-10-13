@@ -1,0 +1,130 @@
+.books-page {
+    padding: 2rem;
+    text-align: center;
+}
+
+.search-container {
+    margin-bottom: 2rem;
+}
+
+.search-container input {
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 300px;
+    font-size: 1rem;
+}
+
+/* === Grille de 4 colonnes === */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    margin-top: 2rem;
+}
+
+/* === Carte de livre === */
+.book-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 180px;
+    height: 280px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0.75rem;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* === Conteneur de cover === */
+.book-cover-container {
+    width: 100%;
+    height: 80%;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Marge intérieure */
+    padding: 0.3rem;
+}
+
+/* === Image de couverture === */
+.book-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* occupe tout l’espace, rogne si nécessaire */
+    border-radius: 4px;
+}
+
+/* === Si pas de couverture === */
+.book-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* === Titre du livre === */
+.book-title {
+    font-size: 0.9rem;
+    margin: 0.4rem 0;
+    text-align: center;
+    color: #333;
+    flex-shrink: 0;
+}
+
+/* === Bouton Détails === */
+.details-button {
+    background: #007bff;
+    color: white;
+    padding: 0.4rem 1.2rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s ease-in-out;
+    margin-top: 0.3rem;
+}
+
+.details-button:hover {
+    background: #0056b3;
+}
+
+/* === Pagination === */
+.pagination {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.pagination button {
+    border: 1px solid #ccc;
+    background: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
