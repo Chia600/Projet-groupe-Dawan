@@ -15,6 +15,12 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class SecurityConfig {
 
+    private static final String[] SWAGGER_WHITELIST = {
+            "/swagger-ui/**",
+            "/v3/api-docs/**",
+            "/api/v1/**"
+    };
+
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -25,8 +31,7 @@ public class SecurityConfig {
 
         return http.csrf(c -> c.disable())
                 .authorizeHttpRequests(auth ->
-                        auth.requestMatchers("/swagger-ui/**").permitAll()
-                                .requestMatchers("/v3/api-docs/**").permitAll()
+                        auth.requestMatchers(SWAGGER_WHITELIST).permitAll()
                                 .requestMatchers("/api/users/**").permitAll()
                                 .requestMatchers("/api/authors/**").permitAll()
                                 .requestMatchers("/api/books/**").permitAll()
