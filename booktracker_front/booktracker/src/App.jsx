@@ -1,23 +1,22 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
 import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import BookPage from "./pages/BookPage";
-import Navbar from "./components/Navbar";
+import BooksPage from "./pages/BooksPage";
+import BookDetails from "./pages/BooksDetails.jsx";
+import "./App.css";
 
-function App(){
-  return (
-    <BrowserRouter>
-      <Navbar />
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/login" element={<Login/>} />
-          <Route path="/register" element={<Register/>} />
-        </Routes>
-      </div>
-    </BrowserRouter>
-  );
+
+export default function App() {
+    return (
+        <>
+            <Header />
+            <main style={{ paddingTop: "5rem", textAlign: "center" }}>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/books" element={<BooksPage />} />
+                    <Route path="/books/:id" element={<BookDetails />} />
+                </Routes>
+            </main>
+        </>
+    );
 }
-
-export default App;

@@ -1,0 +1,122 @@
+/* Arrière-plan semi-transparent */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+/* Fenêtre principale */
+.modal-content {
+    background: #fff;
+    border-radius: 10px;
+    width: 380px;
+    padding: 2rem 2rem 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* Titre */
+.modal-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+}
+
+/* Ligne de séparation */
+.divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 1rem 0;
+}
+
+/* Formulaire */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    color: #444;
+}
+
+.login-form input {
+    margin-top: 0.3rem;
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* Conteneur du lien "Nouveau ?" */
+.register-container {
+    display: flex;
+    justify-content: flex-end; /* aligné à droite */
+    margin-top: -0.5rem;
+}
+
+/* Lien "Nouveau ?" */
+.register-link {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.register-link:hover {
+    color: #0056b3;
+}
+
+/* Section des boutons bas */
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+/* Boutons */
+.cancel-btn,
+.login-btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cancel-btn {
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    color: #333;
+}
+
+.cancel-btn:hover {
+    background: #e4e4e4;
+}
+
+.login-btn {
+    background: #007bff;
+    border: none;
+    color: white;
+}
+
+.login-btn:hover {
+    background: #0056b3;
+}
