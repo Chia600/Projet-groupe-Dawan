@@ -6,7 +6,7 @@ import com.dawanproject.booktracker.entities.ReviewPK;
 import com.dawanproject.booktracker.mappers.ReviewMapper;
 import com.dawanproject.booktracker.repositories.ReviewRepository;
 import com.dawanproject.booktracker.services.ReviewService;
-
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -18,15 +18,11 @@ import java.util.stream.Collectors;
  * Implementation of ReviewService for managing Review entities.
  */
 @Service
+@RequiredArgsConstructor
 public class ReviewServiceImpl implements ReviewService {
 
     private final ReviewRepository reviewRepository;
     private final ReviewMapper reviewMapper;
-
-    public ReviewServiceImpl(ReviewRepository reviewRepository, ReviewMapper reviewMapper) {
-        this.reviewRepository = reviewRepository;
-        this.reviewMapper = reviewMapper;
-    }
 
     @Override
     public ReviewDto createReview(ReviewDto reviewDTO) {

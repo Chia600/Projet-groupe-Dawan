@@ -3,6 +3,7 @@ package com.dawanproject.booktracker.dtos;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,6 +24,14 @@ public class UserDto {
     @NotNull(message = "L'ID utilisateur est requis pour les mises à jour")
     private Long userId;
 
+    @NotBlank(message = "Le prénom est requis")
+    @Size(max = 50, message = "Le prénom ne peut pas dépasser 50 caractères")
+    private String firstname;
+
+    @NotBlank(message = "Le nom de famille est requis")
+    @Size(max = 50, message = "Le nom de famille ne peut pas dépasser 50 caractères")
+    private String lastname;
+
     /**
      * Username of the user.
      */
@@ -41,11 +50,6 @@ public class UserDto {
      */
     @NotBlank(message = "Le mot de passe est requis")
     private String password;
-
-    /**
-     * Indicates whether the user is subscribed to a service.
-     */
-    private boolean isSubscribed;
 
     private List<Long> bookIds;
 

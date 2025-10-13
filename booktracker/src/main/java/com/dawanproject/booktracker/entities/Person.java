@@ -21,10 +21,10 @@ public abstract class Person implements Serializable {
     @Version
     private int version;
 
-    @Column(length=100, nullable = false)
+    @Column(length = 100, nullable = false)
     private String firstname;
 
-    @Column(length=100, nullable = false)
+    @Column(length = 100, nullable = false)
     private String lastname;
 
 }

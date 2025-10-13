@@ -7,7 +7,10 @@ import com.dawanproject.booktracker.mappers.UserMapper;
 import com.dawanproject.booktracker.repositories.BookRepository;
 import com.dawanproject.booktracker.repositories.UserRepository;
 import com.dawanproject.booktracker.services.UserService;
-
+import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -19,36 +22,13 @@ import java.util.stream.Collectors;
  * Implementation of UserService for managing User entities and their book collections.
  */
 @Service
+@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
     private final BookRepository bookRepository;
     private final PasswordEncoder passwordEncoder;
     private final UserMapper userMapper;
-
-    public UserServiceImpl(UserRepository userRepository, BookRepository bookRepository, 
-                          PasswordEncoder passwordEncoder, UserMapper userMapper) {
-        this.userRepository = userRepository;
-        this.bookRepository = bookRepository;
-        this.passwordEncoder = passwordEncoder;
-        this.userMapper = userMapper;
-    }
-
-    @Override
-    public UserDto registerUser(UserDto userDTO) {
-        User user = userMapper.toEntity(userDTO);
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
-        User savedUser = userRepository.save(user);
-        return userMapper.toDTO(savedUser);
-    }
-
-    @Override
-    public UserDto createUser(UserDto userDTO) {
-        User user = userMapper.toEntity(userDTO);
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
-        User savedUser = userRepository.save(user);
-        return userMapper.toDTO(savedUser);
-    }
 
     @Override
     public List<UserDto> getAllUsers() {

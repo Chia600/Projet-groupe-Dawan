@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import API from "../api/axios";
+import api from "../api/axios";
 import BookCard from "../components/BookCard";
 
 export default function BookPages() {
@@ -8,7 +8,7 @@ export default function BookPages() {
 
   const fetchBooks = async () => {
     try {
-      const res = await API.get("/books", { params: { q } });
+      const res = await api.get("/books", { params: { q } });
       setBooks(res.data);
     } catch (err) {
       console.error(err);

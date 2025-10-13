@@ -1,14 +1,11 @@
 package com.dawanproject.booktracker.mappers;
 
+import com.dawanproject.booktracker.dtos.RegisterRequestDto;
 import com.dawanproject.booktracker.dtos.UserDto;
+import com.dawanproject.booktracker.entities.Book;
 import com.dawanproject.booktracker.entities.Review;
 import com.dawanproject.booktracker.entities.User;
-
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.MappingConstants;
-import org.mapstruct.Named;
-import org.mapstruct.ReportingPolicy;
+import org.mapstruct.*;
 
 import java.util.List;
 import java.util.Set;
@@ -19,7 +16,7 @@ import java.util.stream.Collectors;
  */
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING, unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface UserMapper {
-     /**
+    /**
      * Maps a set of Review entities to a list of review IDs (bookIds).
      *
      * @param reviews The set of Review entities.
@@ -34,6 +31,17 @@ public interface UserMapper {
                 .map(review -> review.getReviewId().getBookId())
                 .collect(Collectors.toList());
     }
+
+    @Named("mapBooksToIds")
+    default List<Long> mapBooksToIds(Set<Book> books) {
+        if (books == null) {
+            return null;
+        }
+        return books.stream()
+                .map(b -> b.getBookId())
+                .collect(Collectors.toList());
+    }
+
     /**
      * Converts a User entity to a UserDTO.
      *
@@ -41,7 +49,7 @@ public interface UserMapper {
      * @return The corresponding UserDTO.
      */
     @Mapping(source = "reviews", target = "reviewIds", qualifiedByName = "mapReviewsToIds")
-    @Mapping(target = "password", ignore = true)
+    @Mapping(source = "books", target = "bookIds", qualifiedByName = "mapBooksToIds")
     UserDto toDTO(User user);
 
     /**
@@ -50,14 +58,10 @@ public interface UserMapper {
      * @param userDTO The UserDTO to convert.
      * @return The corresponding User entity.
      */
-    @Mapping(target = "userId", ignore = true)
-    @Mapping(target = "reviews", ignore = true)
-    @Mapping(target = "firstname", ignore = true)
-    @Mapping(target = "lastname", ignore = true)
-    @Mapping(target = "version", ignore = true)
-    @Mapping(target = "books", ignore = true)
-    @Mapping(target = "picture", ignore = true)
-    @Mapping(target = "subscriptionDate", ignore = true)
     User toEntity(UserDto userDTO);
-   
+
+    RegisterRequestDto toDto(User user);
+
+    User registerRequestDtoToEntity(RegisterRequestDto dto);
+
 }
