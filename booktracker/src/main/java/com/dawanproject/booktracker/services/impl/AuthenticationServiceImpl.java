@@ -3,10 +3,14 @@ package com.dawanproject.booktracker.services.impl;
 import com.dawanproject.booktracker.dtos.AccountResponseDto;
 import com.dawanproject.booktracker.dtos.LoginRequestDto;
 import com.dawanproject.booktracker.dtos.RegisterRequestDto;
+import com.dawanproject.booktracker.dtos.UserDto;
+import com.dawanproject.booktracker.entities.Role;
 import com.dawanproject.booktracker.entities.User;
+import com.dawanproject.booktracker.enums.RoleName;
 import com.dawanproject.booktracker.mappers.UserMapper;
 import com.dawanproject.booktracker.repositories.UserRepository;
 import com.dawanproject.booktracker.security.JwtTokenUtil;
+import com.dawanproject.booktracker.services.AccountService;
 import com.dawanproject.booktracker.services.AuthenticationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
@@ -15,12 +19,14 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -31,35 +37,32 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     private final AuthenticationManager authenticationManager;
     private final UserMapper userMapper;
     private final JwtTokenUtil jwtTokenUtil;
+    private final AccountService accountService;
 
     @Override
-    public ResponseEntity<AccountResponseDto> register(RegisterRequestDto request) {
+    public Optional<UserDto> register(RegisterRequestDto request) {
         if (userRepository.findByUsername(request.username()).isPresent()) {
-            return ResponseEntity.badRequest().body(AccountResponseDto.builder().message("Username already exists").build());
-        }
-
-        if (userRepository.findByEmail(request.email()).isPresent()) {
-            return ResponseEntity.badRequest().body(AccountResponseDto.builder().message("Email already exists").build());
+            return Optional.empty();
         }
 
         User user = userMapper.registerRequestDtoToEntity(request);
         user.setSubscriptionDate(LocalDate.now());
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         User savedUser = userRepository.save(user);
+        List<Role> role = Arrays.asList(new Role(RoleName.USER));
+        accountService.addRoleToUser(savedUser, role);
 
-        userMapper.toDTO(savedUser);
-
-        return ResponseEntity.ok(AccountResponseDto.builder().message("User successfully registered").build());
+        return Optional.of(userMapper.toDTO(savedUser));
     }
 
     @Override
     public ResponseEntity<AccountResponseDto> login(LoginRequestDto request) {
 
-        UserDetails user;
+        User user;
         try {
             user = userRepository.findByUsername(request.username()).orElseThrow(() -> new UsernameNotFoundException("User does not exist"));
-        } catch( UsernameNotFoundException unfe){
-            return ResponseEntity.badRequest().body(AccountResponseDto.builder().message(unfe.getMessage()).build());
+        } catch (UsernameNotFoundException e) {
+            return ResponseEntity.badRequest().body(AccountResponseDto.builder().message(e.getMessage()).build());
         }
 
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.username(), request.password()));
@@ -73,6 +76,6 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
         return ResponseEntity.ok()
                 .headers(responseHeaders)
-                .body(AccountResponseDto.builder().message("user successfully authenticated").build());
+                .body(AccountResponseDto.builder().message("user successfully authenticated").token(jwtToken).build());
     }
 }

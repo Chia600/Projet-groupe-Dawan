@@ -1,7 +1,8 @@
-package com.dawanproject.booktracker.controller;
+package com.dawanproject.booktracker.controllers;
 
-import com.dawanproject.booktracker.controllers.UserController;
 import com.dawanproject.booktracker.dtos.UserDto;
+import com.dawanproject.booktracker.security.JwtAuthFilter;
+import com.dawanproject.booktracker.security.JwtTokenUtil;
 import com.dawanproject.booktracker.security.SecurityConfig;
 import com.dawanproject.booktracker.services.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -36,6 +37,12 @@ class UserControllerTest {
 
     @MockitoBean
     private UserService userService;
+
+    @MockitoBean
+    private JwtTokenUtil jwtTokenUtil;
+
+    @MockitoBean
+    private JwtAuthFilter jwtAuthFilter;
 
     @Autowired
     private ObjectMapper objectMapper;

@@ -1,10 +1,6 @@
 package com.dawanproject.booktracker.controllers;
 
-import com.dawanproject.booktracker.dtos.LoginRequestDto;
-import com.dawanproject.booktracker.dtos.RegisterRequestDto;
 import com.dawanproject.booktracker.dtos.UserDto;
-import com.dawanproject.booktracker.dtos.AccountResponseDto;
-import com.dawanproject.booktracker.services.AuthenticationService;
 import com.dawanproject.booktracker.services.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -24,30 +20,6 @@ import java.util.List;
 public class UserController {
 
     private final UserService userService;
-
-    private final AuthenticationService authService;
-
-    /**
-     * Registers a new user with a hashed password (public endpoint).
-     *
-     * @param registerRequestDto The user data to register.
-     * @return ResponseEntity containing the created user and HTTP status 201 (Created).
-     */
-    @PostMapping("/register")
-    public ResponseEntity<AccountResponseDto> register(@Valid @RequestBody RegisterRequestDto registerRequestDto) {
-        return authService.register(registerRequestDto);
-    }
-
-    /**
-     * Login
-     *
-     * @param loginRequestDto The user data to login.
-     * @return ResponseEntity containing the created user and HTTP status 201 (Created).
-     */
-    @PostMapping("/login")
-    public ResponseEntity<AccountResponseDto> login(@Valid @RequestBody LoginRequestDto loginRequestDto) {
-        return authService.login(loginRequestDto);
-    }
 
     /**
      * Retrieves all users.

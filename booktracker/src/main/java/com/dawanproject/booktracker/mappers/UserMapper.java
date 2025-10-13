@@ -58,7 +58,6 @@ public interface UserMapper {
      * @param userDTO The UserDTO to convert.
      * @return The corresponding User entity.
      */
-
     User toEntity(UserDto userDTO);
 
     RegisterRequestDto toDto(User user);

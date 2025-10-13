@@ -1,7 +1,6 @@
 package com.dawanproject.booktracker.controllers;
 
 import com.dawanproject.booktracker.dtos.AuthorDto;
-import com.dawanproject.booktracker.mappers.AuthorMapper;
 import com.dawanproject.booktracker.services.AuthorService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -21,8 +20,6 @@ import java.util.List;
 public class AuthorController {
 
     private final AuthorService service;
-
-    private final AuthorMapper mapper;
 
     /**
      * Return all authors

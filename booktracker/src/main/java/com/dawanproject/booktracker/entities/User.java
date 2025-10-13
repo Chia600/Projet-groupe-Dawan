@@ -53,8 +53,9 @@ public class User extends Person implements UserDetails {
     @JsonManagedReference
     private Set<Review> reviews = new HashSet<>();
 
+    @ToString.Exclude
     @ManyToMany(fetch = FetchType.EAGER)
-    private Collection<Role> roles;
+    private Set<Role> roles = new HashSet<>();
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

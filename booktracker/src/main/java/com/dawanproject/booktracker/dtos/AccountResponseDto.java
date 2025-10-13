@@ -7,4 +7,5 @@ import lombok.Data;
 @Builder
 public class AccountResponseDto {
     private String message;
+    private String token;
 }
