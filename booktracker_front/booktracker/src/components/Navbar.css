@@ -28,11 +28,11 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
     cursor: pointer;
-    font-family: inherit; /* garde la même police que les liens */
+    font-family: inherit;
     line-height: normal;
 }
 
-/* Effet au survol (pour link et button normalement) */
+/* Effet au survol (pour link et bouton) */
 .navbar-links a:hover,
 .login-link:hover {
     background-color: #595b60;
@@ -44,9 +44,115 @@
 
 /* Supprime les styles natifs du bouton (important !!!) */
 .login-link {
-    border: 1px solid #ccc;  /* garde la même bordure */
-    background: white;       /* neutralise fond native */
-    appearance: none;        /* supprime le style système */
+    border: 1px solid #ccc;
+    background: white;
+    appearance: none;
     outline: none;
-    padding: 0.5rem 1rem;    /* même espacement que les liens */
+    padding: 0.5rem 1rem;
+}
+
+/* Conteneur du profil (avatar + menu dropdown) */
+.profile-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Avatar utilisateur (image ronde) */
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, border-color 0.2s;
+}
+
+.avatar:hover {
+    transform: scale(1.05);
+    border-color: #007bff;
+}
+
+/* Menu déroulant type Discord */
+.profile-dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    padding: 0.5rem 0;
+    animation: fadeIn 0.2s ease;
+    z-index: 1000;
+}
+
+/* En-tête du menu (avatar + nom) */
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.avatar-small {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 0.6rem;
+}
+
+.profile-name {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+/* ─────────────── Separateurs ─────────────── */
+.divider {
+    height: 1px;
+    background-color: #e5e5e5;
+    margin: 0.4rem 0;
+}
+
+/* Liens internes du menu (Profil / Paramètres) */
+.dropdown-item,
+.logout-item {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #222;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover gris doux */
+.dropdown-item:hover {
+    background-color: #f2f2f2;
+}
+
+/* 🔴 Bouton "Se déconnecter" rouge */
+.logout-item {
+    color: #e63946;
+    font-weight: 600;
+}
+
+.logout-item:hover {
+    background-color: #ffe5e5;
+    color: #ff0000;
+}
+
+/* Animation d’apparition fluide */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
