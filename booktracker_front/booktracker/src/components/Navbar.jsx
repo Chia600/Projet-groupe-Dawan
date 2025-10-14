@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import LoginModal from "./LoginModal";
 import RegisterModal from "./RegisterModal";
-import "./Navbar.css";
+import "./navbar.css";
 
 export default function Navbar() {
     // États pour les deux modales

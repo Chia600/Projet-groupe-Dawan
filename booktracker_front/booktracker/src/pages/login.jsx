@@ -19,6 +19,9 @@ export default function Login(){
     };
 
     return (
-        // html with bootstrap form for login page
+        <>
+            {/* html with bootstrap form for login page */}
+        </>
     );
+
 }
