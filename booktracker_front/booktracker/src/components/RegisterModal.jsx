@@ -1,5 +1,5 @@
 import React from "react";
-import "./RegisterModal.css";
+import "./registerModal.css";
 
 export default function RegisterModal({ onClose, onRegister }) {
     return (

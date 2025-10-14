@@ -1,22 +1,19 @@
+// src/App.jsx
 import { Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
+import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import BooksPage from "./pages/BooksPage";
-import BookDetails from "./pages/BooksDetails.jsx";
+import BookDetails from "./pages/BooksDetails";
 import "./App.css";
-
 
 export default function App() {
     return (
-        <>
-            <Header />
-            <main style={{ paddingTop: "5rem", textAlign: "center" }}>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/books" element={<BooksPage />} />
-                    <Route path="/books/:id" element={<BookDetails />} />
-                </Routes>
-            </main>
-        </>
+        <Routes>
+            <Route element={<Layout />}>
+                <Route path="/" element={<Home />} />
+                <Route path="/books" element={<BooksPage />} />
+                <Route path="/books/:id" element={<BookDetails />} />
+            </Route>
+        </Routes>
     );
 }

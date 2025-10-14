@@ -1,11 +1,15 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useSearchParams } from "react-router-dom"; // 👈 pour lire la recherche dans l’URL
 import "./BooksPage.css";
+import BookCard from "../components/BookCard";
 
 export default function BooksPage() {
-    const [q, setQ] = useState("");
     const [page, setPage] = useState(1);
     const booksPerPage = 12;
+
+    // récupère le paramètre de recherche dans l’URL
+    const [params] = useSearchParams();
+    const q = params.get("search")?.toLowerCase() || "";
 
     // Données mockées
     const mockBooks = [
@@ -29,55 +33,36 @@ export default function BooksPage() {
         { id: 18, title: "Le Comte de Monte-Cristo", cover: "https://m.media-amazon.com/images/I/91rj5bYx6vL._AC_UF1000,1000_QL80_.jpg" },
     ];
 
-    // Filtrage par recherche
+    // Filtrage selon la recherche (via URL)
     const filteredBooks = mockBooks.filter((b) =>
-        b.title.toLowerCase().includes(q.toLowerCase())
+        b.title.toLowerCase().includes(q)
     );
 
-    // Pagination logique
+    const totalPages = Math.ceil(filteredBooks.length / booksPerPage);
     const startIndex = (page - 1) * booksPerPage;
     const paginatedBooks = filteredBooks.slice(startIndex, startIndex + booksPerPage);
-    const totalPages = Math.ceil(filteredBooks.length / booksPerPage);
 
     return (
         <div className="books-page">
-            <h1>Catalogue des livres</h1>
+            <h1>{q ? `Résultats pour : "${q}"` : "Catalogue des livres"}</h1>
 
-            {/* Barre de recherche */}
-            <div className="search-container">
-                <input
-                    type="text"
-                    placeholder="Rechercher un livre..."
-                    value={q}
-                    onChange={(e) => {
-                        setQ(e.target.value);
-                        setPage(1);
-                    }}
-                />
-            </div>
-
-            {/* Grille livres */}
             <div className="book-grid">
-                {paginatedBooks.map((book) => (
-                    <div key={book.id} className="book-card">
-                        <div className="book-cover-container">
-                            {book.cover ? (
-                                <img src={book.cover} alt={book.title} className="book-cover" />
-                            ) : (
-                                <div className="book-placeholder">Couverture de livre</div>
-                            )}
-                        </div>
-                        <h3 className="book-title">{book.title}</h3>
-                        <Link to={`/books/${book.id}`} className="details-button">
-                            Détails
-                        </Link>
-                    </div>
-                ))}
+                {paginatedBooks.length > 0 ? (
+                    paginatedBooks.map((book) => <BookCard key={book.id} book={book} />)
+                ) : (
+                    <p>Aucun livre trouvé :( </p>
+                )}
             </div>
 
             {/* Pagination */}
             {totalPages > 1 && (
                 <div className="pagination">
+                    {page > 1 && (
+                        <button onClick={() => setPage(page - 1)} className="nav-button">
+                            «
+                        </button>
+                    )}
+
                     {Array.from({ length: totalPages }, (_, i) => (
                         <button
                             key={i}
@@ -87,6 +72,12 @@ export default function BooksPage() {
                             {i + 1}
                         </button>
                     ))}
+
+                    {page < totalPages && (
+                        <button onClick={() => setPage(page + 1)} className="nav-button">
+                            »
+                        </button>
+                    )}
                 </div>
             )}
         </div>

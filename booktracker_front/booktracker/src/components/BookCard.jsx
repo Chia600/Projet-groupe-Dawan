@@ -1,20 +1,21 @@
 import React from "react";
-import "./BookCard.css"; // fichier CSS pour le hover
+import "./bookCard.css";
+import {Link} from "react-router-dom"; // fichier CSS pour le hover
 
-export default function BookCard({ book }) {
-  return (
-    <div className="book-card">
-      {book.coverUrl ? (
-        <img src={book.coverUrl} alt={book.title} className="book-cover" />
-      ) : (
-        <div className="book-cover placeholder">Pas de couverture</div>
-      )}
-
-      <div className="book-overlay">
-        <h3>{book.title}</h3>
-        {book.description && <p>{book.description.length > 150 ? book.description.slice(0, 150) + "..." : book.description}</p>}
-        {book.publishedDate && <small>Publié le : {book.publishedDate}</small>}
-      </div>
-    </div>
-  );
+export default function BookCard({book}) {
+    return (
+        <div key={book.id} className="book-card">
+            <div className="book-cover-container">
+                {book.cover ? (
+                    <img src={book.cover} alt={book.title} className="book-cover"/>
+                ) : (
+                    <div className="book-placeholder">Couverture de livre</div>
+                )}
+            </div>
+            <h3 className="book-title">{book.title}</h3>
+            <Link to={`/books/${book.id}`} className="details-button">
+                Détails
+            </Link>
+        </div>
+    );
 }
