@@ -1,0 +1,77 @@
+.user-page {
+   text-align: center;
+   height: auto;
+   width: 1080px;
+   margin-top: 4rem;
+}
+
+.user-detail-page {
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   padding: 3rem;
+   margin-top: 4rem;
+   background-color: #f7f7f7;
+}
+
+.user-detail-container {
+   display: flex;
+   flex-direction: row;
+   align-items: flex-start;
+   background-color: white;
+   border-radius: 12px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+   padding: 2rem;
+   max-width: 950px;
+   width: 100%;
+   gap: 2rem;
+}
+
+.user-detail-img {
+   width: 220px;
+   height: 320px;
+   object-fit: cover;
+   border-radius: 8px;
+   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Infos --- */
+.user-info-section {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   text-align: left;
+}
+
+.user-name {
+   font-size: 1.8rem;
+   font-weight: 600;
+   margin-top: 0;
+   margin-bottom: 11rem;
+}
+
+/* --- Infos supplémentaires --- */
+.user-extra p {
+   margin: 0.3rem 0;
+   color: #555;
+}
+
+.profile-details-edit-btn {
+   display: block;
+   align-self: self-end;
+}
+
+.user-detail-container button {
+   background: #007bff;
+   color: white;
+   padding: 0.4rem 1.2rem;
+   border-radius: 9999px;
+   text-decoration: none;
+   font-weight: 1000;
+   transition: background 0.2s ease-in-out;
+   margin-top: 0.3rem;
+}
+
+.user-detail-container button:hover {
+   background: #0039b3;
+}
