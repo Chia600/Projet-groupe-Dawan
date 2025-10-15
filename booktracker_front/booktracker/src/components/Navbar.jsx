@@ -33,7 +33,7 @@ export default function Navbar() {
       e.preventDefault();
       if (isLoggedIn)
          navigate("/collection");
-       else
+      else
          openLoginModal();
    };
 
@@ -64,15 +64,15 @@ export default function Navbar() {
       setShowMenu(false);
       navigate("/profile/edit"); // redirige vers les paramètres du profil si connecté
    };
-   
-    const handleLogout = () => {
-        localStorage.removeItem("token");
-        localStorage.removeItem("username");
-        setIsLoggedIn(false);
-        setUserName("Utilisateur");
-        setShowMenu(false);
-        navigate("/");
-    };
+
+   const handleLogout = () => {
+      localStorage.removeItem("token");
+      localStorage.removeItem("username");
+      setIsLoggedIn(false);
+      setUserName("Utilisateur");
+      setShowMenu(false);
+      navigate("/");
+   };
 
    // Ferme le menu si clic à l’extérieur
    useEffect(() => {
@@ -88,61 +88,61 @@ export default function Navbar() {
    // Avatar par défaut
    const userAvatar = "https://cdn-icons-png.flaticon.com/512/3135/3135715.png";
 
-    return (
-        <>
-            <nav className="navbar">
-                <ul className="navbar-links">
-                    <li>
-                        <Link to="/" onClick={handleCollectionClick}>
-                            Ma collection
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/books">Livres</Link>
-                    </li>
-                    <li>
-                        {isLoggedIn ? (
-                            <div className="profile-container" ref={menuRef}>
-                                <img
-                                    src={userAvatar}
-                                    alt="Profil"
-                                    className="avatar"
-                                    onClick={() => setShowMenu(!showMenu)}
-                                />
-                                {showMenu && (
-                                    <div className="profile-dropdown">
-                                        <div className="profile-header">
-                                            <img src={userAvatar} alt="Profil" className="avatar-small" />
-                                            <span className="profile-name">{userName}</span>
-                                        </div>
-                                        <div className="divider"></div>
-                                        <button
-                                                                         className="dropdown-item"
-                                                                         onClick={handleProfileDetailsClick}
-                                                                      >
-                                            Profil
-                                        </button>
-                                        <button
-                                                                         className="dropdown-item"
-                                                                         onClick={handleProfileParametersClick}
-                                                                      >
-                                            Paramètres
-                                        </button>
-                                        <div className="divider"></div>
-                                        <button className="logout-item" onClick={handleLogout}>
-                                            🔴 Se déconnecter
-                                        </button>
-                                    </div>
-                                )}
-                            </div>
-                        ) : (
-                            <button className="login-link" onClick={openLoginModal}>
-                                Se connecter
-                            </button>
+   return (
+      <>
+         <nav className="navbar">
+            <ul className="navbar-links">
+               <li>
+                  <Link to="/" onClick={handleCollectionClick}>
+                     Ma collection
+                  </Link>
+               </li>
+               <li>
+                  <Link to="/books">Livres</Link>
+               </li>
+               <li>
+                  {isLoggedIn ? (
+                     <div className="profile-container" ref={menuRef}>
+                        <img
+                           src={userAvatar}
+                           alt="Profil"
+                           className="avatar"
+                           onClick={() => setShowMenu(!showMenu)}
+                        />
+                        {showMenu && (
+                           <div className="profile-dropdown">
+                              <div className="profile-header">
+                                 <img src={userAvatar} alt="Profil" className="avatar-small" />
+                                 <span className="profile-name">{userName}</span>
+                              </div>
+                              <div className="divider"></div>
+                              <button
+                                 className="dropdown-item"
+                                 onClick={handleProfileDetailsClick}
+                              >
+                                 Profil
+                              </button>
+                              <button
+                                 className="dropdown-item"
+                                 onClick={handleProfileParametersClick}
+                              >
+                                 Paramètres
+                              </button>
+                              <div className="divider"></div>
+                              <button className="logout-item" onClick={handleLogout}>
+                                 🔴 Se déconnecter
+                              </button>
+                           </div>
                         )}
-                    </li>
-                </ul>
-            </nav>
+                     </div>
+                  ) : (
+                     <button className="login-link" onClick={openLoginModal}>
+                        Se connecter
+                     </button>
+                  )}
+               </li>
+            </ul>
+         </nav>
 
          {/* === Pop-up Connexion === */}
          {showLoginModal && (
@@ -150,13 +150,13 @@ export default function Navbar() {
                onClose={closeLoginModal}
                onRegister={goToRegister}
                onLoginSuccess={(username) => {
-                        // sauvegarde du pseudo saisi
-                        localStorage.setItem("username", username);
-                        setUserName(username);
-                        setIsLoggedIn(true);
-                        closeLoginModal();
-                        alert(`Bienvenue ${username} !`);
-                    }}
+                  // sauvegarde du pseudo saisi
+                  localStorage.setItem("username", username);
+                  setUserName(username);
+                  setIsLoggedIn(true);
+                  closeLoginModal();
+                  alert(`Bienvenue ${username} !`);
+               }}
             />
          )}
 
@@ -166,7 +166,7 @@ export default function Navbar() {
                onClose={closeRegisterModal}
                onRegister={() => {
                   closeRegisterModal();
-                        alert("Compte créé avec succès ! Vous pouvez maintenant vous connecter.");
+                  alert("Compte créé avec succès ! Vous pouvez maintenant vous connecter.");
                   setTimeout(() => openLoginModal(), 300);
                }}
             />
