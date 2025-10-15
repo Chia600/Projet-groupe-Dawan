@@ -51,20 +51,6 @@ export default function Navbar() {
       navigate("/profile/edit"); // redirige vers les paramètres du profil si connecté
    };
 
-   // Gestion du clic sur "Profil"
-   const handleProfileDetailsClick = (e) => {
-      e.preventDefault(); // empêche la navigation immédiate
-      setShowMenu(false);
-      navigate("/profile"); // redirige vers les paramètres du profil si connecté
-   };
-
-   // Gestion du clic sur "Paramètres"
-   const handleProfileParametersClick = (e) => {
-      e.preventDefault(); // empêche la navigation immédiate
-      setShowMenu(false);
-      navigate("/profile/edit"); // redirige vers les paramètres du profil si connecté
-   };
-
    const handleLogout = () => {
       localStorage.removeItem("token");
       localStorage.removeItem("username");
