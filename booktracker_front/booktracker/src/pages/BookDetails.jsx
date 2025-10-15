@@ -5,8 +5,8 @@ import axios from "axios";
 import "../assets/bookDetails.css";
 
 export default function BookDetails() {
-    const { id } = useParams();
-    const [book, setBook] = useState(null);
+   const { id } = useParams();
+   const [book, setBook] = useState(null);
     const [error, setError] = useState(null);
 
     useEffect(() => {
@@ -27,7 +27,7 @@ export default function BookDetails() {
         fetchBookDetails();
     }, [id]);
 
-    if (error) return <p>{error}</p>;
+   if (error) return <p>{error}</p>;
     if (!book) return <p>Chargement...</p>;
 
     return (
