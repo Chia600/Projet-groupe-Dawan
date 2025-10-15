@@ -5,49 +5,40 @@ import RegisterModal from "./RegisterModal";
 import "../assets/navbar.css";
 
 export default function Navbar() {
-    // États pour les deux modales
     const [showLoginModal, setShowLoginModal] = useState(false);
     const [showRegisterModal, setShowRegisterModal] = useState(false);
-    const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("token")); // init depuis le stockage
-    const [showMenu, setShowMenu] = useState(false); // ouverture/fermeture du menu profil
+    const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("token"));
+    const [userName, setUserName] = useState(localStorage.getItem("username") || "Utilisateur");
+    const [showMenu, setShowMenu] = useState(false);
     const navigate = useNavigate();
-    const menuRef = useRef(null); // référence pour détecter le clic extérieur
+    const menuRef = useRef(null);
 
-    // Fonctions pour LoginModal
     const openLoginModal = () => setShowLoginModal(true);
     const closeLoginModal = () => setShowLoginModal(false);
-
-    // Fonctions pour RegisterModal
     const openRegisterModal = () => setShowRegisterModal(true);
     const closeRegisterModal = () => setShowRegisterModal(false);
 
-    // Quand on clique sur "Nouveau ?"
     const goToRegister = () => {
-        closeLoginModal(); // ferme la modale de connexion
-        setTimeout(() => {
-            openRegisterModal(); // ouvre la modale d'inscription après un léger délai
-        }, 150);
+        closeLoginModal();
+        setTimeout(() => openRegisterModal(), 150);
     };
 
-    // Gestion du clic sur "Ma collection"
     const handleCollectionClick = (e) => {
-        e.preventDefault(); // empêche la navigation immédiate
-        if (isLoggedIn) {
-            navigate("/collection"); // redirige vers la collection si connecté
-        } else {
-            openLoginModal(); // sinon ouvre la popup de connexion
-        }
+        e.preventDefault();
+        if (isLoggedIn) navigate("/collection");
+        else openLoginModal();
     };
 
-    // Déconnexion
     const handleLogout = () => {
-        localStorage.removeItem("token"); // coupe le token
-        setIsLoggedIn(false); // met à jour l’état local
+        localStorage.removeItem("token");
+        localStorage.removeItem("username");
+        setIsLoggedIn(false);
+        setUserName("Utilisateur");
         setShowMenu(false);
         navigate("/");
     };
 
-    // Ferme le menu si clic en dehors
+    // Ferme le menu si clic à l’extérieur
     useEffect(() => {
         const handleClickOutside = (e) => {
             if (menuRef.current && !menuRef.current.contains(e.target)) {
@@ -58,9 +49,8 @@ export default function Navbar() {
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
 
-    // Simulation avatar (plus tard : URL backend)
+    // Avatar par défaut
     const userAvatar = "https://cdn-icons-png.flaticon.com/512/3135/3135715.png";
-    const userName = "Maxence Wurtz"; // simulé pour l'affichage
 
     return (
         <>
@@ -71,7 +61,9 @@ export default function Navbar() {
                             Ma collection
                         </Link>
                     </li>
-                    <li><Link to="/books">Livres</Link></li>
+                    <li>
+                        <Link to="/books">Livres</Link>
+                    </li>
                     <li>
                         {isLoggedIn ? (
                             <div className="profile-container" ref={menuRef}>
@@ -90,27 +82,18 @@ export default function Navbar() {
                                         <div className="divider"></div>
                                         <button
                                             className="dropdown-item"
-                                            onClick={() => {
-                                                alert("Page profil à venir !");
-                                                setShowMenu(false);
-                                            }}
+                                            onClick={() => alert("Page profil à venir !")}
                                         >
                                             Profil
                                         </button>
                                         <button
                                             className="dropdown-item"
-                                            onClick={() => {
-                                                alert("Paramètres à venir !");
-                                                setShowMenu(false);
-                                            }}
+                                            onClick={() => alert("Paramètres à venir !")}
                                         >
                                             Paramètres
                                         </button>
                                         <div className="divider"></div>
-                                        <button
-                                            className="logout-item"
-                                            onClick={handleLogout}
-                                        >
+                                        <button className="logout-item" onClick={handleLogout}>
                                             🔴 Se déconnecter
                                         </button>
                                     </div>
@@ -125,24 +108,30 @@ export default function Navbar() {
                 </ul>
             </nav>
 
-            {/* Pop-up Connexion */}
+            {/* === Pop-up Connexion === */}
             {showLoginModal && (
                 <LoginModal
                     onClose={closeLoginModal}
                     onRegister={goToRegister}
-                    onLoginSuccess={() => setIsLoggedIn(true)} // connexion simulée
+                    onLoginSuccess={(username) => {
+                        // sauvegarde du pseudo saisi
+                        localStorage.setItem("username", username);
+                        setUserName(username);
+                        setIsLoggedIn(true);
+                        closeLoginModal();
+                        alert(`Bienvenue ${username} !`);
+                    }}
                 />
             )}
 
-            {/* Pop-up Inscription */}
+            {/* === Pop-up Inscription === */}
             {showRegisterModal && (
                 <RegisterModal
                     onClose={closeRegisterModal}
                     onRegister={() => {
-                        alert("Compte créé !");
                         closeRegisterModal();
-                        setIsLoggedIn(true); // simule connexion après inscription
-                        localStorage.setItem("token", "fake-token"); // simule stockage token
+                        alert("Compte créé avec succès ! Vous pouvez maintenant vous connecter.");
+                        setTimeout(() => openLoginModal(), 300);
                     }}
                 />
             )}

@@ -1,23 +1,43 @@
 import React, { useState } from "react";
+import API from "../api/axios";
 import "../assets/loginModal.css";
 
 export default function LoginModal({ onClose, onRegister, onLoginSuccess }) {
-    // États internes
-    const [email, setEmail] = useState("");
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
+    const [loading, setLoading] = useState(false);
 
-    // Simulation de connexion
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
+        setError(false);
 
-        if (email.toLowerCase().includes("test")) {
-            localStorage.setItem("token", "fake-token");
-            onLoginSuccess?.();
-            onClose();
-        } else {
+        // Validation rapide
+        if (!username.trim() || !password.trim()) {
             setError(true);
-            setTimeout(() => setError(false), 600);
+            return;
+        }
+
+        try {
+            setLoading(true);
+
+            const response = await API.post("/auth/login", {
+                username,
+                password,
+            });
+
+            if (response.status === 200 && response.data.token) {
+                localStorage.setItem("token", response.data.token);
+                onLoginSuccess?.(username); // notifie la Navbar
+                onClose(); // ferme la modale
+            } else {
+                setError(true);
+            }
+        } catch (err) {
+            console.error("Erreur de connexion :", err);
+            setError(true);
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -31,12 +51,12 @@ export default function LoginModal({ onClose, onRegister, onLoginSuccess }) {
                 {/* Formulaire */}
                 <form className="login-form" onSubmit={handleLogin}>
                     <label>
-                        Email :
+                        Nom d'utilisateur :
                         <input
-                            type="email"
-                            placeholder="Votre email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
+                            type="text"
+                            placeholder="Votre identifiant"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
                             className={error ? "error" : ""}
                             required
                         />
@@ -51,6 +71,7 @@ export default function LoginModal({ onClose, onRegister, onLoginSuccess }) {
                             onChange={(e) => setPassword(e.target.value)}
                             className={error ? "error" : ""}
                             required
+                            minLength={6}
                         />
                     </label>
 
@@ -71,16 +92,25 @@ export default function LoginModal({ onClose, onRegister, onLoginSuccess }) {
                     <p className="error-message">Identifiants incorrects</p>
                 )}
 
-                {/* Ligne de séparation */}
                 <hr className="divider" />
 
                 {/* Boutons bas */}
                 <div className="modal-actions">
-                    <button type="button" className="cancel-btn" onClick={onClose}>
+                    <button
+                        type="button"
+                        className="cancel-btn"
+                        onClick={onClose}
+                        disabled={loading}
+                    >
                         Annuler
                     </button>
-                    <button type="submit" className="login-btn" onClick={handleLogin}>
-                        Se connecter
+                    <button
+                        type="submit"
+                        className="login-btn"
+                        onClick={handleLogin}
+                        disabled={loading}
+                    >
+                        {loading ? "Connexion..." : "Se connecter"}
                     </button>
                 </div>
             </div>
