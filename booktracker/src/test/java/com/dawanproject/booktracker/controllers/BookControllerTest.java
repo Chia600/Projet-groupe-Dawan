@@ -48,6 +48,12 @@ class BookControllerTest {
     @MockitoBean
     private BookService bookService;
 
+    @MockitoBean
+    private JwtTokenUtil jwtTokenUtil;
+
+    @MockitoBean
+    private JwtAuthFilter jwtAuthFilter;
+
     @Autowired
     private MockMvc mockMvc;
 
