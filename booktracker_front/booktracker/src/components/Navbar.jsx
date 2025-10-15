@@ -38,10 +38,10 @@ export default function Navbar() {
    };
 
    // Gestion du clic sur "Profil"
-   const handleProfileDetailsClick = (e) => {
+   const handleUserDetailsClick = (e) => {
       e.preventDefault(); // empêche la navigation immédiate
       setShowMenu(false);
-      navigate("/profile"); // redirige vers les paramètres du profil si connecté
+      navigate("/user"); // redirige vers les paramètres du profil si connecté
    };
 
    // Gestion du clic sur "Paramètres"
@@ -104,7 +104,7 @@ export default function Navbar() {
                               <div className="divider"></div>
                               <button
                                  className="dropdown-item"
-                                 onClick={handleProfileDetailsClick}
+                                 onClick={handleUserDetailsClick}
                               >
                                  Profil
                               </button>
