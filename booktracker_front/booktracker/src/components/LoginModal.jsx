@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./loginModal.css";
+import "../assets/loginModal.css";
 
 export default function LoginModal({ onClose, onRegister, onLoginSuccess }) {
     // États internes

@@ -1,5 +1,5 @@
 import React from "react";
-import "./bookCard.css";
+import "../assets/bookCard.css";
 import {Link} from "react-router-dom"; // fichier CSS pour le hover
 
 export default function BookCard({book}) {

@@ -2,14 +2,14 @@ import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
-import "./Header.css";
+import "../assets/header.css";
 
 export default function Header() {
     const location = useLocation();
     const navigate = useNavigate();
     const isHome = location.pathname === "/";
 
-    // 🔙 Redirection vers la home quand on clique sur le titre
+    // Redirection vers la home quand on clique sur le titre
     const handleGoHome = () => {
         navigate("/");
     };

@@ -1,6 +1,6 @@
 import React from "react";
 import SearchBar from "../components/SearchBar";
-import "./Home.css";
+import "../assets/home.css";
 
 export default function Home() {
     return (
