@@ -4,9 +4,9 @@ import "../assets/loginModal.css";
 
 export default function LoginModal({ onClose, onRegister, onLoginSuccess }) {
    const [username, setUsername] = useState("");
-   const [password, setPassword] = useState("");
-   const [error, setError] = useState(false);
-   const [loading, setLoading] = useState(false);
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState(false);
+    const [loading, setLoading] = useState(false);
 
    const handleLogin = async (e) => {
       e.preventDefault();
@@ -26,9 +26,17 @@ export default function LoginModal({ onClose, onRegister, onLoginSuccess }) {
             password,
          });
 
-         if (response.status === 200 && response.data.token) {
-            localStorage.setItem("token", response.data.token);
-            let accessToken = localStorage.getItem("token");
+         try {
+            setLoading(true);
+
+            const response = await API.post("/auth/login", {
+                username,
+                password,
+            });
+
+            if (response.status === 200 && response.data.token) {
+                localStorage.setItem("token", response.data.token);
+                let accessToken = localStorage.getItem("token");
             // Décoder le JWT pour récupérer l'username
             const base64Url = accessToken.split('.')[1];
             const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
@@ -42,8 +50,12 @@ export default function LoginModal({ onClose, onRegister, onLoginSuccess }) {
             const decoded = JSON.parse(jsonPayload);
             localStorage.setItem("userId", decoded.user_id);
             onLoginSuccess?.(username); // notifie la Navbar
-            onClose(); // ferme la modale
-         } else {
+                onClose(); // ferme la modale
+            } else {
+                setError(true);
+            }
+        } catch (err) {
+            console.error("Erreur de connexion :", err);
             setError(true);
          }
       } catch (err) {
@@ -75,18 +87,18 @@ export default function LoginModal({ onClose, onRegister, onLoginSuccess }) {
                   />
                </label>
 
-               <label>
-                  Mot de passe :
-                  <input
-                     type="password"
-                     placeholder="Votre mot de passe"
-                     value={password}
-                     onChange={(e) => setPassword(e.target.value)}
-                     className={error ? "error" : ""}
-                     required
-                     minLength={6}
-                  />
-               </label>
+                    <label>
+                        Mot de passe :
+                        <input
+                            type="password"
+                            placeholder="Votre mot de passe"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            className={error ? "error" : ""}
+                            required
+                            minLength={6}
+                        />
+                    </label>
 
                {/* Lien "Nouveau ?" aligné à droite sous le mot de passe */}
                <div className="register-container">
@@ -107,23 +119,23 @@ export default function LoginModal({ onClose, onRegister, onLoginSuccess }) {
 
             <hr className="divider" />
 
-            {/* Boutons bas */}
-            <div className="modal-actions">
-               <button
-                  type="button"
-                  className="cancel-btn"
-                  onClick={onClose}
+                {/* Boutons bas */}
+                <div className="modal-actions">
+                    <button
+                        type="button"
+                        className="cancel-btn"
+                        onClick={onClose}
+                        disabled={loading}
+                    >
+                        Annuler
+                    </button>
+                    <button
+                        type="submit"
+                        className="login-btn"
+                        onClick={handleLogin}
                   disabled={loading}
-               >
-                  Annuler
-               </button>
-               <button
-                  type="submit"
-                  className="login-btn"
-                  onClick={handleLogin}
-                  disabled={loading}
-               >
-                  {loading ? "Connexion..." : "Se connecter"}
+                    >
+                        {loading ? "Connexion..." : "Se connecter"}
                </button>
             </div>
          </div>
