@@ -50,6 +50,7 @@ public interface UserMapper {
      */
     @Mapping(source = "reviews", target = "reviewIds", qualifiedByName = "mapReviewsToIds")
     @Mapping(source = "books", target = "bookIds", qualifiedByName = "mapBooksToIds")
+    @Mapping(source = "subscriptionDate", target = "subscriptionDate", dateFormat = "yyyy-MM-dd")
     UserDto toDTO(User user);
 
     /**

@@ -1,13 +1,11 @@
 package com.dawanproject.booktracker.dtos;
 
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -31,6 +29,11 @@ public class UserDto {
     @NotBlank(message = "Le nom de famille est requis")
     @Size(max = 50, message = "Le nom de famille ne peut pas dépasser 50 caractères")
     private String lastname;
+
+    private String picture;
+
+    @PastOrPresent(message = "La date de création doit être dans le passé ou aujourd'hui")
+    private LocalDate subscriptionDate;
 
     /**
      * Username of the user.
