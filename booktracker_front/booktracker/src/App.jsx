@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import BooksPage from "./pages/BooksPage";
-import BookDetails from "./pages/BooksDetails";
+import BookDetails from "./pages/BookDetails.jsx";
 import "./App.css";
 
 export default function App() {

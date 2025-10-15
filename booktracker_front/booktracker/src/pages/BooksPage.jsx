@@ -7,8 +7,8 @@ import BookCard from "../components/BookCard";
 export default function BooksPage() {
     const [books, setBooks] = useState([]);          // liste de livres récupérés
     const [page, setPage] = useState(1);             // page courante
-    let booksPerPage = 12;                         // taille des pages
-    const [totalPages, setTotalPages] = useState(1); // total renvoyé par backend
+    let booksPerPage = 12;                           // taille des pages
+    const [totalPages, setTotalPages] = useState(0); // total renvoyé par backend
     const [loading, setLoading] = useState(false);   // affichage "chargement"
     const [error, setError] = useState(null);        // gestion d’erreurs
 
@@ -20,16 +20,21 @@ export default function BooksPage() {
             setLoading(true);
             setError(null);
             try {
-                if (page === 4) {
+
+                const backendPage = page - 1;
+
+                if (backendPage === 4) {
                     booksPerPage = 4;
                 }
                 // Appel backend Spring Boot
                 const baseUrl = "http://localhost:8080/api/books";
                 const url = q
-                    ? `${baseUrl}/${page}/${booksPerPage}/${encodeURIComponent(q)}`
-                    : `${baseUrl}/${page}/${booksPerPage}`;
+                    ? `${baseUrl}/${backendPage}/${booksPerPage}/${encodeURIComponent(q)}`
+                    : `${baseUrl}/${backendPage}/${booksPerPage}`;
 
                 const res = await axios.get(url);
+
+                console.log(res);
 
                 setBooks(res.data.content || []);
                 setTotalPages(4);
@@ -59,7 +64,11 @@ export default function BooksPage() {
                     <div className="book-grid">
                         {books.length > 0 ? (
                             books.map((book) => (
-                                <BookCard key={book.id || book.bookId || book.googleId} book={book} />
+                                // ID venant du backend (bookId) > l’API Google (idVolume/googleId)
+                                <BookCard
+                                    key={book.bookId || book.idVolume || book.googleId || book.id} // 🔧 rendu plus robuste
+                                    book={book}
+                                />
                             ))
                         ) : (
                             <p>Aucun livre trouvé :(</p>

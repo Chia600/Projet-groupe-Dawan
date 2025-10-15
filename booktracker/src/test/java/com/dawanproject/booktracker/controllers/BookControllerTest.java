@@ -1,6 +1,8 @@
 package com.dawanproject.booktracker.controllers;
 
 import com.dawanproject.booktracker.dtos.BookDto;
+import com.dawanproject.booktracker.security.JwtAuthFilter;
+import com.dawanproject.booktracker.security.JwtTokenUtil;
 import com.dawanproject.booktracker.services.BookService;
 import com.dawanproject.booktracker.services.GoogleBooksApiService;
 import com.dawanproject.booktracker.tools.JsonTool;
@@ -36,6 +38,12 @@ class BookControllerTest {
 
     @MockitoBean
     private GoogleBooksApiService service;
+
+    @MockitoBean
+    private JwtTokenUtil jwttokenUtil;
+
+    @MockitoBean
+    private JwtAuthFilter jwtAuthFilter;
 
     @MockitoBean
     private BookService bookService;
