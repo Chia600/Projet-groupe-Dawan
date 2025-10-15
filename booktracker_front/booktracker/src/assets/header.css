@@ -1,0 +1,46 @@
+.header {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    padding: 0.75rem 1.5rem;
+}
+
+/* Une seule ligne : titre | search | navbar */
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/* Titre à gauche */
+.header-title {
+    font-size: 1.5rem;
+    margin: 0;
+    flex-shrink: 0; /* taille minimale non écrasable */
+    cursor: pointer; /* rend le titre cliquable */
+    transition: opacity 0.2s ease; /* petit effet au survol */
+}
+
+.header-title:hover {
+    opacity: 0.7; /* feedback visuel */
+}
+
+/* Barre centrée */
+.header-search {
+    flex: 1; /* prend tout l’espace restant */
+    display: flex;
+    justify-content: center;
+}
+
+/* Navbar à droite */
+.header-nav {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Nettoyage du spacing interne de la navbar si besoin */
+.header-nav nav {
+    display: flex;
+    gap: 1rem;
+}

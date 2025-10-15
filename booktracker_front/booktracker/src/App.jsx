@@ -1,23 +1,19 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+// src/App.jsx
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
 import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import BookPage from "./pages/BookPages";
-import Navbar from "./components/Navbar";
+import BooksPage from "./pages/BooksPage";
+import BookDetails from "./pages/BooksDetails";
+import "./App.css";
 
-function App(){
-  return (
-    <BrowserRouter>
-      <Navbar />
-      <div className="container">
+export default function App() {
+    return (
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/login" element={<Login/>} />
-          <Route path="/register" element={<Register/>} />
+            <Route element={<Layout />}>
+                <Route path="/" element={<Home />} />
+                <Route path="/books" element={<BooksPage />} />
+                <Route path="/books/:id" element={<BookDetails />} />
+            </Route>
         </Routes>
-      </div>
-    </BrowserRouter>
-  );
+    );
 }
-
-export default App;
