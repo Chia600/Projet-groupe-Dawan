@@ -30,4 +30,6 @@ public interface BookService {
      * @return Optional<List < BookDto>>
      */
     Optional<List<BookDto>> getBookByTitle(String title);
+
+    Optional<BookDto> createBook(BookDto dto) throws Exception;
 }

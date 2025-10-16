@@ -25,26 +25,24 @@ public class JsonTool {
     public static List<BookDto> parseBooksJsonResponse(String jsonResults) throws JsonProcessingException {
         List<BookDto> bookDtoList = new ArrayList<>();
         ObjectMapper mapper = new ObjectMapper();
-        long id = 1;
 
         JsonNode rootNode = mapper.readTree(jsonResults);
         JsonNode items = rootNode.path("items");
 
         if (items.isEmpty()) {
-            BookDto bookDto = getBookDto(rootNode, id);
+            BookDto bookDto = getBookDto(rootNode);
             bookDtoList.add(bookDto);
         } else {
             for (JsonNode item : items) {
-                BookDto bookDto = getBookDto(item, id);
+                BookDto bookDto = getBookDto(item);
                 bookDtoList.add(bookDto);
-                id++;
             }
         }
 
         return bookDtoList;
     }
 
-    private static BookDto getBookDto(JsonNode item, long id) {
+    private static BookDto getBookDto(JsonNode item) {
         int publicationDate;
         String author;
         String title;
@@ -83,11 +81,10 @@ public class JsonTool {
         if (opt.isEmpty()) {
             category = "";
         } else {
-            category = item.path("volumeInfo").path("categories").get(0).asText();
+            category = (item.path("volumeInfo").path("categories").get(0).asText()).split(" /")[0];
         }
 
         BookDto bookDto = BookDto.builder()
-                .id(id)
                 .title(title)
                 .author(author)
                 .idVolume(idVolume)

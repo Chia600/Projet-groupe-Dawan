@@ -118,8 +118,8 @@ public class UserController {
      * @param bookId The ID of the book to add.
      * @return ResponseEntity with HTTP status 200 (OK) if added, or 404 (Not Found).
      */
-    @PostMapping("/{id}/books")
-    public ResponseEntity<Void> addFavoriteBook(@PathVariable Long id, @RequestBody Long bookId) {
+    @PostMapping("/{id}/books/{bookId}")
+    public ResponseEntity<Void> addFavoriteBook(@PathVariable Long id, @PathVariable Long bookId) {
         if (userService.addFavoriteBook(id, bookId)) {
             return ResponseEntity.ok().build();
         }

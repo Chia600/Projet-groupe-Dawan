@@ -1,17 +1,17 @@
 package com.dawanproject.booktracker.controllers;
 
 import com.dawanproject.booktracker.dtos.BookDto;
+import com.dawanproject.booktracker.dtos.RegisterRequestDto;
+import com.dawanproject.booktracker.dtos.UserDto;
 import com.dawanproject.booktracker.services.BookService;
 import com.dawanproject.booktracker.services.GoogleBooksApiService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -114,6 +114,14 @@ public class BookController {
     )
     public ResponseEntity<List<BookDto>> getBooksByTitle(@PathVariable String title) {
         return bookService.getBookByTitle(title)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @PostMapping("/{bookId}")
+    public ResponseEntity<BookDto> createBook(@PathVariable String bookId) throws Exception {
+        BookDto bookApi = googleBooksApiService.getBookById(bookId);
+        return bookService.createBook(bookApi)
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
