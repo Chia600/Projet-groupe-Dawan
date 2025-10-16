@@ -15,14 +15,15 @@ export default function BooksPage() {
    const [params] = useSearchParams();
    const q = params.get("search")?.trim() || "";    // critère de recherche
 
-   useEffect(() => {
-      const fetchBooks = async () => {
-         setLoading(true);
-         setError(null);
-         try {
-            const backendPage = page - 1;
+    useEffect(() => {
+        const fetchBooks = async () => {
+            setLoading(true);
+            setError(null);
+            try {
 
-            if (backendPage === 4) {
+                const backendPage = page - 1;
+
+                if (backendPage === 4) {
                booksPerPage = 4;
             }
             // Appel backend Spring Boot
@@ -33,8 +34,8 @@ export default function BooksPage() {
 
             const res = await axios.get(url);
 
-            console.log(res);setBooks(res.data.content || []);
-            setTotalPages(4);
+                setBooks(res.data.content || []);
+                setTotalPages(4);
 
          } catch (err) {
             console.error("Erreur de chargement des livres :", err);

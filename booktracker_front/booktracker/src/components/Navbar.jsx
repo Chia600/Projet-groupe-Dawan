@@ -5,37 +5,33 @@ import RegisterModal from "./RegisterModal";
 import "../assets/navbar.css";
 
 export default function Navbar() {
+    const [showLoginModal, setShowLoginModal] = useState(false);
+    const [showRegisterModal, setShowRegisterModal] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("token"));
+    const [userName, setUserName] = useState(localStorage.getItem("username") || "Utilisateur");
+    const [showMenu, setShowMenu] = useState(false);
+    const navigate = useNavigate();
+    const menuRef = useRef(null);
 
-   const [showLoginModal, setShowLoginModal] = useState(false);
-   const [showRegisterModal, setShowRegisterModal] = useState(false);
-   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("token")); const [userName, setUserName] = useState(localStorage.getItem("username") || "Utilisateur");
-   const [showMenu, setShowMenu] = useState(false);
-   const navigate = useNavigate();
-   const menuRef = useRef(null);
-
-
-   const openLoginModal = () => setShowLoginModal(true);
-   const closeLoginModal = () => setShowLoginModal(false);
-
-
+    const openLoginModal = () => setShowLoginModal(true);
+    const closeLoginModal = () => setShowLoginModal(false);
    const openRegisterModal = () => setShowRegisterModal(true);
    const closeRegisterModal = () => setShowRegisterModal(false);
 
-
-   const goToRegister = () => {
-      closeLoginModal();
-      setTimeout(() =>
-         openRegisterModal(), 150);
+    const goToRegister = () => {
+        closeLoginModal();
+        setTimeout(() => openRegisterModal(), 150);
    };
 
-
-   const handleCollectionClick = (e) => {
-      e.preventDefault();
-      if (isLoggedIn)
-         navigate("/collection");
-      else
-         openLoginModal();
-   };
+    // Gestion du clic sur "Ma collection"
+    const handleCollectionClick = (e) => {
+        e.preventDefault(); // empêche la navigation immédiate
+        if (isLoggedIn) {
+            navigate("/collection"); // redirige vers la collection si connecté
+        } else {
+            openLoginModal(); // sinon ouvre la popup de connexion
+        }
+    };
 
    // Gestion du clic sur "Profil"
    const handleUserDetailsClick = (e) => {
@@ -50,12 +46,11 @@ export default function Navbar() {
       setShowMenu(false);
       navigate("/profile/edit"); // redirige vers les paramètres du profil si connecté
    };
-
    const handleLogout = () => {
-      localStorage.removeItem("token");
-      localStorage.removeItem("username");
-      setIsLoggedIn(false);
-      setUserName("Utilisateur");
+        localStorage.removeItem("token");
+        localStorage.removeItem("username");
+        setIsLoggedIn(false);
+        setUserName("Utilisateur");
       setShowMenu(false);
       navigate("/");
    };
@@ -131,28 +126,28 @@ export default function Navbar() {
          </nav>
 
          {/* === Pop-up Connexion === */}
-         {showLoginModal && (
-            <LoginModal
-               onClose={closeLoginModal}
-               onRegister={goToRegister}
-               onLoginSuccess={(username) => {
-                  // sauvegarde du pseudo saisi
-                  localStorage.setItem("username", username);
-                  setUserName(username);
-                  setIsLoggedIn(true);
-                  closeLoginModal();
-                  alert(`Bienvenue ${username} !`);
-               }}
+            {showLoginModal && (
+                <LoginModal
+                    onClose={closeLoginModal}
+                    onRegister={goToRegister}
+                    onLoginSuccess={(username) => {
+                        // sauvegarde du pseudo saisi
+                        localStorage.setItem("username", username);
+                        setUserName(username);
+                        setIsLoggedIn(true);
+                        closeLoginModal();
+                        alert(`Bienvenue ${username} !`);
+                    }}
             />
          )}
 
-         {/* === Pop-up Inscription ===*/}
-         {showRegisterModal && (
-            <RegisterModal
-               onClose={closeRegisterModal}
-               onRegister={() => {
-                  closeRegisterModal();
-                  alert("Compte créé avec succès ! Vous pouvez maintenant vous connecter.");
+         {/* === Pop-up Inscription === */}
+            {showRegisterModal && (
+                <RegisterModal
+                    onClose={closeRegisterModal}
+                    onRegister={() => {
+                        closeRegisterModal();
+                        alert("Compte créé avec succès ! Vous pouvez maintenant vous connecter.");
                   setTimeout(() => openLoginModal(), 300);
                }}
             />

@@ -52,7 +52,7 @@ export default function LoginModal({ onClose, onRegister, onLoginSuccess }) {
       } finally {
          setLoading(false);
       }
-   };
+   }
 
    return (
       <div className="modal-overlay">

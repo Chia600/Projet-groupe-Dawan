@@ -6,6 +6,7 @@ import BooksPage from "./pages/BooksPage";
 import BookDetails from "./pages/BookDetails";
 import UserDetails from "./pages/UserDetails";
 import ProfileParameters from "./pages/ProfileParameters";
+import Collection from "./components/Collection";
 import "./App.css";
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
             <Route path="/books/:id" element={<BookDetails />} />
             <Route path="/user" element={<UserDetails />} />
             <Route path="/profile/edit" element={<ProfileParameters />} />
+            <Route path="/collection" element={<Collection />} />
          </Route>
       </Routes>
    );

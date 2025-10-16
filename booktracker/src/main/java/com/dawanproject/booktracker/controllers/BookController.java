@@ -81,6 +81,13 @@ public class BookController {
         return ResponseEntity.ok(googleBooksApiService.getBookById(bookId)); //QbUACwAAQBAJ
     }
 
+    @GetMapping("/{bookId}")
+    public ResponseEntity<BookDto> getBookById(@PathVariable Long bookId) throws Exception {
+        return bookService.getBookById(bookId)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
     // Récupérer tous les livres d'une catégorie
     @GetMapping("/category/{genre}")
     public ResponseEntity<List<BookDto>> getBooksByGenre(@PathVariable String genre) {
