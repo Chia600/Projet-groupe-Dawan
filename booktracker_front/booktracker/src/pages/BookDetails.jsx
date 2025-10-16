@@ -69,7 +69,14 @@ export default function BookDetails() {
         }
 
         try {
-            await axios.post(`${baseUrl}/users/${userId}/books`, book.id);
+            const bookIdToStore = book.idVolume || id;
+            
+            // Envoyer juste l'ID en tant que string
+            await axios.post(`${baseUrl}/users/${userId}/books`, 
+                JSON.stringify(bookIdToStore), 
+                { headers: { 'Content-Type': 'application/json' } }
+            );
+            
             setIsInFavorites(true);
             alert("✅ Livre ajouté à vos favoris !");
             setShowReviewModal(true);
@@ -103,25 +110,29 @@ export default function BookDetails() {
     };
 
     const handleSaveReview = async () => {
-        if (rating === 0) {
-            alert("Veuillez sélectionner une note");
+        // Plus besoin de vérifier le rating, il est optionnel
+        if (!reviewText && rating === 0) {
+            alert("Veuillez ajouter une critique ou une note");
             return;
         }
 
         try {
+            const bookIdToStore = book.idVolume || id;
+            
             const reviewData = {
                 userId: parseInt(userId),
-                bookId: book.id,
-                review: reviewText,
-                rating: rating,
-                creationDate: userReview?.creationDate || new Date().toISOString().split('T')[0]
+                googleBookId: bookIdToStore,
+                review: reviewText || null,
+                rating: rating > 0 ? rating : null // Envoyer null si pas de note
             };
 
             if (userReview) {
-                await axios.put(`${baseUrl}/reviews/${userId}/${book.id}`, reviewData);
+                // Mise à jour
+                await axios.put(`${baseUrl}/google-book-reviews/${userId}/${bookIdToStore}`, reviewData);
                 alert("✅ Critique mise à jour !");
             } else {
-                await axios.post(`${baseUrl}/reviews`, reviewData);
+                // Création
+                await axios.post(`${baseUrl}/google-book-reviews`, reviewData);
                 alert("✅ Critique ajoutée !");
             }
 
@@ -211,7 +222,7 @@ export default function BookDetails() {
                         </div>
                     )}
 
-                    {/* La critique */}
+                    {/* Ma critique */}
                     {userReview && (
                         <div style={{ 
                             marginTop: '1.5rem', 
@@ -234,7 +245,7 @@ export default function BookDetails() {
 
                 {/* --- Infos du livre à droite --- */}
                 <div className="book-info-section">
-                    <h2 className="book-detail-title">{book.title}</h2>
+                    <h2 className="book-title">{book.title}</h2>
                     <p className="book-author">{book.author}</p>
 
                     {/* --- Étoiles + moyenne globale --- */}

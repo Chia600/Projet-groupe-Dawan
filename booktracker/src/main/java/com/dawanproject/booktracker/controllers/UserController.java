@@ -1,14 +1,18 @@
 package com.dawanproject.booktracker.controllers;
 
 import com.dawanproject.booktracker.dtos.UserDto;
+import com.dawanproject.booktracker.entities.FavoriteBook;
+import com.dawanproject.booktracker.repositories.FavoriteBookRepository;
 import com.dawanproject.booktracker.services.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * REST controller for managing User entities and their book collections.
@@ -20,6 +24,7 @@ import java.util.List;
 public class UserController {
 
     private final UserService userService;
+    private final FavoriteBookRepository favoriteBookRepository;
 
     /**
      * Retrieves all users.
@@ -99,45 +104,60 @@ public class UserController {
     }
 
     /**
-     * Retrieves the collection of favorite books for a user.
+     * Retrieves the collection of favorite books (Google Books IDs) for a user.
      *
      * @param id The ID of the user.
-     * @return ResponseEntity containing the list of book IDs and HTTP status 200 (OK), or 404 (Not Found).
+     * @return ResponseEntity containing the list of Google Books IDs and HTTP status 200 (OK).
      */
     @GetMapping("/{id}/books")
-    public ResponseEntity<List<Long>> getFavoriteBooks(@PathVariable Long id) {
-        return userService.getFavoriteBooks(id)
-                .map(ResponseEntity::ok)
-                .orElseGet(() -> ResponseEntity.notFound().build());
+    public ResponseEntity<List<String>> getFavoriteBooks(@PathVariable Long id) {
+        List<String> googleBookIds = favoriteBookRepository.findByUserId(id)
+                .stream()
+                .map(FavoriteBook::getGoogleBookId)
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(googleBookIds);
     }
 
     /**
-     * Adds a book to the user's collection of favorite books.
+     * Adds a book (Google Books ID) to the user's collection of favorite books.
      *
-     * @param id     The ID of the user.
-     * @param bookId The ID of the book to add.
-     * @return ResponseEntity with HTTP status 200 (OK) if added, or 404 (Not Found).
+     * @param id           The ID of the user.
+     * @param googleBookId The Google Books ID (idVolume) to add.
+     * @return ResponseEntity with HTTP status 200 (OK) if added.
      */
     @PostMapping("/{id}/books")
-    public ResponseEntity<Void> addFavoriteBook(@PathVariable Long id, @RequestBody Long bookId) {
-        if (userService.addFavoriteBook(id, bookId)) {
-            return ResponseEntity.ok().build();
+    public ResponseEntity<Void> addFavoriteBook(@PathVariable Long id, @RequestBody String googleBookId) {
+        // Nettoyer l'ID (enlever les guillemets si présents)
+        googleBookId = googleBookId.replace("\"", "").trim();
+        
+        // Vérifier si l'utilisateur existe
+        if (userService.getUserById(id).isEmpty()) {
+            return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.notFound().build();
+        
+        // Vérifier si déjà en favoris
+        if (favoriteBookRepository.findByUserIdAndGoogleBookId(id, googleBookId).isPresent()) {
+            return ResponseEntity.ok().build(); // Déjà présent, pas d'erreur
+        }
+        
+        // Ajouter aux favoris
+        FavoriteBook favorite = new FavoriteBook(id, googleBookId);
+        favoriteBookRepository.save(favorite);
+        
+        return ResponseEntity.ok().build();
     }
 
     /**
      * Removes a book from the user's collection of favorite books.
      *
-     * @param id     The ID of the user.
-     * @param bookId The ID of the book to remove.
-     * @return ResponseEntity with HTTP status 204 (No Content) if removed, or 404 (Not Found).
+     * @param id           The ID of the user.
+     * @param googleBookId The Google Books ID to remove.
+     * @return ResponseEntity with HTTP status 204 (No Content) if removed.
      */
-    @DeleteMapping("/{id}/books/{bookId}")
-    public ResponseEntity<Void> removeFavoriteBook(@PathVariable Long id, @PathVariable Long bookId) {
-        if (userService.removeFavoriteBook(id, bookId)) {
-            return ResponseEntity.noContent().build();
-        }
-        return ResponseEntity.notFound().build();
+    @DeleteMapping("/{id}/books/{googleBookId}")
+    @Transactional
+    public ResponseEntity<Void> removeFavoriteBook(@PathVariable Long id, @PathVariable String googleBookId) {
+        favoriteBookRepository.deleteByUserIdAndGoogleBookId(id, googleBookId);
+        return ResponseEntity.noContent().build();
     }
 }

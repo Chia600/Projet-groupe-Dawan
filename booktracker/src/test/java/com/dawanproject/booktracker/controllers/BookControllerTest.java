@@ -51,9 +51,6 @@ class BookControllerTest {
     @MockitoBean
     private JwtTokenUtil jwtTokenUtil;
 
-    @MockitoBean
-    private JwtAuthFilter jwtAuthFilter;
-
     @Autowired
     private MockMvc mockMvc;
 
