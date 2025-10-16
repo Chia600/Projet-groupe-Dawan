@@ -1,6 +1,5 @@
 package com.dawanproject.booktracker.controllers;
 
-import com.dawanproject.booktracker.dtos.RegisterRequestDto;
 import com.dawanproject.booktracker.dtos.UserDto;
 import com.dawanproject.booktracker.security.JwtAuthFilter;
 import com.dawanproject.booktracker.security.JwtTokenUtil;
@@ -14,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
-import org.springframework.security.test.context.support.WithAnonymousUser;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
@@ -60,8 +58,8 @@ class UserControllerTest {
     @WithMockUser(roles = {"ADMIN", "USER"})
     void testGetAllUsers_Success() throws Exception {
 
-        UserDto userDTO1 = new UserDto(1L, "John", "Doe", "user1", "user1@example.com", null, Collections.emptyList(), Collections.emptyList());
-        UserDto userDTO2 = new UserDto(2L, "John", "Doe", "user2", "user2@example.com", null, Collections.emptyList(), Collections.emptyList());
+        UserDto userDTO1 = new UserDto(1L, "John", "Doe", null, null,"user1", "user1@example.com",  null, Collections.emptyList(), Collections.emptyList());
+        UserDto userDTO2 = new UserDto(2L, "John", "Doe", null, null,"user2", "user2@example.com", null, Collections.emptyList(), Collections.emptyList());
         List<UserDto> users = Arrays.asList(userDTO1, userDTO2);
 
         when(userService.getAllUsers()).thenReturn(users);
@@ -80,7 +78,7 @@ class UserControllerTest {
     @WithMockUser(roles = {"ADMIN", "USER"})
     void testGetUserById_Success() throws Exception {
 
-        UserDto userDTO = new UserDto(1L, "John", "Doe", "testuser", "test@example.com", null, Collections.emptyList(), Collections.emptyList());
+        UserDto userDTO = new UserDto(1L, "John", "Doe", null, null,"testuser", "test@example.com", null, Collections.emptyList(), Collections.emptyList());
 
         when(userService.getUserById(1L)).thenReturn(Optional.of(userDTO));
 
@@ -109,8 +107,8 @@ class UserControllerTest {
     @WithMockUser(roles = {"ADMIN", "USER"})
     void testUpdateUser_Success() throws Exception {
 
-        UserDto userDTO = new UserDto(1L, "John", "Doe", "testuser", "new@example.com", "newpassword", Collections.emptyList(), Collections.emptyList());
-        UserDto responseDTO = new UserDto(1L, "John", "Doe", "testuser", "new@example.com", null, Collections.emptyList(), Collections.emptyList());
+        UserDto userDTO = new UserDto(1L, "John", "Doe", null, null,"testuser", "new@example.com", "newpassword", Collections.emptyList(), Collections.emptyList());
+        UserDto responseDTO = new UserDto(1L, "John", "Doe", null, null,"testuser", "new@example.com", null, Collections.emptyList(), Collections.emptyList());
 
         when(userService.updateUser(eq(1L), any(UserDto.class))).thenReturn(Optional.of(responseDTO));
 
@@ -130,7 +128,7 @@ class UserControllerTest {
     @WithMockUser(roles = {"ADMIN", "USER"})
     void testUpdateUser_NotFound() throws Exception {
 
-        UserDto userDTO = new UserDto(1L, "John", "Doe", "newuser", "new@example.com", "newpassword", Collections.emptyList(), Collections.emptyList());
+        UserDto userDTO = new UserDto(1L, "John", "Doe", null, null,"newuser", "new@example.com", "newpassword", Collections.emptyList(), Collections.emptyList());
 
         when(userService.updateUser(eq(1L), any(UserDto.class))).thenReturn(Optional.empty());
 
@@ -173,7 +171,7 @@ class UserControllerTest {
     @WithMockUser(roles = {"ADMIN", "USER"})
     void testGetUserByUsername_Success() throws Exception {
 
-        UserDto userDTO = new UserDto(1L, "John", "Doe", "testuser", "test@example.com", null, Collections.emptyList(), Collections.emptyList());
+        UserDto userDTO = new UserDto(1L, "John", "Doe", null, null,"testuser", "test@example.com", null, Collections.emptyList(), Collections.emptyList());
 
         when(userService.getUserByUsername("testuser")).thenReturn(Optional.of(userDTO));
 
@@ -203,7 +201,7 @@ class UserControllerTest {
     @WithMockUser(roles = {"ADMIN", "USER"})
     void testGetUserByEmail_Success() throws Exception {
 
-        UserDto userDTO = new UserDto(1L, "John", "Doe", "testuser", "test@example.com", null, Collections.emptyList(), Collections.emptyList());
+        UserDto userDTO = new UserDto(1L, "John", "Doe", null, null,"testuser", "test@example.com", null, Collections.emptyList(), Collections.emptyList());
 
         when(userService.getUserByEmail("test@example.com")).thenReturn(Optional.of(userDTO));
 
