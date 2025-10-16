@@ -68,7 +68,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.username(), request.password()));
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
-        var jwtToken = jwtTokenUtil.generateToken(user);
+        var jwtToken = jwtTokenUtil.generateToken(user, user.getUserId());
 
         HttpHeaders responseHeaders = new HttpHeaders();
         responseHeaders.add("Access-Control-Expose-Headers", "Authorization");

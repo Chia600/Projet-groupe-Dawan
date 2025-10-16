@@ -22,11 +22,11 @@ public class JwtTokenUtil {
     @Value("${jwt.expiration}")
     private int expiration;
 
-    public String generateToken(UserDetails userDetails) {
-        return generateToken(new HashMap<>(), userDetails);
+    public String generateToken(UserDetails userDetails, Long id) {
+        return generateToken(new HashMap<>(), userDetails, id);
     }
 
-    private String generateToken(Map<String, Object> extraClaims, UserDetails userDetails) {
+    private String generateToken(Map<String, Object> extraClaims, UserDetails userDetails, Long id) {
         Map<String, Object> claims = new HashMap<>();
         List<String> roles = new ArrayList<>();
 
@@ -35,7 +35,8 @@ public class JwtTokenUtil {
         }
 
         claims.put("roles", roles);
-        claims.put("user_details", userDetails.toString());
+        claims.put("user_id", id);
+        claims.put("user_name", userDetails.getUsername());
         claims.putAll((extraClaims));
 
         return Jwts.builder()
