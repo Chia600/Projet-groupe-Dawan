@@ -1,93 +1,93 @@
 .book-detail-page {
-    display: flex;
-    justify-content: center;
-    padding: 3rem;
-    background-color: #f7f7f7;
+   display: flex;
+   justify-content: center;
+   padding: 3rem;
+   background-color: #f7f7f7;
 }
 
 .book-detail-container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    padding: 2rem;
-    max-width: 950px;
-    width: 100%;
-    gap: 2rem;
+   display: flex;
+   flex-direction: row;
+   align-items: flex-start;
+   background-color: white;
+   border-radius: 12px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+   padding: 2rem;
+   max-width: 950px;
+   width: 100%;
+   gap: 2rem;
 }
 
 /* --- Couverture --- */
 .book-cover-section {
-    text-align: center;
+   text-align: center;
 }
 
 .book-detail-cover {
-    width: 220px;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+   width: 220px;
+   height: 320px;
+   object-fit: cover;
+   border-radius: 8px;
+   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
 .book-cover-text {
-    font-size: 0.9rem;
-    color: #888;
-    margin-top: 0.5rem;
+   font-size: 0.9rem;
+   color: #888;
+   margin-top: 0.5rem;
 }
 
 /* --- Infos --- */
 .book-info-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   text-align: left;
 }
 
 .book-title {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
+   font-size: 1.8rem;
+   font-weight: 600;
+   margin-bottom: 0.25rem;
 }
 
 .book-author {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 1rem;
+   font-size: 1rem;
+   color: #666;
+   margin-bottom: 1rem;
 }
 
 /* --- Notes --- */
 .book-rating {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   margin-bottom: 1rem;
 }
 
 .stars {
-    font-size: 1.4rem;
-    color: #f5b50a;
-    letter-spacing: 3px;
+   font-size: 1.4rem;
+   color: #f5b50a;
+   letter-spacing: 3px;
 }
 
 .global-average {
-    border: 1px solid #aaa;
-    border-radius: 4px;
-    padding: 0.3rem 0.8rem;
-    font-size: 0.9rem;
-    color: #333;
+   border: 1px solid #aaa;
+   border-radius: 4px;
+   padding: 0.3rem 0.8rem;
+   font-size: 0.9rem;
+   color: #333;
 }
 
 /* --- Description --- */
 .book-description {
-    color: #444;
-    line-height: 1.6;
-    margin-bottom: 1rem;
+   color: #444;
+   line-height: 1.6;
+   margin-bottom: 1rem;
 }
 
 /* --- Infos supplémentaires --- */
 .book-extra p {
-    margin: 0.3rem 0;
-    color: #555;
+   margin: 0.3rem 0;
+   color: #555;
 }
