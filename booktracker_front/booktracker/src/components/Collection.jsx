@@ -323,7 +323,7 @@ export default function Collection() {
                      <h2>📚 Votre collection est vide</h2>
                      <p>Commencez par rechercher et ajouter des livres à vos favoris !</p>
                      <button
-                        onClick={() => navigate('/results')}
+                        onClick={() => navigate('/books')}
                         className="browse-button"
                      >
                         Parcourir les livres
