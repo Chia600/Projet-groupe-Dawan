@@ -3,6 +3,7 @@ package com.dawanproject.booktracker.mappers;
 import com.dawanproject.booktracker.dtos.BookDto;
 import com.dawanproject.booktracker.entities.Author;
 import com.dawanproject.booktracker.entities.Book;
+import jakarta.validation.constraints.Null;
 import org.mapstruct.*;
 
 
@@ -20,6 +21,8 @@ public interface BookMapper {
 
     @Named("mapAuthortoString")
     default String mapAuthortoString(Author author) {
+        if(author == null)
+            return "";
         return author.getFirstname() + " " + author.getLastname();
     }
 
