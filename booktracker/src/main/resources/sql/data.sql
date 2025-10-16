@@ -24,7 +24,8 @@ INSERT INTO book (cover,description,page_number,publication_date,title,author_id
 
 
 INSERT INTO user (firstname,lastname,email,password,picture,subscription_date,username,version) VALUES
-('Donald', 'Duck', 'dduck@duckburg.wd', '$2a$10$sjI.PA6YJsk/winjVvjMGOTdHvD5xiotniE5GJhoS2VhGxWUMB4iO', NULL, '2025-10-06', 'powerDuck', 0);
+('Donald', 'Duck', 'dduck@duckburg.wd', '$2a$10$sjI.PA6YJsk/winjVvjMGOTdHvD5xiotniE5GJhoS2VhGxWUMB4iO', 'https://media.gibert.com/media/catalog/product/cache/b1940cabebdcc55af9730bc15c397023/c/_/c_9782723488136-9782723488136_1.jpg', '2025-10-06', 'powerDuck', 0);
+('Mickey', 'Mouse', 'mickeym@duckburg.com', '$2a$10$RtvYgGduwXb.Y.PUrSc1ZevhYkyQjwDf6SV0kVVIDJ8SRQTvITxWO', 'https://deco-de-heros.com/107407-large_default/figurine-en-carton-mickey-mouse-disney-hauteur-100-cm.webp', '2025-10-16', 'mickeyM', 0);
 
 INSERT INTO review (creation_date,rating,review,user_user_id,book_book_id) VALUES
 ('2025-10-06',4, NULL, 1, 1);
