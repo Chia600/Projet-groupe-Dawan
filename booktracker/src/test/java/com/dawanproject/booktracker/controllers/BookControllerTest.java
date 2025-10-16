@@ -40,9 +40,6 @@ class BookControllerTest {
     private GoogleBooksApiService service;
 
     @MockitoBean
-    private JwtTokenUtil jwttokenUtil;
-
-    @MockitoBean
     private JwtAuthFilter jwtAuthFilter;
 
     @MockitoBean
@@ -50,9 +47,6 @@ class BookControllerTest {
 
     @MockitoBean
     private JwtTokenUtil jwtTokenUtil;
-
-    @MockitoBean
-    private JwtAuthFilter jwtAuthFilter;
 
     @Autowired
     private MockMvc mockMvc;
