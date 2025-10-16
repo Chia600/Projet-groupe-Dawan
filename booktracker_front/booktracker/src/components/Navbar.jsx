@@ -23,14 +23,15 @@ export default function Navbar() {
         setTimeout(() => openRegisterModal(), 150);
    };
 
-
-   const handleCollectionClick = (e) => {
-      e.preventDefault();
-      if (isLoggedIn)
-         navigate("/collection");
-      else
-         openLoginModal();
-   };
+    // Gestion du clic sur "Ma collection"
+    const handleCollectionClick = (e) => {
+        e.preventDefault(); // empêche la navigation immédiate
+        if (isLoggedIn) {
+            navigate("/collection"); // redirige vers la collection si connecté
+        } else {
+            openLoginModal(); // sinon ouvre la popup de connexion
+        }
+    };
 
    // Gestion du clic sur "Profil"
    const handleUserDetailsClick = (e) => {
@@ -45,7 +46,6 @@ export default function Navbar() {
       setShowMenu(false);
       navigate("/profile/edit"); // redirige vers les paramètres du profil si connecté
    };
-
    const handleLogout = () => {
         localStorage.removeItem("token");
         localStorage.removeItem("username");

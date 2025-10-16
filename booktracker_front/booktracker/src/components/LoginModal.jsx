@@ -57,14 +57,10 @@ export default function LoginModal({ onClose, onRegister, onLoginSuccess }) {
         } catch (err) {
             console.error("Erreur de connexion :", err);
             setError(true);
-         }
-      } catch (err) {
-         console.error("Erreur de connexion :", err);
-         setError(true);
-      } finally {
-         setLoading(false);
-      }
-   };
+        } finally {
+            setLoading(false);
+        }
+    };
 
    return (
       <div className="modal-overlay">

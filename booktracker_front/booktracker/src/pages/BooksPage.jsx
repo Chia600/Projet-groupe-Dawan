@@ -34,8 +34,6 @@ export default function BooksPage() {
 
             const res = await axios.get(url);
 
-            console.log(res);
-
                 setBooks(res.data.content || []);
                 setTotalPages(4);
 

@@ -5,8 +5,8 @@ import axios from "axios";
 import "../assets/bookDetails.css";
 
 export default function BookDetails() {
-   const { id } = useParams();
-   const [book, setBook] = useState(null);
+    const { id } = useParams();
+    const [book, setBook] = useState(null);
     const [error, setError] = useState(null);
     const [userReview, setUserReview] = useState(null);
     const [isInFavorites, setIsInFavorites] = useState(false);
@@ -164,7 +164,7 @@ export default function BookDetails() {
         return (sum / book.reviews.length).toFixed(1);
     };
 
-   if (error) return <p>{error}</p>;
+    if (error) return <p>{error}</p>;
     if (!book) return <p>Chargement...</p>;
 
     const avgRating = calculateAverageRating();
