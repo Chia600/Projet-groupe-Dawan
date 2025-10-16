@@ -9,20 +9,7 @@ export default function UserDetails() {
    const [error, setError] = useState(null);
    const navigate = useNavigate();
 
-   let accessToken = localStorage.getItem("token");
-   // Décoder le JWT pour récupérer l'username
-   const base64Url = accessToken.split('.')[1];
-   const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-   const jsonPayload = decodeURIComponent(
-      atob(base64)
-         .split('')
-         .map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2))
-         .join('')
-   );
-
-   const decoded = JSON.parse(jsonPayload);
-   const userId = decoded.user_details.charAt(12);
-   localStorage.setItem("userId", userId);
+   const userId = localStorage.getItem("userId");
 
    useEffect(() => {
       const fetchProfileDetails = async () => {
@@ -70,7 +57,7 @@ export default function UserDetails() {
                   {/* --- Détails secondaires --- */}
                   <div className="user-extra">
                      <p><strong>Inscrit depuis le :</strong> {user.subscriptionDate}</p>
-                     <p><strong>mon email :</strong> {user.email}</p>
+                     <p><strong>Mon email :</strong> {user.email}</p>
                      <p><strong>Nombre de livres dans ma collection :</strong> {user.bookIds.length}</p>
                      <p><strong>Nombre de critiques écrites :</strong> {user.reviewIds.length}</p>
                   </div>
