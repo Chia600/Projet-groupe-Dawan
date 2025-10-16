@@ -191,7 +191,7 @@ export default function Collection() {
    };
 
    const goToBookDetails = (bookId) => {
-      navigate(`/book/${bookId}`);
+      navigate(`/books/${bookId}`);
    };
 
    const renderStars = (rating) => {
