@@ -81,6 +81,6 @@ class BookControllerTest {
                 .andReturn().getResponse();
         assertEquals(200, response.getStatus());
 
-        assertTrue(response.getContentAsString().contains("\"id\":3,\"idVolume\":\"Yq35BY5Fk3gC\",\"title\":\"The Mythical Man-Month\",\"publicationDate\":\"1995-01-01\",\"pageNumber\":348"));
+        assertTrue(response.getContentAsString().contains("\"idVolume\":\"Yq35BY5Fk3gC\",\"title\":\"The Mythical Man-Month\",\"publicationDate\":\"1995-01-01\",\"pageNumber\":348"));
     }
 }

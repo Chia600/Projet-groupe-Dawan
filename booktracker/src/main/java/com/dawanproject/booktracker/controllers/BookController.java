@@ -1,11 +1,8 @@
 package com.dawanproject.booktracker.controllers;
 
 import com.dawanproject.booktracker.dtos.BookDto;
-import com.dawanproject.booktracker.dtos.RegisterRequestDto;
-import com.dawanproject.booktracker.dtos.UserDto;
 import com.dawanproject.booktracker.services.BookService;
 import com.dawanproject.booktracker.services.GoogleBooksApiService;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpHeaders;
@@ -52,11 +49,7 @@ public class BookController {
     ) throws Exception {
 
         String search;
-        if (optional.isPresent()) {
-            search = optional.get();
-        } else {
-            search = "";
-        }
+        search = optional.orElse("");
 
         Page<BookDto> customerPage = googleBooksApiService.getAll(page, size, search);
         HttpHeaders headers = new HttpHeaders();
